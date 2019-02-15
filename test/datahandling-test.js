@@ -48,7 +48,7 @@ describe("dataHandling", function() {
         commits: 0,
         date: Date.parse('2018-02-14'),
       }
-      console.log(expectedOut);
+      // console.log(expectedOut);
       expect(objOut[3]).to.deep.equal(expectedOut)
 
     });

@@ -52,7 +52,7 @@ function countStreak(kvMapObjArr) {
 }
 
 function longestStreak(streakArray) {
-  console.log(streakArray);
+  // console.log(streakArray);
   const longestStreakObj = streakArray.reduce(function(acc, curr) {
     return (curr.streak >= acc.streak) ? curr : acc
   });
@@ -87,10 +87,10 @@ function streakDates(longestStreakObj) {
   // console.log(edMonth);
   // console.log(edDay);
   // console.log(edDate);
-  console.log(edStr);
+  // console.log(edStr);
 
   const str =  'In the last year, your longest streak was ' + longestStreakObj.streak + ' days, logged from ' + sdStr + ' to ' + edStr + '.';
-  console.log(str);
+  // console.log(str);
   return str
   
 }
