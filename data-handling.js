@@ -37,7 +37,7 @@ function countStreak(kvMapObjArr) {
     } else if (obj.commits < 1 && streakLength > 0) {
       streakObj = {
         streak: streakLength,
-        endDate: obj.date,
+        endDate: obj.date - (24 * 3600000),
         startDate: obj.date - (streakLength * 24 * 3600000) ,
       }
       streakArray.push(streakObj)
@@ -52,13 +52,47 @@ function countStreak(kvMapObjArr) {
 }
 
 function longestStreak(streakArray) {
-  // var longestStreak;
   console.log(streakArray);
-  const longestStreak = streakArray.reduce(function(acc, curr) {
+  const longestStreakObj = streakArray.reduce(function(acc, curr) {
     return (curr.streak >= acc.streak) ? curr : acc
   });
-  console.log(longestStreak);
-  return longestStreak
+  // console.log(longestStreakObj);
+  return longestStreakObj
+}
+
+function streakDates(longestStreakObj) {
+  // console.log(longestStreakObj.startDate);
+  // return longestSO.startDate.getDate()
+  const sd = new Date(longestStreakObj.startDate)
+  const sdYear = sd.getFullYear()
+  // note that january is 0! so add 1
+  const sdMonth = sd.getMonth() + 1
+  const sdDay = sd.getDate()
+  const sdStr = sd.toDateString()
+  // console.log(sd);
+  // console.log(sdYear);
+  // console.log(sdMonth);
+  // console.log(sdDay);
+  // console.log(sd.toDateString());
+
+  const ed = new Date(longestStreakObj.endDate)
+  const edYear = ed.getFullYear()
+  // note that january is 0! so add 1
+  const edMonth = ed.getMonth() + 1
+  const edDay = ed.getDate()
+  const edDate = edDay + '-' + edMonth + '-' + edYear
+  const edStr = ed.toDateString();
+  // console.log(ed);
+  // console.log(edYear);
+  // console.log(edMonth);
+  // console.log(edDay);
+  // console.log(edDate);
+  console.log(edStr);
+
+  const str =  'In the last year, your longest streak was ' + longestStreakObj.streak + ' days, logged from ' + sdStr + ' to ' + edStr + '.';
+  console.log(str);
+  return str
+  
 }
 
 
@@ -104,4 +138,5 @@ module.exports.dataHandling = dataHandling;
 module.exports.extractData = extractData;
 module.exports.countStreak = countStreak;
 module.exports.longestStreak = longestStreak;
+module.exports.streakDates = streakDates;
 module.exports.louisCountStreak = louisCountStreak;

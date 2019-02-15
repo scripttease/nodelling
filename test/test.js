@@ -1,15 +1,12 @@
 const fs  = require('fs');
-// const fileName = './user-test-data.txt'
 const chai = require('chai');
 const server = require('../server');
 const dataHandling = require('../data-handling').dataHandling;
 const extractData = require('../data-handling').extractData;
 const countStreak = require('../data-handling').countStreak;
 const longestStreak = require('../data-handling').longestStreak;
-// const testData = require('./user-test-data.txt');
+const streakDates = require('../data-handling').streakDates;
 const should = chai.should();
-
-// TODO how could i use const here when I want the data available elsewhere in scope?
 
 describe("dataHandling", function() {
 
@@ -22,14 +19,21 @@ describe("dataHandling", function() {
       done();
       return data = JSON.stringify(fileContents);
     })
-    // return data;
   });
 
+    before(function(done) {
+    //TODO make this relative
+    fs.readFile('/Users/al/projects/nodelling/test/user-test-data2.txt', 'utf8', function(err, fileContents,) {
+      if (err) throw(err);
+
+      done();
+      return data2 = JSON.stringify(fileContents);
+    })
+  });
 
   it('should split data into array of lines', function() {
     const stringOut = dataHandling(data);
 
-    // expect(stringOut.length).to.equal(577)
     expect(stringOut.length).to.equal(577)
   });
 
@@ -43,7 +47,6 @@ describe("dataHandling", function() {
       const expectedOut = {
         commits: 0,
         date: Date.parse('2018-02-14'),
-        // date: '2018-02-14',
       }
       console.log(expectedOut);
       expect(objOut[3]).to.deep.equal(expectedOut)
@@ -76,11 +79,29 @@ describe("dataHandling", function() {
     });
   });
 
+  describe('#streakDates', () => {
+    it('should return date as string', function() {
+
+      const stringOut = dataHandling(data);
+      const objOut = extractData(stringOut);
+      const streakArr = countStreak(objOut);
+      const longest = longestStreak(streakArr)
+      const str = streakDates(longest)
+      expect(str).to.equal('In the last year, your longest streak was 4 days, logged from Sat Oct 06 2018 to Tue Oct 09 2018.')
+    });
+  });
+
+  describe('#streakDates 2', () => {
+    it('should return date as stringfrom data2', function() {
+
+      const stringOut = dataHandling(data2);
+      const objOut = extractData(stringOut);
+      const streakArr = countStreak(objOut);
+      const longest = longestStreak(streakArr)
+      const str = streakDates(longest)
+      expect(str).to.equal('In the last year, your longest streak was 23 days, logged from Mon Jul 16 2018 to Tue Aug 07 2018.')
+    });
+  });
+
+
 });
-
-// it("should convert json to string", function() {
-//   const stringOut = dataHandling(data);
-
-//   // console.log(data);
-//   expect(stringOut.charAt(1)).to.equal('<')
-// });
