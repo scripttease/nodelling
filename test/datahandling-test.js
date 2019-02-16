@@ -1,6 +1,5 @@
 const fs  = require('fs');
 const chai = require('chai');
-const server = require('../server');
 const dataHandling = require('../data-handling').dataHandling;
 const extractData = require('../data-handling').extractData;
 const countStreak = require('../data-handling').countStreak;
