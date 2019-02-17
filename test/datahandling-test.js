@@ -5,6 +5,7 @@ const extractData = require('../data-handling').extractData;
 const countStreak = require('../data-handling').countStreak;
 const longestStreak = require('../data-handling').longestStreak;
 const streakDates = require('../data-handling').streakDates;
+const extractSVG = require('../data-handling').extractSVG;
 const should = chai.should();
 
 describe("dataHandling", function() {
@@ -15,8 +16,9 @@ describe("dataHandling", function() {
     fs.readFile('/Users/al/projects/nodelling/test/user-test-data.txt', 'utf8', function(err, fileContents,) {
       if (err) throw(err);
 
+      // async has no return hence need done
+      data = fileContents
       done();
-      return data = JSON.stringify(fileContents);
     })
   });
 
@@ -25,8 +27,8 @@ describe("dataHandling", function() {
     fs.readFile('/Users/al/projects/nodelling/test/user-test-data2.txt', 'utf8', function(err, fileContents,) {
       if (err) throw(err);
 
+      data2 = fileContents;
       done();
-      return data2 = JSON.stringify(fileContents);
     })
   });
 
@@ -102,5 +104,13 @@ describe("dataHandling", function() {
     });
   });
 
+  describe('extractSVG', function() {
+    it('should extract the svg to render in view', function() {
+      const pattern = /class="js-calendar-graph-svg"/
+      // console.log(extractSVG(data));
+      expect(extractSVG(data)).to.match(pattern);
+    });
+  });
+  
 
 });

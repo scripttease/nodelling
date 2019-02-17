@@ -1,5 +1,5 @@
-function dataHandling(json) {
-  const txt = JSON.parse(json)
+function dataHandling(txt) {
+  // const txt = JSON.parse(json)
   const stng = txt.toString()
   const lines = stng.split("\n")
   // first capture group is commits second is date
@@ -92,11 +92,18 @@ function streakDates(longestStreakObj) {
   const str =  'In the last year, your longest streak was ' + longestStreakObj.streak + ' days, logged from ' + sdStr + ' to ' + edStr + '.';
   // console.log(str);
   return str
-  
+
 }
 
+// TODO extract the svg to render in view
 
 
+function extractSVG(txt) {
+  // const txt = JSON.parse(json)
+  const regex = /(\<svg width\=\".*?\<\/g><\/svg\>)/gs;
+  const svg = regex.exec(txt)
+  return svg[1]
+}
 
 
 
@@ -129,14 +136,16 @@ function collectNextStreak(days) {
 }
 
 function discardNoCommitDays(days) {
-    while (days[0] && days[0].commits == 0) {
+  while (days[0] && days[0].commits == 0) {
     days.shift();
   }
 }
+
 
 module.exports.dataHandling = dataHandling;
 module.exports.extractData = extractData;
 module.exports.countStreak = countStreak;
 module.exports.longestStreak = longestStreak;
 module.exports.streakDates = streakDates;
+module.exports.extractSVG = extractSVG;
 module.exports.louisCountStreak = louisCountStreak;

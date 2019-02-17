@@ -2,7 +2,8 @@
 
 // const request = require('request');
 const request = require('supertest');
-const app = require('../src/server');
+const app = require('../src/server').app;
+const getUserInfo = require('../src/server').getUserInfo;
 const startServer = require('../start-server')
 
 describe('GET /', function () {
@@ -15,9 +16,21 @@ describe('GET /', function () {
       .end(function(err, res) {
         //use a regex match here so can just see part
         // console.log(res) // shows you the fields
-        expect(res.text).to.match(/Bringin'/)
+        expect(res.text).to.match(/Git Streak/)
+        done();
       });
-    done();
 
   });
 });
+
+describe('getUserInfo', function() {
+  it('should take username and return contribs json', function() {
+    const username = 'scripttease'
+    //testing a promise so need its own promise or to use done.
+    return getUserInfo(username).then(function(svg) {
+      expect(svg).to.match(/js-calendar-graph-svg/)
+    })
+  });
+  
+});
+
