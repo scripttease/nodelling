@@ -69,11 +69,6 @@ function streakDates(longestStreakObj) {
   const sdMonth = sd.getMonth() + 1
   const sdDay = sd.getDate()
   const sdStr = sd.toDateString()
-  // console.log(sd);
-  // console.log(sdYear);
-  // console.log(sdMonth);
-  // console.log(sdDay);
-  // console.log(sd.toDateString());
 
   const ed = new Date(longestStreakObj.endDate)
   const edYear = ed.getFullYear()
@@ -82,27 +77,21 @@ function streakDates(longestStreakObj) {
   const edDay = ed.getDate()
   const edDate = edDay + '-' + edMonth + '-' + edYear
   const edStr = ed.toDateString();
-  // console.log(ed);
-  // console.log(edYear);
-  // console.log(edMonth);
-  // console.log(edDay);
-  // console.log(edDate);
-  // console.log(edStr);
 
   const str =  'In the last year, your longest streak was ' + longestStreakObj.streak + ' days, logged from ' + sdStr + ' to ' + edStr + '.';
-  // console.log(str);
   return str
 
 }
 
-// TODO extract the svg to render in view
-
-
 function extractSVG(txt) {
   // const txt = JSON.parse(json)
   const regex = /(\<svg width\=\".*?\<\/g><\/svg\>)/gs;
-  const svg = regex.exec(txt)
-  return svg[1]
+  const svgAll = regex.exec(txt)
+  // const svg = svgAll[1]
+  return {
+    svg: svgAll[1],
+    userInfo: svgAll,
+  }
 }
 
 

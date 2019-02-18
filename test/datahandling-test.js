@@ -108,7 +108,8 @@ describe("dataHandling", function() {
     it('should extract the svg to render in view', function() {
       const pattern = /class="js-calendar-graph-svg"/
       // console.log(extractSVG(data));
-      expect(extractSVG(data)).to.match(pattern);
+      const svgObj = extractSVG(data)
+      expect(svgObj.svg).to.match(pattern);
     });
   });
   

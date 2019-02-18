@@ -1,4 +1,4 @@
-const app = require('./src/server.js');
+const app = require('./src/server.js').app;
 // var express = require('express');
 // var app = express();
 const port = process.env.PORT || 1234;
@@ -13,7 +13,7 @@ if(!module.parent){
     if (err) {
       console.log(err);
     } else {
-  console.log('Example app listening on port ' + port);
+  console.log('app listening on port ' + port);
     }
 });
 }

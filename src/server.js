@@ -31,26 +31,53 @@ function getUserInfo(username) {
       // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Checking_that_the_fetch_was_successful
       return response.text();
     }
+    // else
     throw new Error('Username Not Found')
   }).then(function(responseTxt) {
-    return extractSVG(responseTxt);
+    const svgObj = extractSVG(responseTxt)
+    return svgObj
     // don't want to catch here because want to catch in the app to signify to user.
-    // }).catch(function(error) {
-    //   console.log('There has been a problem with your fetch operation: ', error);
   });
 }
 
-app.get("/streak", function(req, res) {
-  getUserInfo(req.params.username)
-    .then(userDetails => {
-      res.render("user-details-json", userDetails);
+app.get("/streak/:username", function(req, res) {
+  // see https://expressjs.com/en/api.html#req.params
+  const username = req.params.username
+  getUserInfo(username)
+    .then(svgObj => {
+
+      //this would also work, if you referrend in the ejs as svgOnly.svg... give it an object. or just refer to the part of the object you want 
+      // res.status(200).render("user-details", {svgOnly: svgObj} );
+      res.status(200).render("user-details", svgObj);
     })
     .catch(error => {
       console.error(error);
-      res.code(500).render("error-page");
+      // https://expressjs.com/en/api.html#res.status
+      res.status(500).render("error-page");
     });
 });
 
+
+
+
+// if i just want this to be an ajax req why does it need a route? (I dont think it can just be ajax because of CORS, i think it actually needs to re-render the whole page? )
+app.get('api/streak/:username', function(req, res) {
+  // see https://expressjs.com/en/api.html#req.params
+  getUserInfo(req.params.username)
+    .then(userDetails => {
+      // this can send info to the existing view? as json? should be res.send?
+      res.setHeader('Content-Type', 'application/json');
+      res.json(userDetails);
+    })
+    .catch(error => {
+      console.error(error);
+      //TODO make an error page that says username not found
+      // https://expressjs.com/en/api.html#res.status
+      res.status(500).render("error-page");
+    });
+});
+
+//TODO write the <script> for the index page that gets the username typed in by the user and then write the ajax that inserts their streak info into page (or render a new page)
 
 
 module.exports.app = app;
