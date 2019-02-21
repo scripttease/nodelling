@@ -5,6 +5,7 @@ const helmet = require('helmet');
 // HTTP request logger middleware for node.js
 const morgan = require('morgan');
 const app = express();
+
 const extractSVG = require('../data-handling').extractSVG;
 const userStats = require('../data-handling').userStats;
 
@@ -48,7 +49,7 @@ app.get("/streak/:username", function(req, res) {
   const username = req.params.username
   getUserInfo(username)
     .then(statsObj => {
-
+      // console.log(statsObj);
       //this would also work, if you referrend in the ejs as viewData.svg... give it an object. or just refer to the part of the object you want. In the commented out version you are basically assigning your return from the fnobject that you have assigned
       // res.status(200).render("user-details", {viewData: statsObj} );
       res.status(200).render("user-details", statsObj);

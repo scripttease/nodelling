@@ -1,0 +1,820 @@
+<div class="js-yearly-contributions">
+  
+<div class="position-relative">
+
+
+    <h2 class="f4 text-normal mb-2">
+      2,137 contributions
+        in the last year
+    </h2>
+
+    <div class="border border-gray-dark py-2 graph-before-activity-overview">
+      <div class="js-calendar-graph is-graph-loading graph-canvas calendar-graph height-full"
+          data-graph-url="/users/lpil/contributions?to=2019-02-21"
+          data-url="/lpil"
+          data-from="2019-02-01"
+          data-to="2019-02-21"
+          data-org="">
+        
+<svg width="563" height="88" class="js-calendar-graph-svg">
+  <g transform="translate(16, 20)" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:6134406,&quot;target&quot;:&quot;CONTRIBUTION_CALENDAR_SQUARE&quot;,&quot;user_id&quot;:16262154,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;}}" data-hydro-click-hmac="4ae9f22a311ba984fc00dfbbbde1fa6707bcfedbc3d634a14e38737d967f4404">
+      <g transform="translate(0, 0)">
+          <rect class="day" width="8" height="8" x="11" y="0" fill="#c6e48b" data-count="5" data-date="2018-02-18"/>
+          <rect class="day" width="8" height="8" x="11" y="10" fill="#c6e48b" data-count="6" data-date="2018-02-19"/>
+          <rect class="day" width="8" height="8" x="11" y="20" fill="#7bc96f" data-count="16" data-date="2018-02-20"/>
+          <rect class="day" width="8" height="8" x="11" y="30" fill="#ebedf0" data-count="0" data-date="2018-02-21"/>
+          <rect class="day" width="8" height="8" x="11" y="40" fill="#ebedf0" data-count="0" data-date="2018-02-22"/>
+          <rect class="day" width="8" height="8" x="11" y="50" fill="#c6e48b" data-count="4" data-date="2018-02-23"/>
+          <rect class="day" width="8" height="8" x="11" y="60" fill="#c6e48b" data-count="2" data-date="2018-02-24"/>
+      </g>
+      <g transform="translate(11, 0)">
+          <rect class="day" width="8" height="8" x="10" y="0" fill="#c6e48b" data-count="3" data-date="2018-02-25"/>
+          <rect class="day" width="8" height="8" x="10" y="10" fill="#c6e48b" data-count="8" data-date="2018-02-26"/>
+          <rect class="day" width="8" height="8" x="10" y="20" fill="#c6e48b" data-count="10" data-date="2018-02-27"/>
+          <rect class="day" width="8" height="8" x="10" y="30" fill="#7bc96f" data-count="20" data-date="2018-02-28"/>
+          <rect class="day" width="8" height="8" x="10" y="40" fill="#c6e48b" data-count="4" data-date="2018-03-01"/>
+          <rect class="day" width="8" height="8" x="10" y="50" fill="#c6e48b" data-count="10" data-date="2018-03-02"/>
+          <rect class="day" width="8" height="8" x="10" y="60" fill="#c6e48b" data-count="1" data-date="2018-03-03"/>
+      </g>
+      <g transform="translate(22, 0)">
+          <rect class="day" width="8" height="8" x="9" y="0" fill="#c6e48b" data-count="8" data-date="2018-03-04"/>
+          <rect class="day" width="8" height="8" x="9" y="10" fill="#c6e48b" data-count="9" data-date="2018-03-05"/>
+          <rect class="day" width="8" height="8" x="9" y="20" fill="#c6e48b" data-count="1" data-date="2018-03-06"/>
+          <rect class="day" width="8" height="8" x="9" y="30" fill="#7bc96f" data-count="15" data-date="2018-03-07"/>
+          <rect class="day" width="8" height="8" x="9" y="40" fill="#ebedf0" data-count="0" data-date="2018-03-08"/>
+          <rect class="day" width="8" height="8" x="9" y="50" fill="#c6e48b" data-count="6" data-date="2018-03-09"/>
+          <rect class="day" width="8" height="8" x="9" y="60" fill="#c6e48b" data-count="2" data-date="2018-03-10"/>
+      </g>
+      <g transform="translate(33, 0)">
+          <rect class="day" width="8" height="8" x="8" y="0" fill="#c6e48b" data-count="10" data-date="2018-03-11"/>
+          <rect class="day" width="8" height="8" x="8" y="10" fill="#c6e48b" data-count="10" data-date="2018-03-12"/>
+          <rect class="day" width="8" height="8" x="8" y="20" fill="#c6e48b" data-count="6" data-date="2018-03-13"/>
+          <rect class="day" width="8" height="8" x="8" y="30" fill="#c6e48b" data-count="7" data-date="2018-03-14"/>
+          <rect class="day" width="8" height="8" x="8" y="40" fill="#ebedf0" data-count="0" data-date="2018-03-15"/>
+          <rect class="day" width="8" height="8" x="8" y="50" fill="#ebedf0" data-count="0" data-date="2018-03-16"/>
+          <rect class="day" width="8" height="8" x="8" y="60" fill="#ebedf0" data-count="0" data-date="2018-03-17"/>
+      </g>
+      <g transform="translate(44, 0)">
+          <rect class="day" width="8" height="8" x="7" y="0" fill="#ebedf0" data-count="0" data-date="2018-03-18"/>
+          <rect class="day" width="8" height="8" x="7" y="10" fill="#ebedf0" data-count="0" data-date="2018-03-19"/>
+          <rect class="day" width="8" height="8" x="7" y="20" fill="#ebedf0" data-count="0" data-date="2018-03-20"/>
+          <rect class="day" width="8" height="8" x="7" y="30" fill="#7bc96f" data-count="22" data-date="2018-03-21"/>
+          <rect class="day" width="8" height="8" x="7" y="40" fill="#c6e48b" data-count="9" data-date="2018-03-22"/>
+          <rect class="day" width="8" height="8" x="7" y="50" fill="#c6e48b" data-count="11" data-date="2018-03-23"/>
+          <rect class="day" width="8" height="8" x="7" y="60" fill="#ebedf0" data-count="0" data-date="2018-03-24"/>
+      </g>
+      <g transform="translate(55, 0)">
+          <rect class="day" width="8" height="8" x="6" y="0" fill="#ebedf0" data-count="0" data-date="2018-03-25"/>
+          <rect class="day" width="8" height="8" x="6" y="10" fill="#c6e48b" data-count="3" data-date="2018-03-26"/>
+          <rect class="day" width="8" height="8" x="6" y="20" fill="#c6e48b" data-count="10" data-date="2018-03-27"/>
+          <rect class="day" width="8" height="8" x="6" y="30" fill="#c6e48b" data-count="11" data-date="2018-03-28"/>
+          <rect class="day" width="8" height="8" x="6" y="40" fill="#c6e48b" data-count="3" data-date="2018-03-29"/>
+          <rect class="day" width="8" height="8" x="6" y="50" fill="#c6e48b" data-count="1" data-date="2018-03-30"/>
+          <rect class="day" width="8" height="8" x="6" y="60" fill="#c6e48b" data-count="9" data-date="2018-03-31"/>
+      </g>
+      <g transform="translate(66, 0)">
+          <rect class="day" width="8" height="8" x="5" y="0" fill="#ebedf0" data-count="0" data-date="2018-04-01"/>
+          <rect class="day" width="8" height="8" x="5" y="10" fill="#7bc96f" data-count="14" data-date="2018-04-02"/>
+          <rect class="day" width="8" height="8" x="5" y="20" fill="#c6e48b" data-count="7" data-date="2018-04-03"/>
+          <rect class="day" width="8" height="8" x="5" y="30" fill="#c6e48b" data-count="9" data-date="2018-04-04"/>
+          <rect class="day" width="8" height="8" x="5" y="40" fill="#c6e48b" data-count="3" data-date="2018-04-05"/>
+          <rect class="day" width="8" height="8" x="5" y="50" fill="#c6e48b" data-count="7" data-date="2018-04-06"/>
+          <rect class="day" width="8" height="8" x="5" y="60" fill="#c6e48b" data-count="4" data-date="2018-04-07"/>
+      </g>
+      <g transform="translate(77, 0)">
+          <rect class="day" width="8" height="8" x="4" y="0" fill="#c6e48b" data-count="4" data-date="2018-04-08"/>
+          <rect class="day" width="8" height="8" x="4" y="10" fill="#c6e48b" data-count="11" data-date="2018-04-09"/>
+          <rect class="day" width="8" height="8" x="4" y="20" fill="#c6e48b" data-count="1" data-date="2018-04-10"/>
+          <rect class="day" width="8" height="8" x="4" y="30" fill="#c6e48b" data-count="8" data-date="2018-04-11"/>
+          <rect class="day" width="8" height="8" x="4" y="40" fill="#7bc96f" data-count="13" data-date="2018-04-12"/>
+          <rect class="day" width="8" height="8" x="4" y="50" fill="#c6e48b" data-count="11" data-date="2018-04-13"/>
+          <rect class="day" width="8" height="8" x="4" y="60" fill="#ebedf0" data-count="0" data-date="2018-04-14"/>
+      </g>
+      <g transform="translate(88, 0)">
+          <rect class="day" width="8" height="8" x="3" y="0" fill="#c6e48b" data-count="1" data-date="2018-04-15"/>
+          <rect class="day" width="8" height="8" x="3" y="10" fill="#7bc96f" data-count="14" data-date="2018-04-16"/>
+          <rect class="day" width="8" height="8" x="3" y="20" fill="#7bc96f" data-count="12" data-date="2018-04-17"/>
+          <rect class="day" width="8" height="8" x="3" y="30" fill="#7bc96f" data-count="12" data-date="2018-04-18"/>
+          <rect class="day" width="8" height="8" x="3" y="40" fill="#c6e48b" data-count="4" data-date="2018-04-19"/>
+          <rect class="day" width="8" height="8" x="3" y="50" fill="#7bc96f" data-count="12" data-date="2018-04-20"/>
+          <rect class="day" width="8" height="8" x="3" y="60" fill="#c6e48b" data-count="1" data-date="2018-04-21"/>
+      </g>
+      <g transform="translate(99, 0)">
+          <rect class="day" width="8" height="8" x="2" y="0" fill="#ebedf0" data-count="0" data-date="2018-04-22"/>
+          <rect class="day" width="8" height="8" x="2" y="10" fill="#c6e48b" data-count="5" data-date="2018-04-23"/>
+          <rect class="day" width="8" height="8" x="2" y="20" fill="#ebedf0" data-count="0" data-date="2018-04-24"/>
+          <rect class="day" width="8" height="8" x="2" y="30" fill="#c6e48b" data-count="8" data-date="2018-04-25"/>
+          <rect class="day" width="8" height="8" x="2" y="40" fill="#c6e48b" data-count="1" data-date="2018-04-26"/>
+          <rect class="day" width="8" height="8" x="2" y="50" fill="#196127" data-count="40" data-date="2018-04-27"/>
+          <rect class="day" width="8" height="8" x="2" y="60" fill="#c6e48b" data-count="3" data-date="2018-04-28"/>
+      </g>
+      <g transform="translate(110, 0)">
+          <rect class="day" width="8" height="8" x="1" y="0" fill="#c6e48b" data-count="3" data-date="2018-04-29"/>
+          <rect class="day" width="8" height="8" x="1" y="10" fill="#196127" data-count="75" data-date="2018-04-30"/>
+          <rect class="day" width="8" height="8" x="1" y="20" fill="#239a3b" data-count="25" data-date="2018-05-01"/>
+          <rect class="day" width="8" height="8" x="1" y="30" fill="#c6e48b" data-count="8" data-date="2018-05-02"/>
+          <rect class="day" width="8" height="8" x="1" y="40" fill="#c6e48b" data-count="3" data-date="2018-05-03"/>
+          <rect class="day" width="8" height="8" x="1" y="50" fill="#c6e48b" data-count="8" data-date="2018-05-04"/>
+          <rect class="day" width="8" height="8" x="1" y="60" fill="#ebedf0" data-count="0" data-date="2018-05-05"/>
+      </g>
+      <g transform="translate(121, 0)">
+          <rect class="day" width="8" height="8" x="0" y="0" fill="#ebedf0" data-count="0" data-date="2018-05-06"/>
+          <rect class="day" width="8" height="8" x="0" y="10" fill="#c6e48b" data-count="2" data-date="2018-05-07"/>
+          <rect class="day" width="8" height="8" x="0" y="20" fill="#ebedf0" data-count="0" data-date="2018-05-08"/>
+          <rect class="day" width="8" height="8" x="0" y="30" fill="#239a3b" data-count="26" data-date="2018-05-09"/>
+          <rect class="day" width="8" height="8" x="0" y="40" fill="#ebedf0" data-count="0" data-date="2018-05-10"/>
+          <rect class="day" width="8" height="8" x="0" y="50" fill="#7bc96f" data-count="13" data-date="2018-05-11"/>
+          <rect class="day" width="8" height="8" x="0" y="60" fill="#c6e48b" data-count="2" data-date="2018-05-12"/>
+      </g>
+      <g transform="translate(132, 0)">
+          <rect class="day" width="8" height="8" x="-1" y="0" fill="#ebedf0" data-count="0" data-date="2018-05-13"/>
+          <rect class="day" width="8" height="8" x="-1" y="10" fill="#c6e48b" data-count="9" data-date="2018-05-14"/>
+          <rect class="day" width="8" height="8" x="-1" y="20" fill="#7bc96f" data-count="14" data-date="2018-05-15"/>
+          <rect class="day" width="8" height="8" x="-1" y="30" fill="#c6e48b" data-count="1" data-date="2018-05-16"/>
+          <rect class="day" width="8" height="8" x="-1" y="40" fill="#c6e48b" data-count="2" data-date="2018-05-17"/>
+          <rect class="day" width="8" height="8" x="-1" y="50" fill="#c6e48b" data-count="1" data-date="2018-05-18"/>
+          <rect class="day" width="8" height="8" x="-1" y="60" fill="#ebedf0" data-count="0" data-date="2018-05-19"/>
+      </g>
+      <g transform="translate(143, 0)">
+          <rect class="day" width="8" height="8" x="-2" y="0" fill="#ebedf0" data-count="0" data-date="2018-05-20"/>
+          <rect class="day" width="8" height="8" x="-2" y="10" fill="#c6e48b" data-count="2" data-date="2018-05-21"/>
+          <rect class="day" width="8" height="8" x="-2" y="20" fill="#c6e48b" data-count="1" data-date="2018-05-22"/>
+          <rect class="day" width="8" height="8" x="-2" y="30" fill="#c6e48b" data-count="7" data-date="2018-05-23"/>
+          <rect class="day" width="8" height="8" x="-2" y="40" fill="#c6e48b" data-count="2" data-date="2018-05-24"/>
+          <rect class="day" width="8" height="8" x="-2" y="50" fill="#c6e48b" data-count="6" data-date="2018-05-25"/>
+          <rect class="day" width="8" height="8" x="-2" y="60" fill="#c6e48b" data-count="2" data-date="2018-05-26"/>
+      </g>
+      <g transform="translate(154, 0)">
+          <rect class="day" width="8" height="8" x="-3" y="0" fill="#ebedf0" data-count="0" data-date="2018-05-27"/>
+          <rect class="day" width="8" height="8" x="-3" y="10" fill="#ebedf0" data-count="0" data-date="2018-05-28"/>
+          <rect class="day" width="8" height="8" x="-3" y="20" fill="#c6e48b" data-count="7" data-date="2018-05-29"/>
+          <rect class="day" width="8" height="8" x="-3" y="30" fill="#c6e48b" data-count="1" data-date="2018-05-30"/>
+          <rect class="day" width="8" height="8" x="-3" y="40" fill="#c6e48b" data-count="5" data-date="2018-05-31"/>
+          <rect class="day" width="8" height="8" x="-3" y="50" fill="#c6e48b" data-count="2" data-date="2018-06-01"/>
+          <rect class="day" width="8" height="8" x="-3" y="60" fill="#c6e48b" data-count="4" data-date="2018-06-02"/>
+      </g>
+      <g transform="translate(165, 0)">
+          <rect class="day" width="8" height="8" x="-4" y="0" fill="#c6e48b" data-count="1" data-date="2018-06-03"/>
+          <rect class="day" width="8" height="8" x="-4" y="10" fill="#ebedf0" data-count="0" data-date="2018-06-04"/>
+          <rect class="day" width="8" height="8" x="-4" y="20" fill="#ebedf0" data-count="0" data-date="2018-06-05"/>
+          <rect class="day" width="8" height="8" x="-4" y="30" fill="#ebedf0" data-count="0" data-date="2018-06-06"/>
+          <rect class="day" width="8" height="8" x="-4" y="40" fill="#ebedf0" data-count="0" data-date="2018-06-07"/>
+          <rect class="day" width="8" height="8" x="-4" y="50" fill="#ebedf0" data-count="0" data-date="2018-06-08"/>
+          <rect class="day" width="8" height="8" x="-4" y="60" fill="#ebedf0" data-count="0" data-date="2018-06-09"/>
+      </g>
+      <g transform="translate(176, 0)">
+          <rect class="day" width="8" height="8" x="-5" y="0" fill="#ebedf0" data-count="0" data-date="2018-06-10"/>
+          <rect class="day" width="8" height="8" x="-5" y="10" fill="#c6e48b" data-count="11" data-date="2018-06-11"/>
+          <rect class="day" width="8" height="8" x="-5" y="20" fill="#7bc96f" data-count="18" data-date="2018-06-12"/>
+          <rect class="day" width="8" height="8" x="-5" y="30" fill="#c6e48b" data-count="2" data-date="2018-06-13"/>
+          <rect class="day" width="8" height="8" x="-5" y="40" fill="#c6e48b" data-count="1" data-date="2018-06-14"/>
+          <rect class="day" width="8" height="8" x="-5" y="50" fill="#196127" data-count="40" data-date="2018-06-15"/>
+          <rect class="day" width="8" height="8" x="-5" y="60" fill="#c6e48b" data-count="11" data-date="2018-06-16"/>
+      </g>
+      <g transform="translate(187, 0)">
+          <rect class="day" width="8" height="8" x="-6" y="0" fill="#c6e48b" data-count="3" data-date="2018-06-17"/>
+          <rect class="day" width="8" height="8" x="-6" y="10" fill="#c6e48b" data-count="4" data-date="2018-06-18"/>
+          <rect class="day" width="8" height="8" x="-6" y="20" fill="#c6e48b" data-count="9" data-date="2018-06-19"/>
+          <rect class="day" width="8" height="8" x="-6" y="30" fill="#c6e48b" data-count="5" data-date="2018-06-20"/>
+          <rect class="day" width="8" height="8" x="-6" y="40" fill="#7bc96f" data-count="14" data-date="2018-06-21"/>
+          <rect class="day" width="8" height="8" x="-6" y="50" fill="#ebedf0" data-count="0" data-date="2018-06-22"/>
+          <rect class="day" width="8" height="8" x="-6" y="60" fill="#ebedf0" data-count="0" data-date="2018-06-23"/>
+      </g>
+      <g transform="translate(198, 0)">
+          <rect class="day" width="8" height="8" x="-7" y="0" fill="#ebedf0" data-count="0" data-date="2018-06-24"/>
+          <rect class="day" width="8" height="8" x="-7" y="10" fill="#ebedf0" data-count="0" data-date="2018-06-25"/>
+          <rect class="day" width="8" height="8" x="-7" y="20" fill="#c6e48b" data-count="7" data-date="2018-06-26"/>
+          <rect class="day" width="8" height="8" x="-7" y="30" fill="#196127" data-count="37" data-date="2018-06-27"/>
+          <rect class="day" width="8" height="8" x="-7" y="40" fill="#c6e48b" data-count="6" data-date="2018-06-28"/>
+          <rect class="day" width="8" height="8" x="-7" y="50" fill="#c6e48b" data-count="5" data-date="2018-06-29"/>
+          <rect class="day" width="8" height="8" x="-7" y="60" fill="#c6e48b" data-count="1" data-date="2018-06-30"/>
+      </g>
+      <g transform="translate(209, 0)">
+          <rect class="day" width="8" height="8" x="-8" y="0" fill="#ebedf0" data-count="0" data-date="2018-07-01"/>
+          <rect class="day" width="8" height="8" x="-8" y="10" fill="#c6e48b" data-count="2" data-date="2018-07-02"/>
+          <rect class="day" width="8" height="8" x="-8" y="20" fill="#c6e48b" data-count="1" data-date="2018-07-03"/>
+          <rect class="day" width="8" height="8" x="-8" y="30" fill="#c6e48b" data-count="2" data-date="2018-07-04"/>
+          <rect class="day" width="8" height="8" x="-8" y="40" fill="#c6e48b" data-count="1" data-date="2018-07-05"/>
+          <rect class="day" width="8" height="8" x="-8" y="50" fill="#c6e48b" data-count="1" data-date="2018-07-06"/>
+          <rect class="day" width="8" height="8" x="-8" y="60" fill="#ebedf0" data-count="0" data-date="2018-07-07"/>
+      </g>
+      <g transform="translate(220, 0)">
+          <rect class="day" width="8" height="8" x="-9" y="0" fill="#c6e48b" data-count="1" data-date="2018-07-08"/>
+          <rect class="day" width="8" height="8" x="-9" y="10" fill="#c6e48b" data-count="4" data-date="2018-07-09"/>
+          <rect class="day" width="8" height="8" x="-9" y="20" fill="#c6e48b" data-count="1" data-date="2018-07-10"/>
+          <rect class="day" width="8" height="8" x="-9" y="30" fill="#c6e48b" data-count="3" data-date="2018-07-11"/>
+          <rect class="day" width="8" height="8" x="-9" y="40" fill="#c6e48b" data-count="9" data-date="2018-07-12"/>
+          <rect class="day" width="8" height="8" x="-9" y="50" fill="#ebedf0" data-count="0" data-date="2018-07-13"/>
+          <rect class="day" width="8" height="8" x="-9" y="60" fill="#ebedf0" data-count="0" data-date="2018-07-14"/>
+      </g>
+      <g transform="translate(231, 0)">
+          <rect class="day" width="8" height="8" x="-10" y="0" fill="#ebedf0" data-count="0" data-date="2018-07-15"/>
+          <rect class="day" width="8" height="8" x="-10" y="10" fill="#c6e48b" data-count="5" data-date="2018-07-16"/>
+          <rect class="day" width="8" height="8" x="-10" y="20" fill="#c6e48b" data-count="4" data-date="2018-07-17"/>
+          <rect class="day" width="8" height="8" x="-10" y="30" fill="#c6e48b" data-count="7" data-date="2018-07-18"/>
+          <rect class="day" width="8" height="8" x="-10" y="40" fill="#c6e48b" data-count="5" data-date="2018-07-19"/>
+          <rect class="day" width="8" height="8" x="-10" y="50" fill="#c6e48b" data-count="3" data-date="2018-07-20"/>
+          <rect class="day" width="8" height="8" x="-10" y="60" fill="#c6e48b" data-count="1" data-date="2018-07-21"/>
+      </g>
+      <g transform="translate(242, 0)">
+          <rect class="day" width="8" height="8" x="-11" y="0" fill="#c6e48b" data-count="1" data-date="2018-07-22"/>
+          <rect class="day" width="8" height="8" x="-11" y="10" fill="#c6e48b" data-count="2" data-date="2018-07-23"/>
+          <rect class="day" width="8" height="8" x="-11" y="20" fill="#196127" data-count="40" data-date="2018-07-24"/>
+          <rect class="day" width="8" height="8" x="-11" y="30" fill="#c6e48b" data-count="9" data-date="2018-07-25"/>
+          <rect class="day" width="8" height="8" x="-11" y="40" fill="#c6e48b" data-count="4" data-date="2018-07-26"/>
+          <rect class="day" width="8" height="8" x="-11" y="50" fill="#c6e48b" data-count="4" data-date="2018-07-27"/>
+          <rect class="day" width="8" height="8" x="-11" y="60" fill="#c6e48b" data-count="5" data-date="2018-07-28"/>
+      </g>
+      <g transform="translate(253, 0)">
+          <rect class="day" width="8" height="8" x="-12" y="0" fill="#7bc96f" data-count="12" data-date="2018-07-29"/>
+          <rect class="day" width="8" height="8" x="-12" y="10" fill="#7bc96f" data-count="13" data-date="2018-07-30"/>
+          <rect class="day" width="8" height="8" x="-12" y="20" fill="#c6e48b" data-count="6" data-date="2018-07-31"/>
+          <rect class="day" width="8" height="8" x="-12" y="30" fill="#c6e48b" data-count="5" data-date="2018-08-01"/>
+          <rect class="day" width="8" height="8" x="-12" y="40" fill="#7bc96f" data-count="12" data-date="2018-08-02"/>
+          <rect class="day" width="8" height="8" x="-12" y="50" fill="#c6e48b" data-count="9" data-date="2018-08-03"/>
+          <rect class="day" width="8" height="8" x="-12" y="60" fill="#c6e48b" data-count="1" data-date="2018-08-04"/>
+      </g>
+      <g transform="translate(264, 0)">
+          <rect class="day" width="8" height="8" x="-13" y="0" fill="#c6e48b" data-count="11" data-date="2018-08-05"/>
+          <rect class="day" width="8" height="8" x="-13" y="10" fill="#196127" data-count="44" data-date="2018-08-06"/>
+          <rect class="day" width="8" height="8" x="-13" y="20" fill="#7bc96f" data-count="12" data-date="2018-08-07"/>
+          <rect class="day" width="8" height="8" x="-13" y="30" fill="#ebedf0" data-count="0" data-date="2018-08-08"/>
+          <rect class="day" width="8" height="8" x="-13" y="40" fill="#c6e48b" data-count="6" data-date="2018-08-09"/>
+          <rect class="day" width="8" height="8" x="-13" y="50" fill="#ebedf0" data-count="0" data-date="2018-08-10"/>
+          <rect class="day" width="8" height="8" x="-13" y="60" fill="#ebedf0" data-count="0" data-date="2018-08-11"/>
+      </g>
+      <g transform="translate(275, 0)">
+          <rect class="day" width="8" height="8" x="-14" y="0" fill="#c6e48b" data-count="1" data-date="2018-08-12"/>
+          <rect class="day" width="8" height="8" x="-14" y="10" fill="#ebedf0" data-count="0" data-date="2018-08-13"/>
+          <rect class="day" width="8" height="8" x="-14" y="20" fill="#ebedf0" data-count="0" data-date="2018-08-14"/>
+          <rect class="day" width="8" height="8" x="-14" y="30" fill="#ebedf0" data-count="0" data-date="2018-08-15"/>
+          <rect class="day" width="8" height="8" x="-14" y="40" fill="#c6e48b" data-count="7" data-date="2018-08-16"/>
+          <rect class="day" width="8" height="8" x="-14" y="50" fill="#c6e48b" data-count="5" data-date="2018-08-17"/>
+          <rect class="day" width="8" height="8" x="-14" y="60" fill="#c6e48b" data-count="4" data-date="2018-08-18"/>
+      </g>
+      <g transform="translate(286, 0)">
+          <rect class="day" width="8" height="8" x="-15" y="0" fill="#c6e48b" data-count="3" data-date="2018-08-19"/>
+          <rect class="day" width="8" height="8" x="-15" y="10" fill="#c6e48b" data-count="4" data-date="2018-08-20"/>
+          <rect class="day" width="8" height="8" x="-15" y="20" fill="#c6e48b" data-count="10" data-date="2018-08-21"/>
+          <rect class="day" width="8" height="8" x="-15" y="30" fill="#c6e48b" data-count="4" data-date="2018-08-22"/>
+          <rect class="day" width="8" height="8" x="-15" y="40" fill="#c6e48b" data-count="9" data-date="2018-08-23"/>
+          <rect class="day" width="8" height="8" x="-15" y="50" fill="#7bc96f" data-count="16" data-date="2018-08-24"/>
+          <rect class="day" width="8" height="8" x="-15" y="60" fill="#ebedf0" data-count="0" data-date="2018-08-25"/>
+      </g>
+      <g transform="translate(297, 0)">
+          <rect class="day" width="8" height="8" x="-16" y="0" fill="#c6e48b" data-count="1" data-date="2018-08-26"/>
+          <rect class="day" width="8" height="8" x="-16" y="10" fill="#c6e48b" data-count="7" data-date="2018-08-27"/>
+          <rect class="day" width="8" height="8" x="-16" y="20" fill="#c6e48b" data-count="6" data-date="2018-08-28"/>
+          <rect class="day" width="8" height="8" x="-16" y="30" fill="#c6e48b" data-count="7" data-date="2018-08-29"/>
+          <rect class="day" width="8" height="8" x="-16" y="40" fill="#c6e48b" data-count="7" data-date="2018-08-30"/>
+          <rect class="day" width="8" height="8" x="-16" y="50" fill="#ebedf0" data-count="0" data-date="2018-08-31"/>
+          <rect class="day" width="8" height="8" x="-16" y="60" fill="#c6e48b" data-count="5" data-date="2018-09-01"/>
+      </g>
+      <g transform="translate(308, 0)">
+          <rect class="day" width="8" height="8" x="-17" y="0" fill="#c6e48b" data-count="11" data-date="2018-09-02"/>
+          <rect class="day" width="8" height="8" x="-17" y="10" fill="#c6e48b" data-count="2" data-date="2018-09-03"/>
+          <rect class="day" width="8" height="8" x="-17" y="20" fill="#c6e48b" data-count="5" data-date="2018-09-04"/>
+          <rect class="day" width="8" height="8" x="-17" y="30" fill="#ebedf0" data-count="0" data-date="2018-09-05"/>
+          <rect class="day" width="8" height="8" x="-17" y="40" fill="#ebedf0" data-count="0" data-date="2018-09-06"/>
+          <rect class="day" width="8" height="8" x="-17" y="50" fill="#ebedf0" data-count="0" data-date="2018-09-07"/>
+          <rect class="day" width="8" height="8" x="-17" y="60" fill="#ebedf0" data-count="0" data-date="2018-09-08"/>
+      </g>
+      <g transform="translate(319, 0)">
+          <rect class="day" width="8" height="8" x="-18" y="0" fill="#ebedf0" data-count="0" data-date="2018-09-09"/>
+          <rect class="day" width="8" height="8" x="-18" y="10" fill="#ebedf0" data-count="0" data-date="2018-09-10"/>
+          <rect class="day" width="8" height="8" x="-18" y="20" fill="#c6e48b" data-count="4" data-date="2018-09-11"/>
+          <rect class="day" width="8" height="8" x="-18" y="30" fill="#c6e48b" data-count="1" data-date="2018-09-12"/>
+          <rect class="day" width="8" height="8" x="-18" y="40" fill="#c6e48b" data-count="6" data-date="2018-09-13"/>
+          <rect class="day" width="8" height="8" x="-18" y="50" fill="#c6e48b" data-count="6" data-date="2018-09-14"/>
+          <rect class="day" width="8" height="8" x="-18" y="60" fill="#c6e48b" data-count="3" data-date="2018-09-15"/>
+      </g>
+      <g transform="translate(330, 0)">
+          <rect class="day" width="8" height="8" x="-19" y="0" fill="#c6e48b" data-count="11" data-date="2018-09-16"/>
+          <rect class="day" width="8" height="8" x="-19" y="10" fill="#c6e48b" data-count="8" data-date="2018-09-17"/>
+          <rect class="day" width="8" height="8" x="-19" y="20" fill="#c6e48b" data-count="3" data-date="2018-09-18"/>
+          <rect class="day" width="8" height="8" x="-19" y="30" fill="#c6e48b" data-count="1" data-date="2018-09-19"/>
+          <rect class="day" width="8" height="8" x="-19" y="40" fill="#ebedf0" data-count="0" data-date="2018-09-20"/>
+          <rect class="day" width="8" height="8" x="-19" y="50" fill="#c6e48b" data-count="7" data-date="2018-09-21"/>
+          <rect class="day" width="8" height="8" x="-19" y="60" fill="#c6e48b" data-count="10" data-date="2018-09-22"/>
+      </g>
+      <g transform="translate(341, 0)">
+          <rect class="day" width="8" height="8" x="-20" y="0" fill="#ebedf0" data-count="0" data-date="2018-09-23"/>
+          <rect class="day" width="8" height="8" x="-20" y="10" fill="#c6e48b" data-count="5" data-date="2018-09-24"/>
+          <rect class="day" width="8" height="8" x="-20" y="20" fill="#c6e48b" data-count="6" data-date="2018-09-25"/>
+          <rect class="day" width="8" height="8" x="-20" y="30" fill="#c6e48b" data-count="2" data-date="2018-09-26"/>
+          <rect class="day" width="8" height="8" x="-20" y="40" fill="#c6e48b" data-count="8" data-date="2018-09-27"/>
+          <rect class="day" width="8" height="8" x="-20" y="50" fill="#c6e48b" data-count="5" data-date="2018-09-28"/>
+          <rect class="day" width="8" height="8" x="-20" y="60" fill="#ebedf0" data-count="0" data-date="2018-09-29"/>
+      </g>
+      <g transform="translate(352, 0)">
+          <rect class="day" width="8" height="8" x="-21" y="0" fill="#c6e48b" data-count="7" data-date="2018-09-30"/>
+          <rect class="day" width="8" height="8" x="-21" y="10" fill="#c6e48b" data-count="7" data-date="2018-10-01"/>
+          <rect class="day" width="8" height="8" x="-21" y="20" fill="#c6e48b" data-count="3" data-date="2018-10-02"/>
+          <rect class="day" width="8" height="8" x="-21" y="30" fill="#c6e48b" data-count="7" data-date="2018-10-03"/>
+          <rect class="day" width="8" height="8" x="-21" y="40" fill="#c6e48b" data-count="9" data-date="2018-10-04"/>
+          <rect class="day" width="8" height="8" x="-21" y="50" fill="#c6e48b" data-count="3" data-date="2018-10-05"/>
+          <rect class="day" width="8" height="8" x="-21" y="60" fill="#7bc96f" data-count="19" data-date="2018-10-06"/>
+      </g>
+      <g transform="translate(363, 0)">
+          <rect class="day" width="8" height="8" x="-22" y="0" fill="#7bc96f" data-count="14" data-date="2018-10-07"/>
+          <rect class="day" width="8" height="8" x="-22" y="10" fill="#c6e48b" data-count="5" data-date="2018-10-08"/>
+          <rect class="day" width="8" height="8" x="-22" y="20" fill="#c6e48b" data-count="6" data-date="2018-10-09"/>
+          <rect class="day" width="8" height="8" x="-22" y="30" fill="#c6e48b" data-count="4" data-date="2018-10-10"/>
+          <rect class="day" width="8" height="8" x="-22" y="40" fill="#c6e48b" data-count="7" data-date="2018-10-11"/>
+          <rect class="day" width="8" height="8" x="-22" y="50" fill="#c6e48b" data-count="8" data-date="2018-10-12"/>
+          <rect class="day" width="8" height="8" x="-22" y="60" fill="#c6e48b" data-count="3" data-date="2018-10-13"/>
+      </g>
+      <g transform="translate(374, 0)">
+          <rect class="day" width="8" height="8" x="-23" y="0" fill="#c6e48b" data-count="7" data-date="2018-10-14"/>
+          <rect class="day" width="8" height="8" x="-23" y="10" fill="#c6e48b" data-count="1" data-date="2018-10-15"/>
+          <rect class="day" width="8" height="8" x="-23" y="20" fill="#ebedf0" data-count="0" data-date="2018-10-16"/>
+          <rect class="day" width="8" height="8" x="-23" y="30" fill="#ebedf0" data-count="0" data-date="2018-10-17"/>
+          <rect class="day" width="8" height="8" x="-23" y="40" fill="#7bc96f" data-count="19" data-date="2018-10-18"/>
+          <rect class="day" width="8" height="8" x="-23" y="50" fill="#c6e48b" data-count="9" data-date="2018-10-19"/>
+          <rect class="day" width="8" height="8" x="-23" y="60" fill="#c6e48b" data-count="5" data-date="2018-10-20"/>
+      </g>
+      <g transform="translate(385, 0)">
+          <rect class="day" width="8" height="8" x="-24" y="0" fill="#c6e48b" data-count="4" data-date="2018-10-21"/>
+          <rect class="day" width="8" height="8" x="-24" y="10" fill="#c6e48b" data-count="6" data-date="2018-10-22"/>
+          <rect class="day" width="8" height="8" x="-24" y="20" fill="#c6e48b" data-count="10" data-date="2018-10-23"/>
+          <rect class="day" width="8" height="8" x="-24" y="30" fill="#c6e48b" data-count="4" data-date="2018-10-24"/>
+          <rect class="day" width="8" height="8" x="-24" y="40" fill="#c6e48b" data-count="2" data-date="2018-10-25"/>
+          <rect class="day" width="8" height="8" x="-24" y="50" fill="#c6e48b" data-count="2" data-date="2018-10-26"/>
+          <rect class="day" width="8" height="8" x="-24" y="60" fill="#7bc96f" data-count="15" data-date="2018-10-27"/>
+      </g>
+      <g transform="translate(396, 0)">
+          <rect class="day" width="8" height="8" x="-25" y="0" fill="#c6e48b" data-count="8" data-date="2018-10-28"/>
+          <rect class="day" width="8" height="8" x="-25" y="10" fill="#7bc96f" data-count="12" data-date="2018-10-29"/>
+          <rect class="day" width="8" height="8" x="-25" y="20" fill="#7bc96f" data-count="12" data-date="2018-10-30"/>
+          <rect class="day" width="8" height="8" x="-25" y="30" fill="#c6e48b" data-count="11" data-date="2018-10-31"/>
+          <rect class="day" width="8" height="8" x="-25" y="40" fill="#c6e48b" data-count="11" data-date="2018-11-01"/>
+          <rect class="day" width="8" height="8" x="-25" y="50" fill="#c6e48b" data-count="2" data-date="2018-11-02"/>
+          <rect class="day" width="8" height="8" x="-25" y="60" fill="#c6e48b" data-count="11" data-date="2018-11-03"/>
+      </g>
+      <g transform="translate(407, 0)">
+          <rect class="day" width="8" height="8" x="-26" y="0" fill="#c6e48b" data-count="9" data-date="2018-11-04"/>
+          <rect class="day" width="8" height="8" x="-26" y="10" fill="#c6e48b" data-count="8" data-date="2018-11-05"/>
+          <rect class="day" width="8" height="8" x="-26" y="20" fill="#c6e48b" data-count="3" data-date="2018-11-06"/>
+          <rect class="day" width="8" height="8" x="-26" y="30" fill="#c6e48b" data-count="11" data-date="2018-11-07"/>
+          <rect class="day" width="8" height="8" x="-26" y="40" fill="#ebedf0" data-count="0" data-date="2018-11-08"/>
+          <rect class="day" width="8" height="8" x="-26" y="50" fill="#c6e48b" data-count="2" data-date="2018-11-09"/>
+          <rect class="day" width="8" height="8" x="-26" y="60" fill="#7bc96f" data-count="19" data-date="2018-11-10"/>
+      </g>
+      <g transform="translate(418, 0)">
+          <rect class="day" width="8" height="8" x="-27" y="0" fill="#c6e48b" data-count="10" data-date="2018-11-11"/>
+          <rect class="day" width="8" height="8" x="-27" y="10" fill="#c6e48b" data-count="8" data-date="2018-11-12"/>
+          <rect class="day" width="8" height="8" x="-27" y="20" fill="#c6e48b" data-count="2" data-date="2018-11-13"/>
+          <rect class="day" width="8" height="8" x="-27" y="30" fill="#c6e48b" data-count="6" data-date="2018-11-14"/>
+          <rect class="day" width="8" height="8" x="-27" y="40" fill="#c6e48b" data-count="10" data-date="2018-11-15"/>
+          <rect class="day" width="8" height="8" x="-27" y="50" fill="#c6e48b" data-count="2" data-date="2018-11-16"/>
+          <rect class="day" width="8" height="8" x="-27" y="60" fill="#c6e48b" data-count="11" data-date="2018-11-17"/>
+      </g>
+      <g transform="translate(429, 0)">
+          <rect class="day" width="8" height="8" x="-28" y="0" fill="#c6e48b" data-count="8" data-date="2018-11-18"/>
+          <rect class="day" width="8" height="8" x="-28" y="10" fill="#c6e48b" data-count="4" data-date="2018-11-19"/>
+          <rect class="day" width="8" height="8" x="-28" y="20" fill="#c6e48b" data-count="1" data-date="2018-11-20"/>
+          <rect class="day" width="8" height="8" x="-28" y="30" fill="#c6e48b" data-count="8" data-date="2018-11-21"/>
+          <rect class="day" width="8" height="8" x="-28" y="40" fill="#c6e48b" data-count="5" data-date="2018-11-22"/>
+          <rect class="day" width="8" height="8" x="-28" y="50" fill="#c6e48b" data-count="1" data-date="2018-11-23"/>
+          <rect class="day" width="8" height="8" x="-28" y="60" fill="#ebedf0" data-count="0" data-date="2018-11-24"/>
+      </g>
+      <g transform="translate(440, 0)">
+          <rect class="day" width="8" height="8" x="-29" y="0" fill="#ebedf0" data-count="0" data-date="2018-11-25"/>
+          <rect class="day" width="8" height="8" x="-29" y="10" fill="#c6e48b" data-count="1" data-date="2018-11-26"/>
+          <rect class="day" width="8" height="8" x="-29" y="20" fill="#c6e48b" data-count="10" data-date="2018-11-27"/>
+          <rect class="day" width="8" height="8" x="-29" y="30" fill="#c6e48b" data-count="1" data-date="2018-11-28"/>
+          <rect class="day" width="8" height="8" x="-29" y="40" fill="#ebedf0" data-count="0" data-date="2018-11-29"/>
+          <rect class="day" width="8" height="8" x="-29" y="50" fill="#c6e48b" data-count="3" data-date="2018-11-30"/>
+          <rect class="day" width="8" height="8" x="-29" y="60" fill="#c6e48b" data-count="3" data-date="2018-12-01"/>
+      </g>
+      <g transform="translate(451, 0)">
+          <rect class="day" width="8" height="8" x="-30" y="0" fill="#c6e48b" data-count="11" data-date="2018-12-02"/>
+          <rect class="day" width="8" height="8" x="-30" y="10" fill="#c6e48b" data-count="9" data-date="2018-12-03"/>
+          <rect class="day" width="8" height="8" x="-30" y="20" fill="#c6e48b" data-count="10" data-date="2018-12-04"/>
+          <rect class="day" width="8" height="8" x="-30" y="30" fill="#c6e48b" data-count="7" data-date="2018-12-05"/>
+          <rect class="day" width="8" height="8" x="-30" y="40" fill="#c6e48b" data-count="4" data-date="2018-12-06"/>
+          <rect class="day" width="8" height="8" x="-30" y="50" fill="#7bc96f" data-count="14" data-date="2018-12-07"/>
+          <rect class="day" width="8" height="8" x="-30" y="60" fill="#c6e48b" data-count="10" data-date="2018-12-08"/>
+      </g>
+      <g transform="translate(462, 0)">
+          <rect class="day" width="8" height="8" x="-31" y="0" fill="#c6e48b" data-count="9" data-date="2018-12-09"/>
+          <rect class="day" width="8" height="8" x="-31" y="10" fill="#c6e48b" data-count="11" data-date="2018-12-10"/>
+          <rect class="day" width="8" height="8" x="-31" y="20" fill="#c6e48b" data-count="6" data-date="2018-12-11"/>
+          <rect class="day" width="8" height="8" x="-31" y="30" fill="#c6e48b" data-count="11" data-date="2018-12-12"/>
+          <rect class="day" width="8" height="8" x="-31" y="40" fill="#c6e48b" data-count="10" data-date="2018-12-13"/>
+          <rect class="day" width="8" height="8" x="-31" y="50" fill="#c6e48b" data-count="11" data-date="2018-12-14"/>
+          <rect class="day" width="8" height="8" x="-31" y="60" fill="#c6e48b" data-count="10" data-date="2018-12-15"/>
+      </g>
+      <g transform="translate(473, 0)">
+          <rect class="day" width="8" height="8" x="-32" y="0" fill="#c6e48b" data-count="1" data-date="2018-12-16"/>
+          <rect class="day" width="8" height="8" x="-32" y="10" fill="#c6e48b" data-count="5" data-date="2018-12-17"/>
+          <rect class="day" width="8" height="8" x="-32" y="20" fill="#c6e48b" data-count="3" data-date="2018-12-18"/>
+          <rect class="day" width="8" height="8" x="-32" y="30" fill="#c6e48b" data-count="2" data-date="2018-12-19"/>
+          <rect class="day" width="8" height="8" x="-32" y="40" fill="#ebedf0" data-count="0" data-date="2018-12-20"/>
+          <rect class="day" width="8" height="8" x="-32" y="50" fill="#c6e48b" data-count="1" data-date="2018-12-21"/>
+          <rect class="day" width="8" height="8" x="-32" y="60" fill="#c6e48b" data-count="3" data-date="2018-12-22"/>
+      </g>
+      <g transform="translate(484, 0)">
+          <rect class="day" width="8" height="8" x="-33" y="0" fill="#c6e48b" data-count="1" data-date="2018-12-23"/>
+          <rect class="day" width="8" height="8" x="-33" y="10" fill="#c6e48b" data-count="9" data-date="2018-12-24"/>
+          <rect class="day" width="8" height="8" x="-33" y="20" fill="#c6e48b" data-count="2" data-date="2018-12-25"/>
+          <rect class="day" width="8" height="8" x="-33" y="30" fill="#c6e48b" data-count="3" data-date="2018-12-26"/>
+          <rect class="day" width="8" height="8" x="-33" y="40" fill="#c6e48b" data-count="9" data-date="2018-12-27"/>
+          <rect class="day" width="8" height="8" x="-33" y="50" fill="#c6e48b" data-count="7" data-date="2018-12-28"/>
+          <rect class="day" width="8" height="8" x="-33" y="60" fill="#7bc96f" data-count="12" data-date="2018-12-29"/>
+      </g>
+      <g transform="translate(495, 0)">
+          <rect class="day" width="8" height="8" x="-34" y="0" fill="#c6e48b" data-count="5" data-date="2018-12-30"/>
+          <rect class="day" width="8" height="8" x="-34" y="10" fill="#c6e48b" data-count="2" data-date="2018-12-31"/>
+          <rect class="day" width="8" height="8" x="-34" y="20" fill="#ebedf0" data-count="0" data-date="2019-01-01"/>
+          <rect class="day" width="8" height="8" x="-34" y="30" fill="#ebedf0" data-count="0" data-date="2019-01-02"/>
+          <rect class="day" width="8" height="8" x="-34" y="40" fill="#c6e48b" data-count="2" data-date="2019-01-03"/>
+          <rect class="day" width="8" height="8" x="-34" y="50" fill="#c6e48b" data-count="2" data-date="2019-01-04"/>
+          <rect class="day" width="8" height="8" x="-34" y="60" fill="#ebedf0" data-count="0" data-date="2019-01-05"/>
+      </g>
+      <g transform="translate(506, 0)">
+          <rect class="day" width="8" height="8" x="-35" y="0" fill="#ebedf0" data-count="0" data-date="2019-01-06"/>
+          <rect class="day" width="8" height="8" x="-35" y="10" fill="#c6e48b" data-count="2" data-date="2019-01-07"/>
+          <rect class="day" width="8" height="8" x="-35" y="20" fill="#c6e48b" data-count="2" data-date="2019-01-08"/>
+          <rect class="day" width="8" height="8" x="-35" y="30" fill="#c6e48b" data-count="7" data-date="2019-01-09"/>
+          <rect class="day" width="8" height="8" x="-35" y="40" fill="#c6e48b" data-count="7" data-date="2019-01-10"/>
+          <rect class="day" width="8" height="8" x="-35" y="50" fill="#c6e48b" data-count="7" data-date="2019-01-11"/>
+          <rect class="day" width="8" height="8" x="-35" y="60" fill="#c6e48b" data-count="7" data-date="2019-01-12"/>
+      </g>
+      <g transform="translate(517, 0)">
+          <rect class="day" width="8" height="8" x="-36" y="0" fill="#ebedf0" data-count="0" data-date="2019-01-13"/>
+          <rect class="day" width="8" height="8" x="-36" y="10" fill="#239a3b" data-count="27" data-date="2019-01-14"/>
+          <rect class="day" width="8" height="8" x="-36" y="20" fill="#c6e48b" data-count="3" data-date="2019-01-15"/>
+          <rect class="day" width="8" height="8" x="-36" y="30" fill="#ebedf0" data-count="0" data-date="2019-01-16"/>
+          <rect class="day" width="8" height="8" x="-36" y="40" fill="#c6e48b" data-count="8" data-date="2019-01-17"/>
+          <rect class="day" width="8" height="8" x="-36" y="50" fill="#ebedf0" data-count="0" data-date="2019-01-18"/>
+          <rect class="day" width="8" height="8" x="-36" y="60" fill="#ebedf0" data-count="0" data-date="2019-01-19"/>
+      </g>
+      <g transform="translate(528, 0)">
+          <rect class="day" width="8" height="8" x="-37" y="0" fill="#c6e48b" data-count="1" data-date="2019-01-20"/>
+          <rect class="day" width="8" height="8" x="-37" y="10" fill="#c6e48b" data-count="6" data-date="2019-01-21"/>
+          <rect class="day" width="8" height="8" x="-37" y="20" fill="#c6e48b" data-count="3" data-date="2019-01-22"/>
+          <rect class="day" width="8" height="8" x="-37" y="30" fill="#c6e48b" data-count="8" data-date="2019-01-23"/>
+          <rect class="day" width="8" height="8" x="-37" y="40" fill="#c6e48b" data-count="1" data-date="2019-01-24"/>
+          <rect class="day" width="8" height="8" x="-37" y="50" fill="#ebedf0" data-count="0" data-date="2019-01-25"/>
+          <rect class="day" width="8" height="8" x="-37" y="60" fill="#c6e48b" data-count="3" data-date="2019-01-26"/>
+      </g>
+      <g transform="translate(539, 0)">
+          <rect class="day" width="8" height="8" x="-38" y="0" fill="#c6e48b" data-count="4" data-date="2019-01-27"/>
+          <rect class="day" width="8" height="8" x="-38" y="10" fill="#ebedf0" data-count="0" data-date="2019-01-28"/>
+          <rect class="day" width="8" height="8" x="-38" y="20" fill="#c6e48b" data-count="3" data-date="2019-01-29"/>
+          <rect class="day" width="8" height="8" x="-38" y="30" fill="#c6e48b" data-count="6" data-date="2019-01-30"/>
+          <rect class="day" width="8" height="8" x="-38" y="40" fill="#c6e48b" data-count="11" data-date="2019-01-31"/>
+          <rect class="day" width="8" height="8" x="-38" y="50" fill="#c6e48b" data-count="3" data-date="2019-02-01"/>
+          <rect class="day" width="8" height="8" x="-38" y="60" fill="#c6e48b" data-count="11" data-date="2019-02-02"/>
+      </g>
+      <g transform="translate(550, 0)">
+          <rect class="day" width="8" height="8" x="-39" y="0" fill="#c6e48b" data-count="1" data-date="2019-02-03"/>
+          <rect class="day" width="8" height="8" x="-39" y="10" fill="#c6e48b" data-count="6" data-date="2019-02-04"/>
+          <rect class="day" width="8" height="8" x="-39" y="20" fill="#c6e48b" data-count="2" data-date="2019-02-05"/>
+          <rect class="day" width="8" height="8" x="-39" y="30" fill="#7bc96f" data-count="15" data-date="2019-02-06"/>
+          <rect class="day" width="8" height="8" x="-39" y="40" fill="#c6e48b" data-count="2" data-date="2019-02-07"/>
+          <rect class="day" width="8" height="8" x="-39" y="50" fill="#c6e48b" data-count="10" data-date="2019-02-08"/>
+          <rect class="day" width="8" height="8" x="-39" y="60" fill="#c6e48b" data-count="11" data-date="2019-02-09"/>
+      </g>
+      <g transform="translate(561, 0)">
+          <rect class="day" width="8" height="8" x="-40" y="0" fill="#c6e48b" data-count="7" data-date="2019-02-10"/>
+          <rect class="day" width="8" height="8" x="-40" y="10" fill="#c6e48b" data-count="3" data-date="2019-02-11"/>
+          <rect class="day" width="8" height="8" x="-40" y="20" fill="#c6e48b" data-count="3" data-date="2019-02-12"/>
+          <rect class="day" width="8" height="8" x="-40" y="30" fill="#7bc96f" data-count="12" data-date="2019-02-13"/>
+          <rect class="day" width="8" height="8" x="-40" y="40" fill="#c6e48b" data-count="5" data-date="2019-02-14"/>
+          <rect class="day" width="8" height="8" x="-40" y="50" fill="#c6e48b" data-count="1" data-date="2019-02-15"/>
+          <rect class="day" width="8" height="8" x="-40" y="60" fill="#c6e48b" data-count="7" data-date="2019-02-16"/>
+      </g>
+      <g transform="translate(572, 0)">
+          <rect class="day" width="8" height="8" x="-41" y="0" fill="#c6e48b" data-count="3" data-date="2019-02-17"/>
+          <rect class="day" width="8" height="8" x="-41" y="10" fill="#c6e48b" data-count="5" data-date="2019-02-18"/>
+          <rect class="day" width="8" height="8" x="-41" y="20" fill="#c6e48b" data-count="7" data-date="2019-02-19"/>
+          <rect class="day" width="8" height="8" x="-41" y="30" fill="#c6e48b" data-count="3" data-date="2019-02-20"/>
+          <rect class="day" width="8" height="8" x="-41" y="40" fill="#c6e48b" data-count="4" data-date="2019-02-21"/>
+      </g>
+      <text x="11" y="-8" class="month">Feb</text>
+      <text x="31" y="-8" class="month">Mar</text>
+      <text x="71" y="-8" class="month">Apr</text>
+      <text x="121" y="-8" class="month">May</text>
+      <text x="161" y="-8" class="month">Jun</text>
+      <text x="201" y="-8" class="month">Jul</text>
+      <text x="251" y="-8" class="month">Aug</text>
+      <text x="291" y="-8" class="month">Sep</text>
+      <text x="341" y="-8" class="month">Oct</text>
+      <text x="381" y="-8" class="month">Nov</text>
+      <text x="421" y="-8" class="month">Dec</text>
+      <text x="471" y="-8" class="month">Jan</text>
+      <text x="511" y="-8" class="month">Feb</text>
+    <text text-anchor="start" class="wday" dx="-12" dy="8" style="display: none;">Sun</text>
+    <text text-anchor="start" class="wday" dx="-12" dy="17">Mon</text>
+    <text text-anchor="start" class="wday" dx="-12" dy="32" style="display: none;">Tue</text>
+    <text text-anchor="start" class="wday" dx="-12" dy="37">Wed</text>
+    <text text-anchor="start" class="wday" dx="-12" dy="57" style="display: none;">Thu</text>
+    <text text-anchor="start" class="wday" dx="-12" dy="57">Fri</text>
+    <text text-anchor="start" class="wday" dx="-12" dy="81" style="display: none;">Sat</text>
+</g></svg>
+
+      </div>
+      <div class="contrib-footer clearfix mt-1 mx-3 px-3 pb-1">
+        <div class="float-left text-gray">
+
+
+          <a href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile">
+            Learn how we count contributions</a>.
+        </div>
+        <div class="contrib-legend text-gray" title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches.">
+          Less
+          <ul class="legend">
+            <li style="background-color: #ebedf0"></li>
+              <li style="background-color: #c6e48b"></li>
+              <li style="background-color: #7bc96f"></li>
+              <li style="background-color: #239a3b"></li>
+              <li style="background-color: #196127"></li>
+          </ul>
+          More
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+    <div class="position-relative" id="user-activity-overview">
+      
+
+  <div class="Box mb-5 p-3 activity-overview-box border-top-0">
+    
+  <div class="js-org-filter-links-container">
+    <nav class="subnav mb-2 d-flex flex-wrap">
+
+        <a style="max-width: 181px;" class="js-org-filter-link f6 py-1 pr-2 pl-1 rounded-1 mr-2 mb-2 subnav-item css-truncate css-truncate-target " data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=jazz-lang&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="54859c26153f031b1e17aba8780bb07a51f8b5ac8d4862e2328d5643b526d5f5" data-hovercard-type="organization" data-hovercard-url="/orgs/jazz-lang/hovercard" href="/lpil?tab=overview&amp;org=jazz-lang">
+          <img class="avatar mr-1" alt="" height="20" width="20" src="https://avatars0.githubusercontent.com/u/46375466?s=60&amp;v=4" />
+          @jazz-lang
+</a>
+        <a style="max-width: 181px;" class="js-org-filter-link f6 py-1 pr-2 pl-1 rounded-1 mr-2 mb-2 subnav-item css-truncate css-truncate-target " data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=Slumbr&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="d29e570088a2b7369b306c5f7204d61419e9c376333cddd9bca2130489ac9bb8" data-hovercard-type="organization" data-hovercard-url="/orgs/Slumbr/hovercard" href="/lpil?tab=overview&amp;org=Slumbr">
+          <img class="avatar mr-1" alt="" height="20" width="20" src="https://avatars3.githubusercontent.com/u/44032714?s=60&amp;v=4" />
+          @Slumbr
+</a>
+        <a style="max-width: 181px;" class="js-org-filter-link f6 py-1 pr-2 pl-1 rounded-1 mr-2 mb-2 subnav-item css-truncate css-truncate-target " data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=duffelhq&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="169a7776d72738ca1c5cab7dedf2488df1ef064290420d9b48511cad99f510d7" data-hovercard-type="organization" data-hovercard-url="/orgs/duffelhq/hovercard" href="/lpil?tab=overview&amp;org=duffelhq">
+          <img class="avatar mr-1" alt="" height="20" width="20" src="https://avatars2.githubusercontent.com/u/33351166?s=60&amp;v=4" />
+          @duffelhq
+</a>
+        
+<div class="select-menu js-select-menu js-menu-container select-menu-modal-right">
+  <a href="#" class="f6 rounded-1 border js-menu-target link-gray no-underline mb-2 py-1 px-3 d-flex flex-items-center" aria-haspopup="true" aria-expanded="false">
+    <span style="height: 21px" class="d-inline-block"></span>
+    More
+  </a>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        <span class="select-menu-title">Organizations</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" autofocus class="form-control js-filterable-field js-navigation-enable" placeholder="Search by name" aria-label="Search by name" autocomplete="off" id="organization-name-field">
+        </div>
+      </div>
+
+      <div class="select-menu-list" role="menu">
+        <ul data-filterable-for="organization-name-field" data-filterable-type="substring">
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=xwax&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="7ee0a5e052007f9cd5bd0337e22998dfcd3186b3b633bb1db407ecf7af42d4bf" href="/lpil?tab=overview&amp;org=xwax">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@xwax" src="https://avatars0.githubusercontent.com/u/2582650?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@xwax</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=ruby&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="73b46f1cdc102eef91cf43e95a2a918635b68103c6cca5c146667a20eaa9a1bd" href="/lpil?tab=overview&amp;org=ruby">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@ruby" src="https://avatars2.githubusercontent.com/u/210414?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@ruby</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=elixir-plug&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="39c9d1e3df4b0f6044415b1735fb222b48b9a6882414c4ea0fb5793ddb406afc" href="/lpil?tab=overview&amp;org=elixir-plug">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@elixir-plug" src="https://avatars1.githubusercontent.com/u/30179070?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@elixir-plug</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=erlang&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="d77eb355810190d4ac3b74d151773e5642917650fbfa48c447fd8e7eef12abe6" href="/lpil?tab=overview&amp;org=erlang">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@erlang" src="https://avatars1.githubusercontent.com/u/153393?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@erlang</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=reevoo&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="bd66b18cea4085cd140bf7a96bd0abbed5667c827ad562c624c8f39afcff4c5b" href="/lpil?tab=overview&amp;org=reevoo">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@reevoo" src="https://avatars0.githubusercontent.com/u/112922?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@reevoo</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=facebook&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="151b6c02470628d96a5b546e63df4490df89126f8430a6622f8890a9d76c2fdd" href="/lpil?tab=overview&amp;org=facebook">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@facebook" src="https://avatars3.githubusercontent.com/u/69631?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@facebook</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=phusion&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="83f0ac822029a610a1e8ba228b01ba26b18e87f4422d0a3c714d5945c893b26f" href="/lpil?tab=overview&amp;org=phusion">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@phusion" src="https://avatars1.githubusercontent.com/u/830588?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@phusion</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=elixir-lang&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="0126fa55616dc4551c044bd1968ed8137323295858974e4f1b6129fbf98d420f" href="/lpil?tab=overview&amp;org=elixir-lang">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@elixir-lang" src="https://avatars2.githubusercontent.com/u/1481354?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@elixir-lang</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=WeAreROLI&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="0e2f3559dd059ed90fffe3ad62c2aa992dcab749540506c20f596e697692b643" href="/lpil?tab=overview&amp;org=WeAreROLI">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@WeAreROLI" src="https://avatars1.githubusercontent.com/u/3866938?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@WeAreROLI</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=CargoSense&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="cd959e8f68fe13722b7be5c61bbe3786af49ba00d30fb45f5d0a7536eb8c4490" href="/lpil?tab=overview&amp;org=CargoSense">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@CargoSense" src="https://avatars0.githubusercontent.com/u/3963271?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@CargoSense</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=appsignal&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="0eecf61dee41867832241d7fc28edea7b2db488f2f0d0b3688832175acc8f89a" href="/lpil?tab=overview&amp;org=appsignal">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@appsignal" src="https://avatars2.githubusercontent.com/u/3984134?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@appsignal</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=ZoneMinder&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="cae4d90ed560cd17eb024984e5b0f59d8d1cf4c43e55cddd3c6158d6326b4ef2" href="/lpil?tab=overview&amp;org=ZoneMinder">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@ZoneMinder" src="https://avatars2.githubusercontent.com/u/4137646?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@ZoneMinder</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=exercism&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="16f62f846f09e1cc98822f045a572741bfb807a6e5a28a88160f1b1327317d51" href="/lpil?tab=overview&amp;org=exercism">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@exercism" src="https://avatars1.githubusercontent.com/u/5624255?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@exercism</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=CultivateHQ&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="dc15c885f2b031d74e52e04133ac1491c7b9f0dfdb459ef13cdebfdd0bb7c801" href="/lpil?tab=overview&amp;org=CultivateHQ">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@CultivateHQ" src="https://avatars1.githubusercontent.com/u/8439061?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@CultivateHQ</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=RustAudio&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="76fe5c1a3151b05fba813daa1104df58424d55ac14f27aded4e3d2348e0612d8" href="/lpil?tab=overview&amp;org=RustAudio">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@RustAudio" src="https://avatars0.githubusercontent.com/u/9999738?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@RustAudio</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=SentiaAnalytics&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="bf73738a48c607fe420767a177ef08665ace304cce4a81598371e9f652c856a9" href="/lpil?tab=overview&amp;org=SentiaAnalytics">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@SentiaAnalytics" src="https://avatars3.githubusercontent.com/u/10233396?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@SentiaAnalytics</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=lancaster-university&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="0f4c9705d15449e980de368e5679f42007ce800da6b801a61f432621805a31d3" href="/lpil?tab=overview&amp;org=lancaster-university">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@lancaster-university" src="https://avatars1.githubusercontent.com/u/13766084?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@lancaster-university</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=honeycomb-tv&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="a77072a7ca11908cb341186ef0163d3ae52bd3f0cd55f886162f37b52813278a" href="/lpil?tab=overview&amp;org=honeycomb-tv">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@honeycomb-tv" src="https://avatars2.githubusercontent.com/u/14880343?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@honeycomb-tv</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=macrodactyl&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="809125eaf656f09c0553b17a77cba6c59ebb8431c344dc51019b18e592f1aacc" href="/lpil?tab=overview&amp;org=macrodactyl">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@macrodactyl" src="https://avatars0.githubusercontent.com/u/15818830?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@macrodactyl</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=asdf-vm&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="0605b8b82b3b9f24c55a956776dcbe8f1b6119d7e23441fe82fac85154cc259c" href="/lpil?tab=overview&amp;org=asdf-vm">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@asdf-vm" src="https://avatars2.githubusercontent.com/u/17869024?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@asdf-vm</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=kerl&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="f4a03ca807e99fbc195ffe6faaa3800442897303e4936ff5bd8a64703d86f5c4" href="/lpil?tab=overview&amp;org=kerl">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@kerl" src="https://avatars1.githubusercontent.com/u/18472926?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@kerl</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=elm&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="f473fafc6ec09a788210bdce13deb214f0351ccfb7d90fef9c393ac50e0b3958" href="/lpil?tab=overview&amp;org=elm">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@elm" src="https://avatars1.githubusercontent.com/u/20698192?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@elm</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=elli-lib&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="0748eb2aff97cb0a71af202ee3f4695d9dc3465c3e72f5e914a9e78da01b310b" href="/lpil?tab=overview&amp;org=elli-lib">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@elli-lib" src="https://avatars2.githubusercontent.com/u/20999221?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@elli-lib</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=alpaca-lang&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="1009d7cefef726594b41c62931f4b554dc1efd8ab14fec39cecf831bd19fd8c3" href="/lpil?tab=overview&amp;org=alpaca-lang">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@alpaca-lang" src="https://avatars1.githubusercontent.com/u/24440856?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@alpaca-lang</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=elm-explorations&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="7fa4f5b9cea6e00c3da9252a7eeb467672676a43e312d56c155b7d3b520624b6" href="/lpil?tab=overview&amp;org=elm-explorations">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@elm-explorations" src="https://avatars0.githubusercontent.com/u/26491321?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@elm-explorations</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=BuckleScript&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="67a0a056fcfbe8fba38632b1a9f8d3b24a719d2beb025266762f905e39b462ca" href="/lpil?tab=overview&amp;org=BuckleScript">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@BuckleScript" src="https://avatars2.githubusercontent.com/u/29257325?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@BuckleScript</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=elixir-editors&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="5193d61734c0fe72ee2428b65725cd4769bb5aaabc2598e08ffa25aff882024d" href="/lpil?tab=overview&amp;org=elixir-editors">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@elixir-editors" src="https://avatars3.githubusercontent.com/u/30567600?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@elixir-editors</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=team-balloonicorn&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="7e503c6acdd5b1c945270dcad60c4b42dd373d6ff871cf6eb6ca995d46f6d966" href="/lpil?tab=overview&amp;org=team-balloonicorn">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@team-balloonicorn" src="https://avatars1.githubusercontent.com/u/31619764?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@team-balloonicorn</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=ex-aws&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="d176eb472a1e8a59da91dac1943bf4cacd119a3e626673bbf8427e1789875997" href="/lpil?tab=overview&amp;org=ex-aws">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@ex-aws" src="https://avatars1.githubusercontent.com/u/32853421?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@ex-aws</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=golang-migrate&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="902d027d0c89ba16680dee29d3a82a91155cb77663a903ff548071678db1be30" href="/lpil?tab=overview&amp;org=golang-migrate">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@golang-migrate" src="https://avatars2.githubusercontent.com/u/35595841?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@golang-migrate</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=lalrpop&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="aa44f64916d4e66f89c23ab473588dd58d3fa587557221de6576fa9b9b5047fc" href="/lpil?tab=overview&amp;org=lalrpop">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@lalrpop" src="https://avatars3.githubusercontent.com/u/35799982?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@lalrpop</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=websockets-rs&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="188c0eb8989d065c535c258cbdd9b4fa77be16fb14c9b3d6d48331657645bb4c" href="/lpil?tab=overview&amp;org=websockets-rs">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@websockets-rs" src="https://avatars3.githubusercontent.com/u/40836418?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@websockets-rs</div>
+</a>            </li>
+            <li class="select-menu-item js-navigation-item wb-break-all p-0" role="menuitem" href="/">
+              <a class="js-navigation-open js-org-filter-link d-block" style="padding: 8px 8px 8px 30px;" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;ORGANIZATION&quot;,&quot;target_url&quot;:&quot;/lpil?tab=overview&amp;org=deoplete-plugins&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="df9685216c41a47da8ef90f21abb0d2219ec5fe5699bf4714bc94ce3c17d5979" href="/lpil?tab=overview&amp;org=deoplete-plugins">
+                <img class="select-menu-item-icon mr-2" height="20" width="20" alt="@deoplete-plugins" src="https://avatars2.githubusercontent.com/u/47318121?s=60&amp;v=4" />
+                <div class="select-menu-item-text css-truncate css-truncate-target" style="max-width: 95%;">@deoplete-plugins</div>
+</a>            </li>
+        </ul>
+
+        <div class="select-menu-no-results">No organizations found</div>
+      </div>
+
+      <div class="select-menu-loading-overlay anim-pulse"><svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg></div>
+    </div>
+  </div>
+</div>
+
+    </nav>
+  </div>
+
+
+      <div class="d-flex">
+        <div class="d-flex flex-column col-md-6 pr-5 float-left">
+          <h5 class="mb-3 text-normal">
+            Activity
+              overview
+          </h5>
+          
+  <div class="d-flex mb-2">
+    <svg class="octicon octicon-repo text-gray mt-1 mr-2 flex-shrink-0" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+    <div class="profile-break-word" data-repository-hovercards-enabled>
+      Contributed to
+        <a data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;REPOSITORY&quot;,&quot;target_url&quot;:&quot;/lpil/gleam&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="ae08be83a619b5b498593124dc3c8317173639b290b42d9963d98eee2971f978" data-hovercard-type="repository" data-hovercard-url="/lpil/gleam/hovercard" class="text-bold css-truncate css-truncate-target" style="max-width: 228px;" href="/lpil/gleam">lpil/gleam</a>,
+        <a data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;REPOSITORY&quot;,&quot;target_url&quot;:&quot;/lpil/learning&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="309fd361152ac1047be31a9a15ec4a54662772c6eeefcc5e899270ba579fb612" data-hovercard-type="repository" data-hovercard-url="/lpil/learning/hovercard" class="text-bold css-truncate css-truncate-target" style="max-width: 228px;" href="/lpil/learning">lpil/learning</a>,
+        <a data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.highlights_click&quot;,&quot;payload&quot;:{&quot;scoped_org_id&quot;:null,&quot;target_type&quot;:&quot;REPOSITORY&quot;,&quot;target_url&quot;:&quot;/honza/vim-snippets&quot;,&quot;client_id&quot;:&quot;403538797.1549465636&quot;,&quot;originating_request_id&quot;:&quot;DF37:3433:8ADFA6:10392D7:5C6F31A1&quot;,&quot;originating_url&quot;:&quot;https://github.com/users/lpil/contributions&quot;,&quot;user_id&quot;:16262154}}" data-hydro-click-hmac="df487d0dea329536ce5950125a5e4ab05bced2c2f4ed93415ef9b7ee0704cae0" data-hovercard-type="repository" data-hovercard-url="/honza/vim-snippets/hovercard" class="text-bold css-truncate css-truncate-target" style="max-width: 228px;" href="/honza/vim-snippets">honza/vim-snippets</a>
+        <span class="no-wrap">
+          and 5 other
+          repositories
+        </span>
+    </div>
+  </div>
+
+
+          
+
+        </div>
+
+        <div class="col-md-6 float-left pl-3 border-left">
+          
+  <div class="js-activity-overview-graph-container" data-percentages="{&quot;Commits&quot;:37,&quot;Code review&quot;:29,&quot;Pull requests&quot;:22,&quot;Issues&quot;:12}">
+    <img class="d-block mx-auto mt-4 js-activity-overview-graph-spinner" alt="Loading" src="https://github.githubassets.com/images/spinners/octocat-spinner-32.gif" width="32" height="32" />
+    <svg class="d-none mx-auto " xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <path class="js-highlight-blob" stroke-linejoin="round" fill="#7bc96f" stroke="#7bc96f" stroke-width="7" />
+        <line stroke-width="2" class="js-highlight-x-axis activity-overview-axis" />
+        <line stroke-width="2" class="js-highlight-y-axis activity-overview-axis" />
+        <ellipse class="activity-overview-point js-highlight-top-ellipse" rx="3" ry="3" stroke-width="2" fill="white" />
+        <ellipse class="activity-overview-point js-highlight-right-ellipse" rx="3" ry="3" stroke-width="2" fill="white" />
+        <ellipse class="activity-overview-point js-highlight-bottom-ellipse" rx="3" ry="3" stroke-width="2" fill="white" />
+        <ellipse class="activity-overview-point js-highlight-left-ellipse" rx="3" ry="3" stroke-width="2" fill="white" />
+        <text text-anchor="middle" class="activity-overview-percentage js-highlight-percent-top"></text>
+        <text text-anchor="middle" class="text-small activity-overview-label js-highlight-label-top"></text>
+        <text text-anchor="start" class="activity-overview-percentage js-highlight-percent-right"></text>
+        <text text-anchor="start" class="text-small activity-overview-label js-highlight-label-right"></text>
+        <text text-anchor="middle" class="activity-overview-percentage js-highlight-percent-bottom"></text>
+        <text text-anchor="middle" class="text-small activity-overview-label js-highlight-label-bottom"></text>
+        <text text-anchor="end" class="activity-overview-percentage js-highlight-percent-left"></text>
+        <text text-anchor="end" class="text-small activity-overview-label js-highlight-label-left"></text>
+      </g>
+    </svg>
+  </div>
+
+        </div>
+      </div>
+  </div>
+
+    </div>
+</div>

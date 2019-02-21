@@ -11,12 +11,17 @@
     <%- svg %>
     </div>
     <div>
+      <% if (today == longestStreakEnd) { %>
+
+      <h2>Your longest streak is your current streak, and so far it is <%- longestStreakLength %>  days</h2>
+      <h2>It started on <%- longestStreakStart %>  </h2>
+      <% } else { %>
       <h2>Your longest streak was <%- longestStreakLength %>  days</h2>
       <h2>It started on <%- longestStreakStart %>  and ended on <%- longestStreakEnd%></h2>
-    </div>
     <div>
-      
       <h2>Your current streak is <%- currentStreakLength %>  days</h2>
+    </div>
+       <%  } %>
     </div>
     <!-- TODO if streak is still going -->
   </body>

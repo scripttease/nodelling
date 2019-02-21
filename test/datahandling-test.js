@@ -1,5 +1,6 @@
 const fs  = require('fs');
 const chai = require('chai');
+const should = chai.should();
 const dataHandling = require('../data-handling').dataHandling;
 const extractData = require('../data-handling').extractData;
 const countStreak = require('../data-handling').countStreak;
@@ -7,7 +8,6 @@ const longestStreak = require('../data-handling').longestStreak;
 const streakDates = require('../data-handling').streakDates;
 const extractSVG = require('../data-handling').extractSVG;
 const userStats = require('../data-handling').userStats;
-const should = chai.should();
 
 describe("dataHandling", function() {
 
@@ -33,6 +33,16 @@ describe("dataHandling", function() {
     })
   });
 
+
+    before(function(done) {
+    //TODO make this relative
+    fs.readFile('/Users/al/projects/nodelling/test/user-test-data3.txt', 'utf8', function(err, fileContents,) {
+      if (err) throw(err);
+
+      data3 = fileContents;
+      done();
+    })
+  });
   it('should split data into array of lines', function() {
     const stringOut = dataHandling(data);
 
@@ -62,7 +72,22 @@ describe("dataHandling", function() {
       const stringOut = dataHandling(data);
       const objOut = extractData(stringOut);
       const streakArr = countStreak(objOut);
+      // console.log(streakArr);
       expect(streakArr.length).to.equal(24);
+
+    });
+  });
+
+
+  describe('#countStreak with data3', () => {
+    it('longest streak should be current streak', () => {
+
+      const stringOut = dataHandling(data3);
+      const objOut = extractData(stringOut);
+      const streakArr = countStreak(objOut);
+      // console.log(streakArr[streakArr.length -1]);
+      lastStr = streakArr[streakArr.length -1];
+      expect(lastStr.streak).to.equal(24);
 
     });
   });
@@ -125,4 +150,44 @@ describe("dataHandling", function() {
     });
   });
   
+
+//TODO test lpil data set 2!! where 2 same length longest streaks make sure it choses most recent.
+  describe('userStats with data2', function() {
+    it('should return all the data the view needs', function() {
+      
+      const stats = userStats(data2);
+      const days = stats.longestStreakLength;
+      const end = stats.longestStreakEnd;
+
+      const stringOut = dataHandling(data2);
+      const objOut = extractData(stringOut);
+      const streakArr = countStreak(objOut);
+      const longest = longestStreak(streakArr)
+      const str = streakDates(longest)
+      console.log(streakArr);
+      console.log(longest);
+      console.log(str);
+      expect(stats.longestStreakEnd).to.equal('Wed Feb 20 2019')
+    });
+  });
+
+  describe('userStats with data3', function() {
+    it('should return all the data the view needs', function() {
+      
+      const stats = userStats(data3);
+      const days = stats.longestStreakLength;
+      const end = stats.longestStreakEnd;
+
+      const stringOut = dataHandling(data3);
+      const objOut = extractData(stringOut);
+      const streakArr = countStreak(objOut);
+      const longest = longestStreak(streakArr)
+      const str = streakDates(longest)
+      // console.log(streakArr);
+      // console.log(longest);
+      // console.log(str);
+      expect(stats.longestStreakEnd).to.equal('Thu Feb 21 2019')
+    });
+  });
 });
+
