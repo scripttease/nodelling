@@ -6,6 +6,7 @@ const countStreak = require('../data-handling').countStreak;
 const longestStreak = require('../data-handling').longestStreak;
 const streakDates = require('../data-handling').streakDates;
 const extractSVG = require('../data-handling').extractSVG;
+const userStats = require('../data-handling').userStats;
 const should = chai.should();
 
 describe("dataHandling", function() {
@@ -88,7 +89,7 @@ describe("dataHandling", function() {
       const streakArr = countStreak(objOut);
       const longest = longestStreak(streakArr)
       const str = streakDates(longest)
-      expect(str).to.equal('In the last year, your longest streak was 4 days, logged from Sat Oct 06 2018 to Tue Oct 09 2018.')
+      expect(str.longestAsString).to.equal('In the last year, your longest streak was 4 days, logged from Sat Oct 06 2018 to Tue Oct 09 2018.')
     });
   });
 
@@ -100,7 +101,7 @@ describe("dataHandling", function() {
       const streakArr = countStreak(objOut);
       const longest = longestStreak(streakArr)
       const str = streakDates(longest)
-      expect(str).to.equal('In the last year, your longest streak was 23 days, logged from Mon Jul 16 2018 to Tue Aug 07 2018.')
+      expect(str.longestAsString).to.equal('In the last year, your longest streak was 23 days, logged from Mon Jul 16 2018 to Tue Aug 07 2018.')
     });
   });
 
@@ -113,5 +114,15 @@ describe("dataHandling", function() {
     });
   });
   
-
+  describe('userStats', function() {
+    it('should return all the data the view needs', function() {
+      
+      const stats = userStats(data);
+      const days = stats.longestStreakLength;
+      const end = stats.longestStreakEnd;
+      expect(days).to.equal(4);
+      expect(stats.longestStreakEnd).to.equal('Tue Oct 09 2018')
+    });
+  });
+  
 });

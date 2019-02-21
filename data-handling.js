@@ -79,8 +79,14 @@ function streakDates(longestStreakObj) {
   const edStr = ed.toDateString();
 
   const str =  'In the last year, your longest streak was ' + longestStreakObj.streak + ' days, logged from ' + sdStr + ' to ' + edStr + '.';
-  return str
-
+  // return str
+  //TODO also return surrent streak length in obj
+  return {
+    longestStreakLength: longestStreakObj.streak,
+    longestStreakStart: sdStr,
+    longestStreakEnd: edStr,
+    longestAsString: str
+  }
 }
 
 function extractSVG(txt) {
@@ -94,6 +100,30 @@ function extractSVG(txt) {
   }
 }
 
+function userStats(data) {
+
+  const stringOut = dataHandling(data);
+  const objOut = extractData(stringOut);
+  const streakArr = countStreak(objOut);
+  const lastStreak = streakArr[streakArr.length -1]
+  const lastStreakDays = lastStreak.streak
+
+  const longest = longestStreak(streakArr);
+  const longestDays = longest.streak
+
+  const str = streakDates(longest);
+  const svgObj = extractSVG(data);
+
+
+
+  return {
+    currentStreakLength: lastStreakDays, 
+    svg: svgObj.svg,
+    longestStreakLength: longestDays,
+    longestStreakStart: str.longestStreakStart,
+    longestStreakEnd: str.longestStreakEnd,
+  }
+}
 
 
 
@@ -137,4 +167,5 @@ module.exports.countStreak = countStreak;
 module.exports.longestStreak = longestStreak;
 module.exports.streakDates = streakDates;
 module.exports.extractSVG = extractSVG;
+module.exports.userStats = userStats;
 module.exports.louisCountStreak = louisCountStreak;

@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const app = express();
 const extractSVG = require('../data-handling').extractSVG;
+const userStats = require('../data-handling').userStats;
 
 
 // https://expressjs.com/en/starter/static-files.html
@@ -34,8 +35,10 @@ function getUserInfo(username) {
     // else
     throw new Error('Username Not Found')
   }).then(function(responseTxt) {
-    const svgObj = extractSVG(responseTxt)
-    return svgObj
+    // const svgObj = extractSVG(responseTxt)
+    // return svgObj
+    const statsObj = userStats(responseTxt);
+    return statsObj;
     // don't want to catch here because want to catch in the app to signify to user.
   });
 }
@@ -44,11 +47,11 @@ app.get("/streak/:username", function(req, res) {
   // see https://expressjs.com/en/api.html#req.params
   const username = req.params.username
   getUserInfo(username)
-    .then(svgObj => {
+    .then(statsObj => {
 
-      //this would also work, if you referrend in the ejs as svgOnly.svg... give it an object. or just refer to the part of the object you want 
-      // res.status(200).render("user-details", {svgOnly: svgObj} );
-      res.status(200).render("user-details", svgObj);
+      //this would also work, if you referrend in the ejs as viewData.svg... give it an object. or just refer to the part of the object you want. In the commented out version you are basically assigning your return from the fnobject that you have assigned
+      // res.status(200).render("user-details", {viewData: statsObj} );
+      res.status(200).render("user-details", statsObj);
     })
     .catch(error => {
       console.error(error);
