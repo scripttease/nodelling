@@ -101,10 +101,35 @@ describe("dataHandling", function() {
       // console.log(streakArr);
       const longest = longestStreak(streakArr)
       expect(longest.streak).to.equal(4);
-
-
     });
   });
+
+
+  describe('#longestStreak with curr and longest same', function() {
+    it(' should count consecutive streaks and return longest', () => {
+
+      const testStreakArray = [
+        { streak: 1, endDate: 1, startDate: 2 },
+        { streak: 2, endDate: 2, startDate: 3 },
+        { streak: 6, endDate: 3, startDate: 4 },
+        { streak: 1, endDate: 4, startDate: 5 },
+        { streak: 1, endDate: 5, startDate: 6 },
+        { streak: 1, endDate: 6, startDate: 7 },
+        { streak: 9, endDate: 7, startDate: 8 },
+        { streak: 1, endDate: 8, startDate: 9 },
+        { streak: 1, endDate: 9, startDate: 10 },
+        { streak: 6, endDate: 10, startDate: 11 },
+        { streak: 1, endDate: 11, startDate: 12 },
+        { streak: 1, endDate: 12, startDate: 13 },
+        { streak: 9, endDate: 13, startDate: 14 },
+      ]
+
+      const longest = longestStreak(testStreakArray)
+      expect(longest.streak).to.equal(9);
+      expect(longest.endDate).to.equal(13);
+    });
+  });
+
 
   describe('#streakDates', () => {
     it('should return date as string', function() {
@@ -151,7 +176,6 @@ describe("dataHandling", function() {
   });
   
 
-//TODO test lpil data set 2!! where 2 same length longest streaks make sure it choses most recent.
   describe('userStats with data2', function() {
     it('should return all the data the view needs', function() {
       
@@ -164,10 +188,10 @@ describe("dataHandling", function() {
       const streakArr = countStreak(objOut);
       const longest = longestStreak(streakArr)
       const str = streakDates(longest)
-      console.log(streakArr);
-      console.log(longest);
-      console.log(str);
-      expect(stats.longestStreakEnd).to.equal('Wed Feb 20 2019')
+      // console.log(streakArr);
+      // console.log(longest);
+      // console.log(str);
+      expect(stats.longestStreakEnd).to.equal('Tue Aug 07 2018')
     });
   });
 

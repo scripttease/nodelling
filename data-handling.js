@@ -29,6 +29,7 @@ function countStreak(kvMapObjArr) {
   // array
   // for each val in kvMapObjArr if commits <0 streaklength += 1
   // elseif (commits are 0) and if streaklength <1 push object into array containing val date, val streak length and calc val of start date (date - streak length in days) and set streaklength == 0 again
+  // console.log(kvMapObjArr);
   let streakObj;
   const length = kvMapObjArr.length;
   const streakArray = [];
@@ -71,7 +72,6 @@ function countStreak(kvMapObjArr) {
   return streakArray;
 }
 
-//TODO fix because fails if curr streak same as longest other streak (doesn't chose current)
 function longestStreak(streakArray) {
   // console.log(streakArray);
   const longestStreakObj = streakArray.reduce(function(acc, curr) {
