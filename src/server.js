@@ -88,7 +88,43 @@ app.get('api/streak/:username', function (req, res) {
     });
 });
 
+//TODO these do not paginate so will only collect say first 30 need to adjust the uris
 //api.github.com/users/scripttease/repos
+function getApiHeaders(username) {
+
+  return fetch("https://api.github.com/users/" + username + "/repos", {
+    headers: {
+      "Content-Type": "application/json"
+    },
+  }).then(function (response) {
+    // console.log(response)
+    if (response.ok) {
+      // console.log(response.headers);
+      return response.headers;
+    }
+    // else
+    const error = new Error(response.statusText)
+    error.response = response
+    throw error
+  });
+}
+
+function range(n) {
+  return [...Array(n).keys()];
+}
+
+function parseHeadersLink(headersLink) {
+  const regex = /(https:\/\/api\.github\.com\/user\/([0-9]+)\/repos\?page\=)([0-9]+)\>; rel\="last"/gm;
+  const matches = regex.exec(headersLink);
+  const numPages = parseInt(matches[3])
+  const array1 = range(numPages)
+  const array2 = array1.map(x => x + 1)
+  const res = array2.map(page => '' + matches[1] + page);
+  return res
+}
+
+
+
 function getApiInfo(username) {
   return fetch("https://api.github.com/users/" + username + "/repos", {
     headers: {
@@ -137,7 +173,13 @@ function getLangInfo(langUrisObj) {
 //TODO write the <script> for the index page that gets the username typed in by the user and then write the ajax that inserts their streak info into page (or render a new page)
 
 
-module.exports.app = app;
-module.exports.getUserInfo = getUserInfo;
-module.exports.getApiInfo = getApiInfo;
-module.exports.getLangInfo = getLangInfo;
+module.exports = { 
+  app, 
+  getUserInfo,
+  getLangUris, 
+  getLangInfo, 
+  getApiInfo,
+  getApiHeaders,
+  parseHeadersLink,
+  range,
+}

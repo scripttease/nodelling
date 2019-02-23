@@ -5,7 +5,7 @@ const request = require('supertest');
 const app = require('../src/server').app;
 const startServer = require('../start-server')
 
-const { getUserInfo, getApiInfo, getLangInfo, } = require('../src/server');
+const { getUserInfo, getApiInfo, getLangInfo, getApiHeaders, parseHeadersLink, range, } = require('../src/server');
 
 describe('GET /', function () {
   it('responds rendering index.ejs and status 200 ok', function (done) {
@@ -89,3 +89,31 @@ describe('getLangInfo', function() {
     })
   });
 });
+
+describe('getApiHeaders', () => {
+  it('gets link headers', () => {
+    const username = 'scripttease'
+    return getApiHeaders(username).then(function(headers) {
+      //see headers api
+      //https://developer.mozilla.org/en-US/docs/Web/API/Headers#Examples
+      const headersLink = headers.get('link')
+      expect(headersLink).to.equal('<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"')
+    })
+  })
+})
+
+describe('parseHeadersLink', () => {
+  it('should extract the number of pages and create the uris to get them all', () => {
+    const headersLink = '<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"'
+
+    const reposUris = parseHeadersLink(headersLink)
+    expect(reposUris).to.deep.equal(['https://api.github.com/user/16262154/repos?page=1','https://api.github.com/user/16262154/repos?page=2', 'https://api.github.com/user/16262154/repos?page=3'])
+  })
+})
+
+describe('range', () => {
+  it('should return a range', () => {
+    expect(range(6)).to.deep.equal([0,1,2,3,4,5])
+    
+  })
+})  
