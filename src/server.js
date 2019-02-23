@@ -21,7 +21,7 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.render("index");
 });
 
@@ -29,29 +29,33 @@ app.get("/", function(req, res) {
 function getUserInfo(username) {
   // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
   // https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
-  return fetch("https://github.com/users/" + username + "/contributions").then(function(response) {
-    if (response.ok) {
-      // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Checking_that_the_fetch_was_successful
-      return response.text();
-    }
-    // else
-    throw new Error('Username Not Found')
-  }).then(function(responseTxt) {
-    // const svgObj = extractSVG(responseTxt)
-    // return svgObj
-    const statsObj = userStats(responseTxt);
-    return statsObj;
-    // don't want to catch here because want to catch in the app to signify to user.
-  });
+  return fetch("https://github.com/users/" + username + "/contributions")
+    .then(function (response) {
+      if (response.ok) {
+        // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Checking_that_the_fetch_was_successful
+        return response.text();
+      }
+      // else
+      throw new Error('Username Not Found')
+    }).then(function (responseTxt) {
+      // const svgObj = extractSVG(responseTxt)
+      // return svgObj
+      const statsObj = userStats(responseTxt);
+      return statsObj;
+      // don't want to catch here because want to catch in the app to signify to user.
+    });
 }
 
-app.get("/streak/:username", function(req, res) {
+app.get("/streak/:username", function (req, res) {
   // see https://expressjs.com/en/api.html#req.params
   const username = req.params.username
   getUserInfo(username)
     .then(statsObj => {
       // console.log(statsObj);
-      //this would also work, if you referrend in the ejs as viewData.svg... give it an object. or just refer to the part of the object you want. In the commented out version you are basically assigning your return from the fnobject that you have assigned
+      // This would also work, if you referrend in the ejs as viewData.svg...
+      // give it an object. or just refer to the part of the object you want. In
+      // the commented out version you are basically assigning your return from
+      // the fnobject that you have assigned
       // res.status(200).render("user-details", {viewData: statsObj} );
       res.status(200).render("user-details", statsObj);
     })
@@ -65,8 +69,10 @@ app.get("/streak/:username", function(req, res) {
 
 
 
-// if i just want this to be an ajax req why does it need a route? (I dont think it can just be ajax because of CORS, i think it actually needs to re-render the whole page? )
-app.get('api/streak/:username', function(req, res) {
+// if i just want this to be an ajax req why does it need a route? (I dont think
+// it can just be ajax because of CORS, i think it actually needs to re-render
+// the whole page? )
+app.get('api/streak/:username', function (req, res) {
   // see https://expressjs.com/en/api.html#req.params
   getUserInfo(req.params.username)
     .then(userDetails => {
@@ -84,9 +90,11 @@ app.get('api/streak/:username', function(req, res) {
 
 //api.github.com/users/scripttease/repos
 function getApiInfo(username) {
-  return fetch("https://api.github.com/users/" + username + "/repos", { headers: {
-    "Content-Type": "application/json" },
-  }).then(function(response) {
+  return fetch("https://api.github.com/users/" + username + "/repos", {
+    headers: {
+      "Content-Type": "application/json"
+    },
+  }).then(function (response) {
     // console.log(response)
     if (response.ok) {
       return response.text();
@@ -95,7 +103,7 @@ function getApiInfo(username) {
     const error = new Error(response.statusText)
     error.response = response
     throw error
-  }).then(function(responseTxt) {
+  }).then(function (responseTxt) {
     const langObj = JSON.parse(responseTxt)
     // console.log(langObj)
     const langUrisObj = getLangUris(langObj);
@@ -106,25 +114,24 @@ function getApiInfo(username) {
 }
 
 function getLangInfo(langUrisObj) {
-  let langObj;
-  const langDetailArray = []
-  langUrisObj.forEach(uri => {
-    
-    return fetch(uri.langUri).then(function (response) {
-      console.log(response)
-      if (response.ok) {
-        return response.text();
-      }
-      // else
-      const error = new Error(response.statusText)
-      error.response = response
-      throw error
-    }).then(function (responseTxt) {
-      langObj = JSON.parse(responseTxt)
-      langDetailArray.push(langObj)
+  const promiseArray = langUrisObj.map(uri => {
+    console.log(uri.langUri)
+    return fetch(uri.langUri, { headers: { 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN } })
+      .then(function (response) {
+        console.log(response)
+        if (response.ok) {
+          return response.text();
+        }
+        // else
+        const error = new Error(response.statusText)
+        error.response = response
+        throw error
+
+      }).then(function (responseTxt) {
+        return JSON.parse(responseTxt)
       });
   });
-  return langDetailArray;
+  return Promise.all(promiseArray)
 }
 
 //TODO write the <script> for the index page that gets the username typed in by the user and then write the ajax that inserts their streak info into page (or render a new page)
@@ -134,4 +141,3 @@ module.exports.app = app;
 module.exports.getUserInfo = getUserInfo;
 module.exports.getApiInfo = getApiInfo;
 module.exports.getLangInfo = getLangInfo;
-

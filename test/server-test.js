@@ -5,7 +5,7 @@ const request = require('supertest');
 const app = require('../src/server').app;
 const startServer = require('../start-server')
 
-const { getUserInfo, getApiInfo, getLangInfo} = require('../src/server');
+const { getUserInfo, getApiInfo, getLangInfo, } = require('../src/server');
 
 describe('GET /', function () {
   it('responds rendering index.ejs and status 200 ok', function (done) {
@@ -81,8 +81,10 @@ describe('getLangInfo', function() {
    { langUri: 'https://api.github.com/repos/scripttease/domi-js/languages' }]
 
     return getLangInfo(uriArray).then(function(langObjArray) {
-      expect(langObjArray.length).to.equal(30)
+      expect(langObjArray.length).to.equal(6)
       expect(langObjArray[0]).to.equal({})
     })
+    // const arr = getLangInfo(uriArray);
+    // expect(arr).to.equal([])
   });
 });

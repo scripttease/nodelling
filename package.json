@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/*-test.js ./ --watch",
-    "start": "node ./start-server.js"
+    "test": "source .env && mocha ./test/*-test.js ./ --watch",
+    "start": "source .env && node ./start-server.js"
   },
   "author": "",
   "license": "ISC",

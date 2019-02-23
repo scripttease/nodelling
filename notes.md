@@ -59,7 +59,18 @@ to run the tests you should just need to do npm test but i have had to change th
 the api doesn't have streak data so we ended up using the source from this:
 "https://github.com/users/" + username + "/contributions" so for example if I use scripttease i get the data in test/user-test-data.html
 
+#### Env variables
 
+In order to authenticate your requests to the github api you will need to generate a personal authentification token (https://github.blog/2013-05-16-personal-api-tokens/)[https://github.blog/2013-05-16-personal-api-tokens/]
+
+Once you have this - to avoid the token being in version control, create a file called .env and copy the format of .env.example but replace "something" with your token.
+
+In order to use your npm start and npm test scripts with an environment variable from your posix compatible shell (ie your terminal) you would now normally need to run: 
+```shell
+source .env
+echo $GITHUB_API_TOKEN
+```
+to check the environment variable has been set BUT instead, in your package.json you can make sure that the scripts for test and start do this for you, which is done here.
 
 
 
@@ -67,3 +78,18 @@ the api doesn't have streak data so we ended up using the source from this:
 ### Node Repl
 type `node` into a shell (works if you have it gloabally installed)
 
+### curried with es6
+
+// const add = (x, y) => x + y
+
+// const curriedAdd = x => y => x + y
+
+// function add(x, y) {
+//   return x + y
+// }
+
+// function curriedAdd(x) {
+//   return function(y) {
+//     return x + y
+//   }
+// }
