@@ -31,5 +31,30 @@ function getLangUris(reposObj) {
     return langArray;
 }
 
+// takes array in format:
+//[ { JavaScript: 20345 }, 
+//  { Scala: 925, SuperCollider: 13 }, 
+//  { Scala: 130713 }, 
+//  { Elixir: 181476, Shell: 74 }, ... ] 
+// from getLangInfo
+// returns single object with all language
+//keys and the summed lines.
+function combineLangData(langObjArray) {
+
+    let summedLangObj = {};
+    langObjArray.forEach(repoObj => {
+        // Object.keys generates an array of keys
+        Object.keys(repoObj).forEach(langKey => {
+            // if key exists in return Object
+            // get its exisiting line value, or 0
+            const existingCount = summedLangObj[langKey] || 0;
+            const newCount = existingCount + repoObj[langKey]
+            // in js if key doesn't exist it is created
+            summedLangObj[langKey] = newCount
+        })
+    })
+    return summedLangObj
+}
 module.exports.getMainLang = getMainLang;
 module.exports.getLangUris = getLangUris;
+module.exports.combineLangData = combineLangData;

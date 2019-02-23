@@ -115,10 +115,10 @@ function getApiInfo(username) {
 
 function getLangInfo(langUrisObj) {
   const promiseArray = langUrisObj.map(uri => {
-    console.log(uri.langUri)
+    // console.log(uri.langUri)
     return fetch(uri.langUri, { headers: { 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN } })
       .then(function (response) {
-        console.log(response)
+        // console.log(response)
         if (response.ok) {
           return response.text();
         }

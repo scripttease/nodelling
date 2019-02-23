@@ -82,9 +82,10 @@ describe('getLangInfo', function() {
 
     return getLangInfo(uriArray).then(function(langObjArray) {
       expect(langObjArray.length).to.equal(6)
-      expect(langObjArray[0]).to.equal({})
+      // console.log(Object.keys(langObjArray[0]))
+      // console.log(langObjArray);
+      
+      expect(Object.keys(langObjArray[0])).to.deep.equal(['JavaScript'])
     })
-    // const arr = getLangInfo(uriArray);
-    // expect(arr).to.equal([])
   });
 });

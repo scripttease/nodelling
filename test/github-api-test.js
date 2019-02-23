@@ -9,7 +9,7 @@ const streakDates = require('../data-handling').streakDates;
 const extractSVG = require('../data-handling').extractSVG;
 const userStats = require('../data-handling').userStats;
 
-const { getMainLang, getLangUris } = require('../github-api');
+const { getMainLang, getLangUris, combineLangData,} = require('../github-api');
 
 // const { dataHandling, extractData, countStreak, longestStreak, streakDates, extractSVG, userStats } = require('../data-handling'); 
 
@@ -51,4 +51,21 @@ describe("getLanguages", function() {
     });
   })
 
+  describe('combineLangData', () => {
+    it('should taks arr of objs and return obj', () => {
+      const langObjArray = [ 
+        { JavaScript: 20345 },
+        { Scala: 925, SuperCollider: 13 },
+        { Scala: 130713 },
+        { Ruby: 15603 },
+        { Elixir: 181476, Shell: 74 },
+        { JavaScript: 1377, HTML: 335 } 
+      ]
+
+      const summedLangObj = combineLangData(langObjArray);
+
+      expect(summedLangObj['JavaScript']).to.equal(20345 + 1377)
+    })
+    
+  })
 })
