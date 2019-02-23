@@ -3,8 +3,9 @@
 // const request = require('request');
 const request = require('supertest');
 const app = require('../src/server').app;
-const getUserInfo = require('../src/server').getUserInfo;
 const startServer = require('../start-server')
+
+const { getUserInfo, getApiInfo, getLangInfo} = require('../src/server');
 
 describe('GET /', function () {
   it('responds rendering index.ejs and status 200 ok', function (done) {
@@ -52,5 +53,36 @@ describe('GET /streak/lpil', function () {
         done();
       });
 
+  });
+});
+
+
+describe('getApiInfo', function() {
+  it('should take username and return contribs json', function() {
+    const username = 'scripttease'
+    return getApiInfo(username).then(function(langUriObj) {
+      expect(langUriObj.length).to.equal(30)
+      expect(langUriObj[0].langUri).to.equal('https://api.github.com/repos/scripttease/connect-js/languages')
+    })
+  });
+});
+
+describe('getLangInfo', function() {
+  it('take the array of lang uris and fetch each and create a new object array ', function() {
+    const username = 'scripttease'
+    const uriArray = [ { langUri:
+      'https://api.github.com/repos/scripttease/connect-js/languages' },
+   { langUri:
+      'https://api.github.com/repos/scripttease/coursera-progfun/languages' },
+   { langUri:
+      'https://api.github.com/repos/scripttease/coursera-scala/languages' },
+   { langUri: 'https://api.github.com/repos/scripttease/crawley/languages' },
+   { langUri: 'https://api.github.com/repos/scripttease/dogma/languages' },
+   { langUri: 'https://api.github.com/repos/scripttease/domi-js/languages' }]
+
+    return getLangInfo(uriArray).then(function(langObjArray) {
+      expect(langObjArray.length).to.equal(30)
+      expect(langObjArray[0]).to.equal({})
+    })
   });
 });

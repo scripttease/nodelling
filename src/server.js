@@ -9,6 +9,7 @@ const app = express();
 const extractSVG = require('../data-handling').extractSVG;
 const userStats = require('../data-handling').userStats;
 
+const { getMainLang, getLangUris } = require('../github-api');
 
 // https://expressjs.com/en/starter/static-files.html
 // serve static files from dir 'public'
@@ -81,9 +82,56 @@ app.get('api/streak/:username', function(req, res) {
     });
 });
 
+//api.github.com/users/scripttease/repos
+function getApiInfo(username) {
+  return fetch("https://api.github.com/users/" + username + "/repos", { headers: {
+    "Content-Type": "application/json" },
+  }).then(function(response) {
+    // console.log(response)
+    if (response.ok) {
+      return response.text();
+    }
+    // else
+    const error = new Error(response.statusText)
+    error.response = response
+    throw error
+  }).then(function(responseTxt) {
+    const langObj = JSON.parse(responseTxt)
+    // console.log(langObj)
+    const langUrisObj = getLangUris(langObj);
+    // console.log(langUrisObj)
+    return langUrisObj;
+    // don't want to catch here because want to catch in the app to signify to user.
+  });
+}
+
+function getLangInfo(langUrisObj) {
+  let langObj;
+  const langDetailArray = []
+  langUrisObj.forEach(uri => {
+    
+    return fetch(uri.langUri).then(function (response) {
+      console.log(response)
+      if (response.ok) {
+        return response.text();
+      }
+      // else
+      const error = new Error(response.statusText)
+      error.response = response
+      throw error
+    }).then(function (responseTxt) {
+      langObj = JSON.parse(responseTxt)
+      langDetailArray.push(langObj)
+      });
+  });
+  return langDetailArray;
+}
+
 //TODO write the <script> for the index page that gets the username typed in by the user and then write the ajax that inserts their streak info into page (or render a new page)
 
 
 module.exports.app = app;
 module.exports.getUserInfo = getUserInfo;
+module.exports.getApiInfo = getApiInfo;
+module.exports.getLangInfo = getLangInfo;
 

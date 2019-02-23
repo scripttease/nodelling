@@ -33,7 +33,7 @@ describe("getLanguages", function() {
     it('should take data and return array of langs', () => {
         const reposObj = JSON.parse(apiData);
         const langArray = getMainLang(reposObj)
-        console.log(langArray)
+        // console.log(langArray)
         expect(langArray.length).to.equal(28)
         expect(langArray[1].lang).to.equal('Scala')
 
@@ -44,7 +44,7 @@ describe("getLanguages", function() {
     it('should take data and return array of langs uris', () => {
         const reposObj = JSON.parse(apiData);
         const langArray = getLangUris(reposObj)
-        console.log(langArray)
+        // console.log(langArray)
         expect(langArray.length).to.equal(30)
         expect(langArray[0].langUri).to.equal('https://api.github.com/repos/scripttease/connect-js/languages')
 

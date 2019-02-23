@@ -1,0 +1,49 @@
+[ { langUri:
+     'https://api.github.com/repos/scripttease/connect-js/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/coursera-progfun/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/coursera-scala/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/crawley/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/dogma/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/domi-js/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/dotfiles/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/elixir_bot/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/elixre/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/elm-against-humanity/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/ELSC/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/exercism/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/experiments/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/fpinscala/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/freecodecamp-backend/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/frontend-boilerplate/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/gems/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/generative-elm/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/git-streak/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/gleam/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/HappyGrapher/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/hello-heroku/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/intermed-algorithms/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/js-against-humanity/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/meet/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/node-tutorial/languages' },
+  { langUri:
+     'https://api.github.com/repos/scripttease/nodelling/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/noted/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/onfido/languages' },
+  { langUri: 'https://api.github.com/repos/scripttease/p5.js/languages' } ]
