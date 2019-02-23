@@ -9,7 +9,7 @@ const app = express();
 const extractSVG = require('../data-handling').extractSVG;
 const userStats = require('../data-handling').userStats;
 
-const { getMainLang, getLangUris } = require('../github-api');
+const { getMainLang, getLangUris, combineLangData, } = require('../github-api');
 
 // https://expressjs.com/en/starter/static-files.html
 // serve static files from dir 'public'
@@ -29,7 +29,12 @@ app.get("/", function (req, res) {
 function getUserInfo(username) {
   // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
   // https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
-  return fetch("https://github.com/users/" + username + "/contributions")
+  return fetch("https://github.com/users/" + username + "/contributions", {
+    headers: {
+      "Content-Type": "application/json",'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
+ 
+    },
+  })
     .then(function (response) {
       if (response.ok) {
         // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Checking_that_the_fetch_was_successful
@@ -94,13 +99,14 @@ function getApiHeaders(username) {
 
   return fetch("https://api.github.com/users/" + username + "/repos", {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
+ 
     },
   }).then(function (response) {
     // console.log(response)
     if (response.ok) {
       // console.log(response.headers);
-      return response.headers;
+      return response.headers.get('link');
     }
     // else
     const error = new Error(response.statusText)
@@ -123,12 +129,87 @@ function parseHeadersLink(headersLink) {
   return res
 }
 
+function doAllTheThings(username) {
+  return getApiHeaders(username)
+    .then(linkHeader => {
+      // console.log(linkHeader);
+      const reposUriArray = parseHeadersLink(linkHeader);
+      // console.log(reposUriArray);
+      const promiseArray = reposUriArray.map(uri => {
+        return getApiInfoUri(uri)
+      })
 
+      return Promise.all(promiseArray)
+    })
+    .then(nestedRepoLangArray => {
+      // console.log(nestedRepoLangArray);
+      const repoLangArray = nestedRepoLangArray.flat()
+
+      return getLangInfo(repoLangArray)
+    }).then(langArrayObj => {
+      // console.log(langArrayObj);
+
+      // return combineLangData(langArrayObj).then(langDataObj => {
+      //   console.log(langDataObj);
+      //   return(langDataObj)
+      // })
+      // console.log(combineLangData(langArrayObj));
+      return combineLangData(langArrayObj)
+   })
+}
+
+// function doAllTheThingsPseudocode(username) {
+//   return getApiHeaders(username)
+//     .then(getLangDataFromPages)
+//     .then(nestedLangData => nestedLangData.flat())
+//     .then(combineLangData)
+// }
+// const getLangDataFromPages = headers => {
+//   const pagesOfRepos = parseHeadersLink(header);
+//   const repos = pagesOfRepos.map(getPageOfRepos)
+//   return Promise.all(repos)
+// }
+
+// const getPageOfRepos = pageUri => {
+//   getApiInfoUri(page)
+//     .then(repos => Promise.all(repos.map(getLangInfo)))
+// }
+
+/*
+1. Look up how many pages of pagination there are (in headers)
+2. Construct pagination URIs from this info
+3. make a request to each URI to get repo info
+4. make a reques to for each repo to get languages
+5. count language stats for all repos together
+*/
+
+function getApiInfoUri(uri) {
+  return fetch(uri, { headers: {
+      "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
+    },
+  }).then(function (response) {
+    // console.log(response)
+    if (response.ok) {
+      return response.text();
+    }
+    // else
+    const error = new Error(response.statusText)
+    error.response = response
+    throw error
+  }).then(function (responseTxt) {
+    const langObj = JSON.parse(responseTxt)
+    // console.log(langObj)
+    const langUrisObj = getLangUris(langObj);
+    // console.log(langUrisObj)
+    return langUrisObj;
+    // don't want to catch here because want to catch in the app to signify to user.
+  });
+}
 
 function getApiInfo(username) {
   return fetch("https://api.github.com/users/" + username + "/repos", {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
     },
   }).then(function (response) {
     // console.log(response)
@@ -182,4 +263,6 @@ module.exports = {
   getApiHeaders,
   parseHeadersLink,
   range,
+  getApiInfoUri,
+  doAllTheThings,
 }

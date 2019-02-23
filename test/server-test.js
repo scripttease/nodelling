@@ -5,7 +5,7 @@ const request = require('supertest');
 const app = require('../src/server').app;
 const startServer = require('../start-server')
 
-const { getUserInfo, getApiInfo, getLangInfo, getApiHeaders, parseHeadersLink, range, } = require('../src/server');
+const { getUserInfo, getApiInfo, getLangInfo, getApiHeaders, parseHeadersLink, range, getApiInfoUri, doAllTheThings, } = require('../src/server');
 
 describe('GET /', function () {
   it('responds rendering index.ejs and status 200 ok', function (done) {
@@ -96,8 +96,8 @@ describe('getApiHeaders', () => {
     return getApiHeaders(username).then(function(headers) {
       //see headers api
       //https://developer.mozilla.org/en-US/docs/Web/API/Headers#Examples
-      const headersLink = headers.get('link')
-      expect(headersLink).to.equal('<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"')
+      // const headersLink = headers.get('link')
+      expect(headers).to.equal('<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"')
     })
   })
 })
@@ -116,4 +116,25 @@ describe('range', () => {
     expect(range(6)).to.deep.equal([0,1,2,3,4,5])
     
   })
+})  
+
+describe('getApiInfoUri', function() {
+  it('should take uri and return repos obj', function() {
+    const uri = 'https://api.github.com/user/16262154/repos?page=1'
+    return getApiInfoUri(uri).then(function(langUriObj) {
+      expect(langUriObj.length).to.equal(30)
+      expect(langUriObj[0].langUri).to.equal('https://api.github.com/repos/scripttease/connect-js/languages')
+    })
+  });
+});
+
+describe('doAllTheThings', () => {
+  it('should take a username and call 3 uris and get langUrisObj', () => {
+    const username = 'scripttease'
+    // const langUrisObj = doAllTheThings(username)
+    // expect(langUrisObj).to.deep.equal({})
+    return doAllTheThings(username).then(function(langUriObj) {
+      expect(langUriObj['JavaScript']).to.equal(325119)
+    })
+  }).timeout(5000)
 })  
