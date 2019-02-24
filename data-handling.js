@@ -193,12 +193,25 @@ function discardNoCommitDays(days) {
   }
 }
 
+function langDataSort(langDataObj) {
+  const dataSorted = Object.keys(langDataObj).sort((n1,n2) => langDataObj[n1]-langDataObj[n2]).map(key => [key, langDataObj[key]])
+  
+  console.log(dataSorted);
+  return dataSorted
+}
 
-module.exports.dataHandling = dataHandling;
-module.exports.extractData = extractData;
-module.exports.countStreak = countStreak;
-module.exports.longestStreak = longestStreak;
-module.exports.streakDates = streakDates;
-module.exports.extractSVG = extractSVG;
-module.exports.userStats = userStats;
-module.exports.louisCountStreak = louisCountStreak;
+  // var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
+  // keysSorted = Object.keys(list).sort(function(a,b){return list[a]-list[b]})
+  // console.log(keysSorted); 
+
+module.exports = {
+  dataHandling,
+  extractData,
+  countStreak,
+  longestStreak,
+  streakDates,
+  extractSVG,
+  userStats,
+  louisCountStreak,
+  langDataSort,
+}

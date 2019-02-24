@@ -1,13 +1,8 @@
 const fs  = require('fs');
 const chai = require('chai');
 const should = chai.should();
-const dataHandling = require('../data-handling').dataHandling;
-const extractData = require('../data-handling').extractData;
-const countStreak = require('../data-handling').countStreak;
-const longestStreak = require('../data-handling').longestStreak;
-const streakDates = require('../data-handling').streakDates;
-const extractSVG = require('../data-handling').extractSVG;
-const userStats = require('../data-handling').userStats;
+
+const { dataHandling, extractData, countStreak, longestStreak, streakDates, extractSVG, userStats, langDataSort, } = require('../data-handling')
 
 const { getLangUris, } = require('../github-api')
 
@@ -62,7 +57,7 @@ describe("dataHandling", function() {
     const langObj = JSON.parse(data4)
     // console.log(langObj)
     const langUrisObj = getLangUris(langObj);
-    console.log(langUrisObj)
+    // console.log(langUrisObj)
     expect(langUrisObj.length).to.equal(22)
   })
 
@@ -236,5 +231,32 @@ describe("dataHandling", function() {
       expect(stats.longestStreakEnd).to.equal('Thu Feb 21 2019')
     });
   });
+
+describe('langDataSort', () => {
+ it('should take a lang obj and process it', () => {
+   const langDataObj = { JavaScript: 317581,
+    Scala: 131638,
+    SuperCollider: 13,
+    Ruby: 333298,
+    HTML: 223061,
+    'Vim script': 78029,
+    Shell: 33143,
+    Elixir: 17939,
+    CSS: 119758,
+    Python: 6342896,
+    Groovy: 298,
+    Makefile: 2056,
+    HCL: 144,
+    Processing: 10744,
+    'Jupyter Notebook': 627,
+    C: 3972,
+    CoffeeScript: 844 }
+    const res = langDataSort(langDataObj)
+    // console.log(res);
+    expect(res[0][1]).to.equal(13)
+ }) 
+})
+
+
 });
 

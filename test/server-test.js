@@ -150,11 +150,12 @@ describe('getLanguageUriForRepo3', function() {
 })
 
 describe('doAllTheThings', () => {
-  it('should take a username and call 3 uris and get langUrisObj', () => {
+  xit('should take a username and call 3 uris and get langUrisObj', () => {
     const username = 'scripttease'
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})
     return doAllTheThings(username).then(function(langUriObj) {
+      // console.log(langUriObj);
       expect(langUriObj['SuperCollider']).to.equal(13)
     })
     // or timesout after 2s which is not enough
@@ -162,15 +163,13 @@ describe('doAllTheThings', () => {
 })  
 
 describe('doAllTheThings2', () => {
-  it('should take a username(2) and call 3 uris and get langUrisObj', () => {
+  xit('should take a username(2) and call 3 uris and get langUrisObj', () => {
     const username = 'lpil'
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})
     return doAllTheThings(username).then(function(langUriObj) {
-      console.log('the first thing');
       // console.log(langUriObj);
       expect(langUriObj['SuperCollider']).to.equal(32603)
-      console.log('the last thing ');
     })
     // or timesout after 2s which is not enough
   }).timeout(5000)
