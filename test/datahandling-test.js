@@ -9,6 +9,8 @@ const streakDates = require('../data-handling').streakDates;
 const extractSVG = require('../data-handling').extractSVG;
 const userStats = require('../data-handling').userStats;
 
+const { getLangUris, } = require('../github-api')
+
 describe("dataHandling", function() {
 
   before(function(done) {
@@ -33,7 +35,6 @@ describe("dataHandling", function() {
     })
   });
 
-
     before(function(done) {
     //TODO make this relative
     fs.readFile('/Users/al/projects/nodelling/test/user-test-data3.txt', 'utf8', function(err, fileContents,) {
@@ -43,6 +44,28 @@ describe("dataHandling", function() {
       done();
     })
   });
+
+    before(function(done) {
+    //TODO make this relative
+    fs.readFile('/Users/al/projects/nodelling/test/test-repo-data.txt', 'utf8', function(err, fileContents,) {
+      if (err) throw(err);
+
+      data4 = fileContents;
+      done();
+    })
+  });
+
+  // 22 because 8 are forks
+  it('should have 22 obj in data4', () => {
+    const data4test = data4
+
+    const langObj = JSON.parse(data4)
+    // console.log(langObj)
+    const langUrisObj = getLangUris(langObj);
+    console.log(langUrisObj)
+    expect(langUrisObj.length).to.equal(22)
+  })
+
   it('should split data into array of lines', function() {
     const stringOut = dataHandling(data);
 

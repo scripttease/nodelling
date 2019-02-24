@@ -5,7 +5,7 @@ const request = require('supertest');
 const app = require('../src/server').app;
 const startServer = require('../start-server')
 
-const { getUserInfo, getApiInfo, getLangInfo, getApiHeaders, parseHeadersLink, range, getApiInfoUri, doAllTheThings, } = require('../src/server');
+const { getUserInfo, getApiInfo, getLangInfo, getPaginationInfoFromHeader, getApiHeaders, paginatedUserRepoUris, range, getLanguageUriForRepo, doAllTheThings, } = require('../src/server');
 
 describe('GET /', function () {
   it('responds rendering index.ejs and status 200 ok', function (done) {
@@ -61,7 +61,7 @@ describe('getApiInfo', function() {
   it('should take username and return contribs json', function() {
     const username = 'scripttease'
     return getApiInfo(username).then(function(langUriObj) {
-      expect(langUriObj.length).to.equal(30)
+      expect(langUriObj.length).to.equal(22)
       expect(langUriObj[0].langUri).to.equal('https://api.github.com/repos/scripttease/connect-js/languages')
     })
   });
@@ -90,10 +90,10 @@ describe('getLangInfo', function() {
   });
 });
 
-describe('getApiHeaders', () => {
+describe('getPaginationInfoFromHeader', () => {
   it('gets link headers', () => {
     const username = 'scripttease'
-    return getApiHeaders(username).then(function(headers) {
+    return getPaginationInfoFromHeader(username).then(function(headers) {
       //see headers api
       //https://developer.mozilla.org/en-US/docs/Web/API/Headers#Examples
       // const headersLink = headers.get('link')
@@ -106,7 +106,7 @@ describe('parseHeadersLink', () => {
   it('should extract the number of pages and create the uris to get them all', () => {
     const headersLink = '<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"'
 
-    const reposUris = parseHeadersLink(headersLink)
+    const reposUris = paginatedUserRepoUris(headersLink)
     expect(reposUris).to.deep.equal(['https://api.github.com/user/16262154/repos?page=1','https://api.github.com/user/16262154/repos?page=2', 'https://api.github.com/user/16262154/repos?page=3'])
   })
 })
@@ -118,15 +118,36 @@ describe('range', () => {
   })
 })  
 
-describe('getApiInfoUri', function() {
+describe('getLanguageUriForRepo', function() {
   it('should take uri and return repos obj', function() {
     const uri = 'https://api.github.com/user/16262154/repos?page=1'
-    return getApiInfoUri(uri).then(function(langUriObj) {
-      expect(langUriObj.length).to.equal(30)
+    return getLanguageUriForRepo(uri).then(function(langUriObj) {
+      expect(langUriObj.length).to.equal(22)
       expect(langUriObj[0].langUri).to.equal('https://api.github.com/repos/scripttease/connect-js/languages')
+
     })
   });
 });
+
+describe('getLanguageUriForRepo2', function() {
+  it('should take uri2 and return repos obj', function() {
+    const uri2 = 'https://api.github.com/user/16262154/repos?page=2'
+    return getLanguageUriForRepo(uri2).then(function(langUriObj) {
+      expect(langUriObj.length).to.equal(27)
+      expect(langUriObj[0].langUri).to.equal('https://api.github.com/repos/scripttease/pontoon-js/languages')
+    })
+  });
+})
+
+// because is a fork
+describe('getLanguageUriForRepo3', function() {
+  it('should take uri3 and return repos obj', function() {
+    const uri3 = 'https://api.github.com/user/16262154/repos?page=3'
+    return getLanguageUriForRepo(uri3).then(function(langUriObj) {
+      expect(langUriObj.length).to.equal(0)
+    })
+  });
+})
 
 describe('doAllTheThings', () => {
   it('should take a username and call 3 uris and get langUrisObj', () => {
@@ -134,7 +155,23 @@ describe('doAllTheThings', () => {
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})
     return doAllTheThings(username).then(function(langUriObj) {
-      expect(langUriObj['JavaScript']).to.equal(325119)
+      expect(langUriObj['SuperCollider']).to.equal(13)
     })
+    // or timesout after 2s which is not enough
+  }).timeout(5000)
+})  
+
+describe('doAllTheThings2', () => {
+  it('should take a username(2) and call 3 uris and get langUrisObj', () => {
+    const username = 'lpil'
+    // const langUrisObj = doAllTheThings(username)
+    // expect(langUrisObj).to.deep.equal({})
+    return doAllTheThings(username).then(function(langUriObj) {
+      console.log('the first thing');
+      // console.log(langUriObj);
+      expect(langUriObj['SuperCollider']).to.equal(32603)
+      console.log('the last thing ');
+    })
+    // or timesout after 2s which is not enough
   }).timeout(5000)
 })  

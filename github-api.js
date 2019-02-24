@@ -21,7 +21,8 @@ function getLangUris(reposObj) {
     let langObj;
     const langArray = [];
     reposObj.forEach(function(obj, ind){
-        if (obj.languages_url) {
+        // add filter for fork here
+        if (obj.languages_url && !obj.fork) {
             langObj = {
                 langUri: obj.languages_url
             }
@@ -43,6 +44,7 @@ function combineLangData(langObjArray) {
 
     let summedLangObj = {};
     langObjArray.forEach(repoObj => {
+        // console.log(repoObj);
         // Object.keys generates an array of keys
         Object.keys(repoObj).forEach(langKey => {
             // if key exists in return Object

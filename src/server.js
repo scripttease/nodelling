@@ -95,7 +95,7 @@ app.get('api/streak/:username', function (req, res) {
 
 //TODO these do not paginate so will only collect say first 30 need to adjust the uris
 //api.github.com/users/scripttease/repos
-function getApiHeaders(username) {
+function getPaginationInfoFromHeader(username) {
 
   return fetch("https://api.github.com/users/" + username + "/repos", {
     headers: {
@@ -119,9 +119,9 @@ function range(n) {
   return [...Array(n).keys()];
 }
 
-function parseHeadersLink(headersLink) {
+function paginatedUserRepoUris(pagInfoFromHeader) {
   const regex = /(https:\/\/api\.github\.com\/user\/([0-9]+)\/repos\?page\=)([0-9]+)\>; rel\="last"/gm;
-  const matches = regex.exec(headersLink);
+  const matches = regex.exec(pagInfoFromHeader);
   const numPages = parseInt(matches[3])
   const array1 = range(numPages)
   const array2 = array1.map(x => x + 1)
@@ -130,13 +130,13 @@ function parseHeadersLink(headersLink) {
 }
 
 function doAllTheThings(username) {
-  return getApiHeaders(username)
-    .then(linkHeader => {
+  return getPaginationInfoFromHeader(username)
+    .then(headerInfo => {
       // console.log(linkHeader);
-      const reposUriArray = parseHeadersLink(linkHeader);
+      const reposUriArray = paginatedUserRepoUris(headerInfo);
       // console.log(reposUriArray);
       const promiseArray = reposUriArray.map(uri => {
-        return getApiInfoUri(uri)
+        return getLanguageUriForRepo(uri)
       })
 
       return Promise.all(promiseArray)
@@ -183,7 +183,11 @@ function doAllTheThings(username) {
 5. count language stats for all repos together
 */
 
-function getApiInfoUri(uri) {
+// takes uri for 1page of repos, returns object containing
+// the languages uri for each repo on the page
+//TODO IMPORTANT filter for forks - don't want forks clogging up your bytes of code
+// filter in the getLangUris?
+function getLanguageUriForRepo(uri) {
   return fetch(uri, { headers: {
       "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
     },
@@ -206,6 +210,7 @@ function getApiInfoUri(uri) {
   });
 }
 
+//no longer used
 function getApiInfo(username) {
   return fetch("https://api.github.com/users/" + username + "/repos", {
     headers: {
@@ -230,6 +235,9 @@ function getApiInfo(username) {
   });
 }
 
+// takes object containging many language uris
+// returns a promise of an array of the resulting
+// language object for each repo
 function getLangInfo(langUrisObj) {
   const promiseArray = langUrisObj.map(uri => {
     // console.log(uri.langUri)
@@ -260,9 +268,9 @@ module.exports = {
   getLangUris, 
   getLangInfo, 
   getApiInfo,
-  getApiHeaders,
-  parseHeadersLink,
+  getPaginationInfoFromHeader,
+  paginatedUserRepoUris,
   range,
-  getApiInfoUri,
+  getLanguageUriForRepo,
   doAllTheThings,
 }
