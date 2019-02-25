@@ -73,7 +73,7 @@ d3.select('.chart')
 
   .on("mouseover", function (d, i) {  // Create tooltip on mouseover
     const xPosition = barWidth + (i*barWidth)
-    const yPosition = chartHeight - scl(d.count)/2 + 40
+    const yPosition = chartHeight - scl(d.count)/2 + 90
 
     // Update the tooltip position and value
    // requires addition to html
@@ -119,41 +119,41 @@ const y = d3.scaleLinear()
   x.domain(xArray)
   y.domain([0, d3.max(data, function(d) { return d.count; })]);
 
+  // add axis label
 chart.append("g")
   .attr("transform", "translate(" + margin + "," + margin + ")")
-    .call(d3.axisLeft(y));
-    
+  .call(d3.axisLeft(y));
+
+// must do appends in correct order
+// see https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e
+  // text title for the x axis
+chart.append("text")
+  .attr("transform",
+    "translate(" + (width / 2) + " ," +
+    (height + margin + 80) + ")")
+  .style("text-anchor", "middle")
+  .style("font-family", "sans-serif")
+  .text("Language");
+
 chart.append("g")
-  .attr("transform", "translate(" + margin + "," + (height+ margin) + ")")
-    .call(d3.axisBottom(x))
-    // rotate axis lables
-    // see https://bl.ocks.org/d3noob/3c040800ff6457717cca586ae9547dbf
-    .selectAll("text")	
-    .style("text-anchor", "end")
-    .attr("dx", "-.8em")
-    .attr("dy", ".15em")
-    .attr("transform", "rotate(-65)");
+  .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
+  .call(d3.axisBottom(x))
+  // rotate axis lables
+  // see https://bl.ocks.org/d3noob/3c040800ff6457717cca586ae9547dbf
+  .selectAll("text")
+  .style("text-anchor", "end")
+  .style("font-family", "sans-serif")
+  .attr("dx", "-.8em")
+  .attr("dy", ".15em")
+  .attr("transform", "rotate(-65)");
 
-// // Create Text Labels
-// svg.selectAll("text")
-//   .data(dataset)
-//   .enter()
-//   .append("text")
-//   .text(function (d) {
-//     return d; // Value in array is the text
-//   })
-//   .attr("x", function (d, i) {
-//     return xScale(i) + xScale.rangeBand() / 2;
-//   })
-//   .attr("y", function (d) {
-//     return canvas_height - yScale(d) + 15;
-//   })
-//   .attr("font-family", "sans-serif") // Change text font
-//   .attr("font-size", "14px") // Font size
-//   .attr("text-anchor", "middle") // Align to middle
-//   .attr("fill", "white");  // Color of font
-
-//             // Do something on text click
-
-
-// // 
+// text title for the y axis
+chart.append("text")
+.attr("transform", "rotate(-90)")
+.attr("y", 0 )
+.attr("x",0 - (height / 2)- margin)
+.attr("dy", "1em")
+.style("text-anchor", "middle")
+.style("font-family", "sans-serif")
+.style("color", "black")
+.text("Bytes");      
