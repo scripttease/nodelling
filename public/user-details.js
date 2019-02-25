@@ -22,6 +22,8 @@ const data = [{ language: 'SuperCollider', count: 13 },
 { language: 'Ruby', count: 333298 }]
 //{ language: 'Python', count: 6342896 } ]
 
+//TODO max count!!
+
 // scale should crate a fn that takes the datum 
 // val eg 5, divides it by the doain max then 
 // multiples it by the range max
@@ -32,12 +34,14 @@ const scl = d3.scaleLinear()
   .range([0, 400])
 
 // svg size
+//need margin for axes
+const margin = 90
 const width = 400
 const height = 400
 // create container with classname chart
 const svg = d3.select("body").append("svg")
-  .attr("width", width)
-  .attr("height", height)
+  .attr("width", width + 2*margin)
+  .attr("height", height + 2*margin)
   .attr("class", 'chart')
 // .append("g")
 
@@ -48,6 +52,7 @@ const barWidth = 15
 //space in between bars
 const barSpace = 0.5
 const chartHeight = 400
+const chartWidth = data.length*barWidth + data.length*barSpace
 
 d3.select('.chart')
   // selectall is like a foreach
@@ -59,8 +64,8 @@ d3.select('.chart')
   .attr("width", barWidth)
   // d === each data obj(elem) in array
   // i is its index
-  .attr("x", function (d, i) { return barWidth * i + barSpace * i; })
-  .attr("y", chartHeight)
+  .attr("x", function (d, i) { return barWidth * i + barSpace * i + margin})
+  .attr("y", chartHeight + margin)
 
   // tooltips must come before transition idk why
   // see http://bl.ocks.org/WilliamQLiu/0aab9d28ab1905ac2c8d
@@ -91,9 +96,43 @@ d3.select('.chart')
   .attr("height", 0)
   .transition()
   .delay(function (d, i) { return i * 100; })
-  .attr("y", function (d, i) { return chartHeight - scl(d.count); })
+  // because starts drawing rect at top
+  .attr("y", function (d, i) { return chartHeight + margin - scl(d.count); })
   .attr("height", function (d) { return scl(d.count); })
 
+ function myRange(n) {
+  return [...Array(n).keys()];
+}   
+
+const xArray = data.map(d => d.language)
+    // scale and axes
+    //see http://bl.ocks.org/flunky/1a8b1bb608c06736f1ed4015065cbbb0
+    //see https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e
+const chart = d3.select(".chart");
+const x = d3.scaleBand()
+	// .domain(myRange(data.length))
+    .range([0,chartWidth]);
+const y = d3.scaleLinear()
+	// .domain([0,333298])
+    .range([height,0]);
+  // Scale the range of the data
+  x.domain(xArray)
+  y.domain([0, d3.max(data, function(d) { return d.count; })]);
+
+chart.append("g")
+  .attr("transform", "translate(" + margin + "," + margin + ")")
+    .call(d3.axisLeft(y));
+    
+chart.append("g")
+  .attr("transform", "translate(" + margin + "," + (height+ margin) + ")")
+    .call(d3.axisBottom(x))
+    // rotate axis lables
+    // see https://bl.ocks.org/d3noob/3c040800ff6457717cca586ae9547dbf
+    .selectAll("text")	
+    .style("text-anchor", "end")
+    .attr("dx", "-.8em")
+    .attr("dy", ".15em")
+    .attr("transform", "rotate(-65)");
 
 // // Create Text Labels
 // svg.selectAll("text")
