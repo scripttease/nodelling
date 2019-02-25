@@ -39,7 +39,7 @@ const svg = d3.select("body").append("svg")
   .attr("width", width)
   .attr("height", height)
   .attr("class", 'chart')
-  .append("g")
+// .append("g")
 
 
 // bar width in px
@@ -61,7 +61,33 @@ d3.select('.chart')
   // i is its index
   .attr("x", function (d, i) { return barWidth * i + barSpace * i; })
   .attr("y", chartHeight)
-  // starting height
+
+  // tooltips must come before transition idk why
+  // see http://bl.ocks.org/WilliamQLiu/0aab9d28ab1905ac2c8d
+  .on('mouseover', function(d) { console.log('mouseover' + d.language); })
+
+  .on("mouseover", function (d, i) {  // Create tooltip on mouseover
+    const xPosition = barWidth + (i*barWidth)
+    const yPosition = chartHeight - scl(d.count)/2 + 40
+
+    // Update the tooltip position and value
+   // requires addition to html
+    d3.select("#tooltip")
+    // nb this really depends on what is on page
+    //already for the y position!
+      .style("left", xPosition + "px")
+      .style("top", yPosition + "px")
+      .select("#value")
+      .text(d.language + ' ' + d.count + ' bytes')
+
+    d3.select("#tooltip").classed("hidden", false);  // Show the tooltip
+  })
+  .on("mouseout", function () {  // 'Destroy' tooltip on mouseout
+    d3.select("#tooltip").classed("hidden", true);  // Hide the tooltip
+  })
+
+  // transition
+   //starting height
   .attr("height", 0)
   .transition()
   .delay(function (d, i) { return i * 100; })
@@ -69,3 +95,26 @@ d3.select('.chart')
   .attr("height", function (d) { return scl(d.count); })
 
 
+// // Create Text Labels
+// svg.selectAll("text")
+//   .data(dataset)
+//   .enter()
+//   .append("text")
+//   .text(function (d) {
+//     return d; // Value in array is the text
+//   })
+//   .attr("x", function (d, i) {
+//     return xScale(i) + xScale.rangeBand() / 2;
+//   })
+//   .attr("y", function (d) {
+//     return canvas_height - yScale(d) + 15;
+//   })
+//   .attr("font-family", "sans-serif") // Change text font
+//   .attr("font-size", "14px") // Font size
+//   .attr("text-anchor", "middle") // Align to middle
+//   .attr("fill", "white");  // Color of font
+
+//             // Do something on text click
+
+
+// // 
