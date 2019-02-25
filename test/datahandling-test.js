@@ -253,7 +253,7 @@ describe('langDataSort', () => {
     CoffeeScript: 844 }
     const res = langDataSort(langDataObj)
     // console.log(res);
-    expect(res[0][1]).to.equal(13)
+    expect(res[0][0]).to.equal('SuperCollider')
  }) 
 })
 

@@ -2,6 +2,7 @@ function dataHandling(txt) {
   // const txt = JSON.parse(json)
   const stng = txt.toString()
   const lines = stng.split("\n")
+  const d3 = require('d3')
   // first capture group is commits second is date
   return lines
 }
@@ -194,7 +195,9 @@ function discardNoCommitDays(days) {
 }
 
 function langDataSort(langDataObj) {
-  const dataSorted = Object.keys(langDataObj).sort((n1,n2) => langDataObj[n1]-langDataObj[n2]).map(key => [key, langDataObj[key]])
+  console.log(langDataObj);
+  const dataSorted = Object.keys(langDataObj).sort((n1,n2) => langDataObj[n1]-langDataObj[n2]).map(key => ({language: key, count: langDataObj[key]}))
+  // const dataSorted = langDataObj.sort((n1,n2) => langDataObj[n1]-langDataObj[n2])
   
   console.log(dataSorted);
   return dataSorted

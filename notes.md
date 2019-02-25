@@ -72,6 +72,9 @@ echo $GITHUB_API_TOKEN
 ```
 to check the environment variable has been set BUT instead, in your package.json you can make sure that the scripts for test and start do this for you, which is done here.
 
+### install d3 for graphs
+(https://github.com/d3/d3)[https://github.com/d3/d3]
+
 
 
 ## Useful Thinsg

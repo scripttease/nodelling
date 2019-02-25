@@ -1,0 +1,17 @@
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chart {
+  border-bottom: 1px solid #ccc;
+  display: block;
+  margin: 1em;
+}
+.chart .bar {
+  fill: #ccc;
+}

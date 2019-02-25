@@ -63,6 +63,7 @@ app.get("/streak/:username", function (req, res) {
       // the fnobject that you have assigned
       // res.status(200).render("user-details", {viewData: statsObj} );
       res.status(200).render("user-details", statsObj);
+      // need to make langDataSort available here too
     })
     .catch(error => {
       console.error(error);
