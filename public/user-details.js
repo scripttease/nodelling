@@ -56,7 +56,13 @@ function getLangData() {
 
 getLangData()
   .then(function (data) {
-    document.getElementById('loader').style.display = 'none'
+    const elems = document.getElementsByClassName('loader-hide')
+    for (var i = 0; i < elems.length; i++) {
+      elems[i].style.display = "none";
+   }
+    // document.getElementById('loader').style.display = 'none'
+    // document.getElementById('loader2').style.display = 'none'
+    // document.getElementById('loader3').style.display = 'none'
     d3graph(data)
   })
 
