@@ -55,7 +55,10 @@ function getLangData() {
 // data = window.languageData
 
 getLangData()
-  .then(data => d3graph(data));
+  .then(function (data) {
+    document.getElementById('loader').style.display = 'none'
+    d3graph(data)
+  })
 
 // const data = [{ language: 'SuperCollider', count: 13 },
 // { language: 'HCL', count: 144 },
@@ -94,6 +97,10 @@ function d3graph(data) {
     .range([0, height]);
 
   // create container with classname chart
+  // change this to already having .chart in the html
+  // that way can have a place holder 'crunching data' image
+  // const svg = d3.select("body").append("svg")
+  // this didnt work SO just create a placeholder div and hide it later
   const svg = d3.select("body").append("svg")
     .attr("width", width + 2 * margin)
     .attr("height", height + 2 * margin)
