@@ -4,6 +4,7 @@
 // don't forget you need css to see stuff
 
 // if there are already window onload events this js doesn't override them :)
+// dont actually need if script at end of body
 if(window.attachEvent) {
   window.attachEvent('onload', getLangData);
 } else {
@@ -39,6 +40,7 @@ function getLangData() {
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
+
   },
   //make sure to serialize your JSON body
   body: JSON.stringify({
@@ -50,13 +52,14 @@ function getLangData() {
   // response data as data for rest of script and 
   // replace the inner html of the loading circle
   // with the langauges graph.
-    console.log('the body>');
+    // console.log('the body>');
     console.log(body);
+    // return body
 })
 }
 
-// need a bundler like parcel to import 
-
+// if langdata was in the object passed to the get
+// route for this page then could do
 // console.log(window.languageData);
 // data = window.languageData
 

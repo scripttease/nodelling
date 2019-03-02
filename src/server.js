@@ -203,6 +203,7 @@ function flattenArray(arrays) {
 //TODO IMPORTANT filter for forks - don't want forks clogging up your bytes of code
 // filter in the getLangUris?
 function getLanguageUriForRepo(uri) {
+  console.log(uri);
   return fetch(uri, { headers: {
       "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
     },
@@ -230,6 +231,7 @@ function getApiInfo(username) {
   return fetch("https://api.github.com/users/" + username + "/repos", {
     headers: {
       "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
+
     },
   }).then(function (response) {
     // console.log(response)

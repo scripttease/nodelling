@@ -81,3 +81,5 @@ typings/
 
 # Secrets
 .env
+
+dist
