@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "source .env && mocha ./test/*-test.js ./ --watch",
-    "start": "source .env && node ./start-server.js"
+    "start": "source .env && node ./start-server.js",
+    "dev": "source .env && parcel ./public/user-details.js",
+    "build": "source .env && parcel build server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "array-flat-polyfill": "^1.0.0",
     "chai": "^4.2.0",
     "d3": "^5.9.1",
     "ejs": "^2.6.1",
@@ -20,6 +23,7 @@
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.11.0",
     "request": "^2.88.0",
     "supertest": "^3.4.2"
   }

@@ -2,9 +2,9 @@ const fs  = require('fs');
 const chai = require('chai');
 const should = chai.should();
 
-const { dataHandling, extractData, countStreak, longestStreak, streakDates, extractSVG, userStats, langDataSort, } = require('../data-handling')
+const { dataHandling, extractData, countStreak, longestStreak, streakDates, extractSVG, userStats, langDataSort, } = require('../src/data-handling')
 
-const { getLangUris, } = require('../github-api')
+const { getLangUris, } = require('../src/github-api')
 
 describe("dataHandling", function() {
 
@@ -59,6 +59,7 @@ describe("dataHandling", function() {
     const langUrisObj = getLangUris(langObj);
     // console.log(langUrisObj)
     expect(langUrisObj.length).to.equal(22)
+
   })
 
   it('should split data into array of lines', function() {
@@ -253,7 +254,7 @@ describe('langDataSort', () => {
     CoffeeScript: 844 }
     const res = langDataSort(langDataObj)
     // console.log(res);
-    expect(res[0][0]).to.equal('SuperCollider')
+    expect(res[0].language).to.equal('SuperCollider')
  }) 
 })
 

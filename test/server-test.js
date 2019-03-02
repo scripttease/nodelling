@@ -5,7 +5,7 @@ const request = require('supertest');
 const app = require('../src/server').app;
 const startServer = require('../start-server')
 
-const { getUserInfo, getApiInfo, getLangInfo, getPaginationInfoFromHeader, getApiHeaders, paginatedUserRepoUris, range, getLanguageUriForRepo, doAllTheThings, } = require('../src/server');
+const { getUserInfo, getApiInfo, getLangInfo, getPaginationInfoFromHeader, getApiHeaders, paginatedUserRepoUris, range, getLanguageUriForRepo, getUserLangStats, } = require('../src/server');
 
 describe('GET /', function () {
   it('responds rendering index.ejs and status 200 ok', function (done) {
@@ -58,7 +58,7 @@ describe('GET /streak/lpil', function () {
 
 
 describe('getApiInfo', function() {
-  it('should take username and return contribs json', function() {
+  xit('should take username and return contribs json', function() {
     const username = 'scripttease'
     return getApiInfo(username).then(function(langUriObj) {
       expect(langUriObj.length).to.equal(22)
@@ -68,7 +68,7 @@ describe('getApiInfo', function() {
 });
 
 describe('getLangInfo', function() {
-  it('take the array of lang uris and fetch each and create a new object array ', function() {
+  xit('take the array of lang uris and fetch each and create a new object array ', function() {
     const username = 'scripttease'
     const uriArray = [ { langUri:
       'https://api.github.com/repos/scripttease/connect-js/languages' },
@@ -87,7 +87,7 @@ describe('getLangInfo', function() {
       
       expect(Object.keys(langObjArray[0])).to.deep.equal(['JavaScript'])
     })
-  });
+  }).timeout(5000)
 });
 
 describe('getPaginationInfoFromHeader', () => {
@@ -99,7 +99,7 @@ describe('getPaginationInfoFromHeader', () => {
       // const headersLink = headers.get('link')
       expect(headers).to.equal('<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"')
     })
-  })
+  }).timeout(5000)
 })
 
 describe('parseHeadersLink', () => {
@@ -126,7 +126,7 @@ describe('getLanguageUriForRepo', function() {
       expect(langUriObj[0].langUri).to.equal('https://api.github.com/repos/scripttease/connect-js/languages')
 
     })
-  });
+  }).timeout(5000)
 });
 
 describe('getLanguageUriForRepo2', function() {
@@ -149,28 +149,28 @@ describe('getLanguageUriForRepo3', function() {
   });
 })
 
-describe('doAllTheThings', () => {
-  xit('should take a username and call 3 uris and get langUrisObj', () => {
+describe('getUserLangStats', () => {
+  it('should take a username and call 3 uris and get langUrisObj', () => {
     const username = 'scripttease'
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})
-    return doAllTheThings(username).then(function(langUriObj) {
+    return getUserLangStats(username).then(function(allsorteddata) {
       // console.log(langUriObj);
-      expect(langUriObj['SuperCollider']).to.equal(13)
+      expect(allsorteddata[0].language).to.equal('SuperCollider')
     })
     // or timesout after 2s which is not enough
-  }).timeout(5000)
+  }).timeout(8000)
 })  
 
-describe('doAllTheThings2', () => {
+describe('getUserLangStats 2', () => {
   xit('should take a username(2) and call 3 uris and get langUrisObj', () => {
     const username = 'lpil'
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})
-    return doAllTheThings(username).then(function(langUriObj) {
+    return getUserLangStats(username).then(function(langUriObj) {
       // console.log(langUriObj);
       expect(langUriObj['SuperCollider']).to.equal(32603)
     })
     // or timesout after 2s which is not enough
-  }).timeout(5000)
+  }).timeout(8000)
 })  

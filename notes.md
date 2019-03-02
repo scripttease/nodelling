@@ -75,6 +75,8 @@ to check the environment variable has been set BUT instead, in your package.json
 ### install d3 for graphs
 (https://github.com/d3/d3)[https://github.com/d3/d3]
 
+#AJAX to hit eternal api for lang stats 
+1. Add the on load script to d3.js so that the user sees their streak data and that the lang data is being fetched (like in github when it says we are cruching lastest data for you)
 
 
 ## Useful Thinsg

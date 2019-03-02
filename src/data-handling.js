@@ -80,6 +80,7 @@ function longestStreak(streakArray) {
   });
   // console.log(longestStreakObj);
   return longestStreakObj
+
 }
 
 function streakDates(longestStreakObj) {
@@ -130,6 +131,7 @@ function extractSVG(txt) {
   }
 }
 
+//TODO have langData passed into htis as 2nd variable and return languageStats as a property
 function userStats(data) {
 
   const stringData = dataHandling(data);
@@ -145,10 +147,7 @@ function userStats(data) {
   const svgObj = extractSVG(data);
 
   const todayAsStr = datesObj.todayAsString;
-
-
     // TODO if streak is still going, average number of commits, fave language this year, maybe even find good open source stuff to commit to depending on your prev commits, your fave lang and thte tabs like this is a good one for beginners to contribute to in open source stuff
-
   return {
     currentStreakLength: lastStreakDays, 
     svg: svgObj.svg,
@@ -157,7 +156,27 @@ function userStats(data) {
     longestStreakEnd: datesObj.longestStreakEnd,
     today: todayAsStr,
   }
+  //TODO this needs the langDataSort output data in too
 }
+
+
+function langDataSort(langDataObj) {
+  // console.log(langDataObj);
+  const dataSorted = Object.keys(langDataObj).sort((n1,n2) => langDataObj[n1]-langDataObj[n2]).map(key => ({language: key, count: langDataObj[key]}))
+  // const dataSorted = langDataObj.sort((n1,n2) => langDataObj[n1]-langDataObj[n2])
+  
+  // console.log(dataSorted);
+  return dataSorted
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,18 +213,6 @@ function discardNoCommitDays(days) {
   }
 }
 
-function langDataSort(langDataObj) {
-  console.log(langDataObj);
-  const dataSorted = Object.keys(langDataObj).sort((n1,n2) => langDataObj[n1]-langDataObj[n2]).map(key => ({language: key, count: langDataObj[key]}))
-  // const dataSorted = langDataObj.sort((n1,n2) => langDataObj[n1]-langDataObj[n2])
-  
-  console.log(dataSorted);
-  return dataSorted
-}
-
-  // var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
-  // keysSorted = Object.keys(list).sort(function(a,b){return list[a]-list[b]})
-  // console.log(keysSorted); 
 
 module.exports = {
   dataHandling,

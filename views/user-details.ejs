@@ -28,6 +28,12 @@
         <p><strong>Language</strong></p>
         <p><span id="value"></span></p>
       </div>
+      <script>
+        // TODO put langdatasorted in statsObj
+        // change this longestStreakLength to be
+        // languaegdatasorted
+        window.languageData = <%- JSON.stringify(longestStreakLength) %>;
+      </script>
       <script src="//d3js.org/d3.v5.min.js"></script>
       <script src='/user-details.js'></script>
       </body>

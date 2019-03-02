@@ -4,12 +4,27 @@ const express = require('express');
 const helmet = require('helmet');
 // HTTP request logger middleware for node.js
 const morgan = require('morgan');
+// Get the JSON body from requests
+const bodyParser = require('body-parser');
 const app = express();
 
-const extractSVG = require('../data-handling').extractSVG;
-const userStats = require('../data-handling').userStats;
+const { extractSVG, userStats, langDataSort, } = require('./data-handling')
 
-const { getMainLang, getLangUris, combineLangData, } = require('../github-api');
+const { getMainLang, getLangUris, combineLangData, } = require('./github-api');
+
+// this and app listen were in start server
+// const port = process.env.PORT || 1234;
+
+// // this module.parent allows test watcher to run by checking that not already listening, see http://www.marcusoft.net/2015/10/eaddrinuse-when-watching-tests-with-mocha-and-supertest.html
+// if(!module.parent){ 
+//   app.listen(port, function(err) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//   console.log('app listening on port ' + port);
+//     }
+// });
+// }
 
 // https://expressjs.com/en/starter/static-files.html
 // serve static files from dir 'public'
@@ -19,7 +34,7 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs');
 app.use(helmet());
 app.use(morgan("dev"));
-
+app.use(bodyParser.json())
 
 app.get("/", function (req, res) {
   res.render("index");
@@ -72,6 +87,20 @@ app.get("/streak/:username", function (req, res) {
     });
 });
 
+
+app.post('/streak/api/languages', function (req, res) {
+  const username = req.body.username
+  getUserLangStats(username)
+  // console.log(username)
+    .then(userLangStatsObj => {
+    // this is ajax
+    res.status(200).json(userLangStatsObj)
+})
+  .catch(error => {
+      console.error(error);
+      res.status(500).render("error-page");
+    });
+});
 
 
 
@@ -130,7 +159,14 @@ function paginatedUserRepoUris(pagInfoFromHeader) {
   return res
 }
 
-function doAllTheThings(username) {
+/*
+1. Look up how many pages of pagination there are (in headers)
+2. Construct pagination URIs from this info
+3. make a request to each URI to get repo info
+4. make a reques to for each repo to get languages
+5. count language stats for all repos together
+*/
+function getUserLangStats(username) {
   return getPaginationInfoFromHeader(username)
     .then(headerInfo => {
       // console.log(linkHeader);
@@ -143,46 +179,24 @@ function doAllTheThings(username) {
       return Promise.all(promiseArray)
     })
     .then(nestedRepoLangArray => {
-      // console.log(nestedRepoLangArray);
-      const repoLangArray = nestedRepoLangArray.flat()
+      const repoLangArray = flattenArray(nestedRepoLangArray);
 
       return getLangInfo(repoLangArray)
     }).then(langArrayObj => {
       // console.log(langArrayObj);
 
-      // return combineLangData(langArrayObj).then(langDataObj => {
-      //   console.log(langDataObj);
-      //   return(langDataObj)
-      // })
-      // console.log(combineLangData(langArrayObj));
       return combineLangData(langArrayObj)
+      //TODO data formatted for d3
+   }).then(combinedLangObj => {
+    const sortedD3Data = langDataSort(combinedLangObj)
+    // console.log(sortedD3Data);
+    return sortedD3Data
    })
 }
 
-// function doAllTheThingsPseudocode(username) {
-//   return getApiHeaders(username)
-//     .then(getLangDataFromPages)
-//     .then(nestedLangData => nestedLangData.flat())
-//     .then(combineLangData)
-// }
-// const getLangDataFromPages = headers => {
-//   const pagesOfRepos = parseHeadersLink(header);
-//   const repos = pagesOfRepos.map(getPageOfRepos)
-//   return Promise.all(repos)
-// }
-
-// const getPageOfRepos = pageUri => {
-//   getApiInfoUri(page)
-//     .then(repos => Promise.all(repos.map(getLangInfo)))
-// }
-
-/*
-1. Look up how many pages of pagination there are (in headers)
-2. Construct pagination URIs from this info
-3. make a request to each URI to get repo info
-4. make a reques to for each repo to get languages
-5. count language stats for all repos together
-*/
+function flattenArray(arrays) {
+  return Array.prototype.concat.apply(...arrays)
+}
 
 // takes uri for 1page of repos, returns object containing
 // the languages uri for each repo on the page
@@ -241,6 +255,7 @@ function getApiInfo(username) {
 // language object for each repo
 function getLangInfo(langUrisObj) {
   const promiseArray = langUrisObj.map(uri => {
+    // console.log("the uri is>")
     // console.log(uri.langUri)
     return fetch(uri.langUri, { headers: { 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN } })
       .then(function (response) {
@@ -249,6 +264,10 @@ function getLangInfo(langUrisObj) {
           return response.text();
         }
         // else
+        //TODO we dont actually want to throw here 
+        // we eithere want to retry the failed ones
+        // or skip them and as we map afterwards
+        // ignore the unsucecssful ones
         const error = new Error(response.statusText)
         error.response = response
         throw error
@@ -273,5 +292,5 @@ module.exports = {
   paginatedUserRepoUris,
   range,
   getLanguageUriForRepo,
-  doAllTheThings,
+  getUserLangStats,
 }

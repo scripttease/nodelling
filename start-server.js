@@ -1,11 +1,5 @@
 const app = require('./src/server.js').app;
-// var express = require('express');
-// var app = express();
 const port = process.env.PORT || 1234;
-
-// app.get('/', function(req, res) {
-//   res.send('Hello World!');
-// });
 
 // this module.parent allows test watcher to run by checking that not already listening, see http://www.marcusoft.net/2015/10/eaddrinuse-when-watching-tests-with-mocha-and-supertest.html
 if(!module.parent){ 

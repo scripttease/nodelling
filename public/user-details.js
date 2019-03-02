@@ -3,7 +3,63 @@
 //section coding a chart automatically
 // don't forget you need css to see stuff
 
+// if there are already window onload events this js doesn't override them :)
+if(window.attachEvent) {
+  window.attachEvent('onload', getLangData);
+} else {
+  if(window.onload) {
+      const curronload = window.onload;
+      const newonload = function(evt) {
+          curronload(evt);
+          getLangData(evt);
+      };
+      window.onload = newonload;
+  } else {
+      window.onload = getLangData;
+  }
+}
+
+// to get current url of page: 
+// window.location.href
+// function userFromUrl() {
+//   var url = window.location.href 
+//   var regex = /^.*?streak\/(.+)/
+//   return regex.exec(url)[1]
+// }
+
+
+function getLangData() {
+  const url = window.location.href 
+  const regex = /^.*?streak\/(.+)/
+  const username1 = regex.exec(url)[1]
+  console.log('this is username here ' + username1);
+  console.log(window.location.href);
+  return fetch('api/languages', {
+  method: "post",
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+  //make sure to serialize your JSON body
+  body: JSON.stringify({
+    username: username1
+  })
+})
+.then(res => res.json())
+.then((body) => { 
+  // response data as data for rest of script and 
+  // replace the inner html of the loading circle
+  // with the langauges graph.
+    console.log('the body>');
+    console.log(body);
+})
+}
+
 // need a bundler like parcel to import 
+
+// console.log(window.languageData);
+// data = window.languageData
+
 const data = [{ language: 'SuperCollider', count: 13 },
 { language: 'HCL', count: 144 },
 { language: 'Groovy', count: 298 },
@@ -19,25 +75,26 @@ const data = [{ language: 'SuperCollider', count: 13 },
 { language: 'Scala', count: 131638 },
 { language: 'HTML', count: 223061 },
 { language: 'JavaScript', count: 317581 },
-{ language: 'Ruby', count: 333298 }]
-//{ language: 'Python', count: 6342896 } ]
-
-//TODO max count!!
-
-// scale should crate a fn that takes the datum 
-// val eg 5, divides it by the doain max then 
-// multiples it by the range max
-const scl = d3.scaleLinear()
-  // actual data values range
-  .domain([0, 333298])
-  // range == width on page?
-  .range([0, 400])
+{ language: 'Ruby', count: 333298 },//]
+{ language: 'Python', count: 6342896 } ]
 
 // svg size
 //need margin for axes
 const margin = 90
 const width = 400
 const height = 400
+//TODO max count!!
+
+const maxDataCount = data.reduce((prev, curr) => (prev.count > curr.count) ? prev.count : curr.count)
+// scale should crate a fn that takes the datum 
+// val eg 5, divides it by the doain max then 
+// multiples it by the range max
+const scl = d3.scaleLinear()
+  // actual data values range
+  .domain([0, maxDataCount])
+  // range == width on page?
+  .range([0, height]);
+
 // create container with classname chart
 const svg = d3.select("body").append("svg")
   .attr("width", width + 2*margin)
@@ -52,6 +109,7 @@ const barWidth = 15
 //space in between bars
 const barSpace = 0.5
 const chartHeight = 400
+//TODO change barwidth if there are too many langs for a whole page width
 const chartWidth = data.length*barWidth + data.length*barSpace
 
 d3.select('.chart')
@@ -155,5 +213,4 @@ chart.append("text")
 .attr("dy", "1em")
 .style("text-anchor", "middle")
 .style("font-family", "sans-serif")
-.style("color", "black")
 .text("Bytes");      

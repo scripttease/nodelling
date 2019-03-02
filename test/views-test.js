@@ -2,13 +2,13 @@ const fs  = require('fs');
 const chai = require('chai');
 const should = chai.should();
 
-const dataHandling = require('../data-handling').dataHandling;
-const extractData = require('../data-handling').extractData;
-const countStreak = require('../data-handling').countStreak;
-const longestStreak = require('../data-handling').longestStreak;
-const streakDates = require('../data-handling').streakDates;
-const extractSVG = require('../data-handling').extractSVG;
-const userStats = require('../data-handling').userStats;
+const dataHandling = require('../src/data-handling').dataHandling;
+const extractData = require('../src/data-handling').extractData;
+const countStreak = require('../src/data-handling').countStreak;
+const longestStreak = require('../src/data-handling').longestStreak;
+const streakDates = require('../src/data-handling').streakDates;
+const extractSVG = require('../src/data-handling').extractSVG;
+const userStats = require('../src/data-handling').userStats;
 
 
 const request = require('supertest');
@@ -18,7 +18,7 @@ const startServer = require('../start-server')
 
 describe('user details view', function() {
   
-  it('displays different if laterst streak is current streak', function (done) {
+  it('displays differently if latest streak is current streak', function (done) {
     request(app)
       .get('/streak/lpil')
       .expect(200)
