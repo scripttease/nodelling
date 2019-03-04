@@ -48,7 +48,7 @@ describe('GET /streak/lpil', function () {
         // console.log(res) // shows you the fields
         const pattern = /class="js-calendar-graph-svg"/
         expect(res.text).to.match(pattern)
-        expect(res.text).to.match(/User Deets/)
+        expect(res.text).to.match(/Your Github Stats/)
 
         done();
       });
@@ -58,7 +58,7 @@ describe('GET /streak/lpil', function () {
 
 
 describe('getApiInfo', function() {
-  xit('should take username and return contribs json', function() {
+  it('should take username and return contribs json', function() {
     const username = 'scripttease'
     return getApiInfo(username).then(function(langUriObj) {
       expect(langUriObj.length).to.equal(22)
@@ -68,7 +68,7 @@ describe('getApiInfo', function() {
 });
 
 describe('getLangInfo', function() {
-  xit('take the array of lang uris and fetch each and create a new object array ', function() {
+  it('take the array of lang uris and fetch each and create a new object array ', function() {
     const username = 'scripttease'
     const uriArray = [ { langUri:
       'https://api.github.com/repos/scripttease/connect-js/languages' },
@@ -156,20 +156,20 @@ describe('getUserLangStats', () => {
     // expect(langUrisObj).to.deep.equal({})
     return getUserLangStats(username).then(function(allsorteddata) {
       // console.log(langUriObj);
-      expect(allsorteddata[0].language).to.equal('SuperCollider')
+      expect(allsorteddata[0].count).to.equal(13)
     })
     // or timesout after 2s which is not enough
   }).timeout(8000)
 })  
 
 describe('getUserLangStats 2', () => {
-  xit('should take a username(2) and call 3 uris and get langUrisObj', () => {
+  it('should take a username(2) and call 3 uris and get langUrisObj', () => {
     const username = 'lpil'
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})
     return getUserLangStats(username).then(function(langUriObj) {
       // console.log(langUriObj);
-      expect(langUriObj['SuperCollider']).to.equal(32603)
+      expect(langUriObj[0]).to.deep.equal({'count':46, 'language': 'Standard ML'})
     })
     // or timesout after 2s which is not enough
   }).timeout(8000)

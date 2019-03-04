@@ -247,6 +247,7 @@ function getApiInfo(username) {
     // console.log(langUrisObj)
     return langUrisObj;
     // don't want to catch here because want to catch in the app to signify to user.
+
   });
 }
 

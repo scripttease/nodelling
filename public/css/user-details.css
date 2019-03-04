@@ -1,3 +1,27 @@
+/* streak svg styles */
+body h1 {
+  font-family: sans-serif;
+  color: darkslategray;
+  font-weight: 500;
+}
+
+body h2 {
+  font-family: sans-serif;
+  color: darkslategray;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.month {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.wday {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
 .chart div {
   font: 10px sans-serif;
   background-color: steelblue;
