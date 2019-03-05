@@ -25,7 +25,7 @@ describe('GET /', function () {
 });
 
 describe('getUserInfo', function() {
-  it('should take username and return contribs json', function() {
+  xit('should take username and return contribs json', function() {
     const username = 'scripttease'
     //testing a promise so need its own promise or to use done.
     return getUserInfo(username).then(function(svgObj) {
@@ -37,7 +37,7 @@ describe('getUserInfo', function() {
 
 
 describe('GET /streak/lpil', function () {
-  it('responds calling getuserinfo and renders user-details', function (done) {
+  xit('responds calling getuserinfo and renders user-details', function (done) {
     request(app)
       .get('/streak/lpil')
       // .expect('Content-Type', "text/html; charset=utf-8")
@@ -58,7 +58,7 @@ describe('GET /streak/lpil', function () {
 
 
 describe('getApiInfo', function() {
-  it('should take username and return contribs json', function() {
+  xit('should take username and return contribs json', function() {
     const username = 'scripttease'
     return getApiInfo(username).then(function(langUriObj) {
       expect(langUriObj.length).to.equal(22)
@@ -68,7 +68,7 @@ describe('getApiInfo', function() {
 });
 
 describe('getLangInfo', function() {
-  it('take the array of lang uris and fetch each and create a new object array ', function() {
+  xit('take the array of lang uris and fetch each and create a new object array ', function() {
     const username = 'scripttease'
     const uriArray = [ { langUri:
       'https://api.github.com/repos/scripttease/connect-js/languages' },
@@ -91,7 +91,7 @@ describe('getLangInfo', function() {
 });
 
 describe('getPaginationInfoFromHeader', () => {
-  it('gets link headers', () => {
+  xit('gets link headers', () => {
     const username = 'scripttease'
     return getPaginationInfoFromHeader(username).then(function(headers) {
       //see headers api
@@ -103,7 +103,7 @@ describe('getPaginationInfoFromHeader', () => {
 })
 
 describe('parseHeadersLink', () => {
-  it('should extract the number of pages and create the uris to get them all', () => {
+  xit('should extract the number of pages and create the uris to get them all', () => {
     const headersLink = '<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"'
 
     const reposUris = paginatedUserRepoUris(headersLink)
@@ -119,7 +119,7 @@ describe('range', () => {
 })  
 
 describe('getLanguageUriForRepo', function() {
-  it('should take uri and return repos obj', function() {
+  xit('should take uri and return repos obj', function() {
     const uri = 'https://api.github.com/user/16262154/repos?page=1'
     return getLanguageUriForRepo(uri).then(function(langUriObj) {
       expect(langUriObj.length).to.equal(22)
@@ -130,7 +130,7 @@ describe('getLanguageUriForRepo', function() {
 });
 
 describe('getLanguageUriForRepo2', function() {
-  it('should take uri2 and return repos obj', function() {
+  xit('should take uri2 and return repos obj', function() {
     const uri2 = 'https://api.github.com/user/16262154/repos?page=2'
     return getLanguageUriForRepo(uri2).then(function(langUriObj) {
       expect(langUriObj.length).to.equal(27)
@@ -141,7 +141,7 @@ describe('getLanguageUriForRepo2', function() {
 
 // because is a fork
 describe('getLanguageUriForRepo3', function() {
-  it('should take uri3 and return repos obj', function() {
+  xit('should take uri3 and return repos obj', function() {
     const uri3 = 'https://api.github.com/user/16262154/repos?page=3'
     return getLanguageUriForRepo(uri3).then(function(langUriObj) {
       expect(langUriObj.length).to.equal(0)
@@ -150,7 +150,7 @@ describe('getLanguageUriForRepo3', function() {
 })
 
 describe('getUserLangStats', () => {
-  it('should take a username and call 3 uris and get langUrisObj', () => {
+  xit('should take a username and call 3 uris and get langUrisObj', () => {
     const username = 'scripttease'
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})
@@ -163,7 +163,7 @@ describe('getUserLangStats', () => {
 })  
 
 describe('getUserLangStats 2', () => {
-  it('should take a username(2) and call 3 uris and get langUrisObj', () => {
+  xit('should take a username(2) and call 3 uris and get langUrisObj', () => {
     const username = 'lpil'
     // const langUrisObj = doAllTheThings(username)
     // expect(langUrisObj).to.deep.equal({})

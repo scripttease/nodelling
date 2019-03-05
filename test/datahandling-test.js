@@ -2,7 +2,7 @@ const fs  = require('fs');
 const chai = require('chai');
 const should = chai.should();
 
-const { dataHandling, extractData, countStreak, longestStreak, streakDates, extractSVG, userStats, langDataSort, } = require('../src/data-handling')
+const { dataHandling, extractData, countStreak, longestStreak, streakDates, extractSVG, userStats, langDataSort, cssValidLangName, } = require('../src/data-handling')
 
 const { getLangUris, } = require('../src/github-api')
 
@@ -261,3 +261,14 @@ describe('langDataSort', () => {
 
 });
 
+
+
+describe('cssValidLangName', function () {
+  it('takes string and retrns css valid string', () => {
+    const name = 'Vim Script'
+    const name2 = 'C++'
+    expect(cssValidLangName(name)).to.equal('vimscript')
+    expect(cssValidLangName(name2)).to.equal('cx')
+    expect(cssValidLangName('F#')).to.equal('fx')
+  })
+})

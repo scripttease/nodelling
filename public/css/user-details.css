@@ -40,9 +40,9 @@ body h2 {
   fill: #ccc;
 }
 
-rect:hover {
+/* rect:hover {
   fill: orange !important;
-}
+} */
 
 #tooltip {
   position: absolute;

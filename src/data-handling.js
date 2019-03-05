@@ -214,6 +214,16 @@ function discardNoCommitDays(days) {
 }
 
 
+function cssValidLangName(lang) {
+  const regexAlphaNum = /([a-zA-Z]+)/
+  const regexSpace = /\s/
+  const regexNonAlphaNum = /\W+/
+  const res1 = lang.replace(regexSpace, '')
+  const res2 = res1.toLowerCase()
+  return res2.replace(regexNonAlphaNum, 'x')
+}
+
+
 module.exports = {
   dataHandling,
   extractData,
@@ -224,4 +234,5 @@ module.exports = {
   userStats,
   louisCountStreak,
   langDataSort,
+  cssValidLangName
 }

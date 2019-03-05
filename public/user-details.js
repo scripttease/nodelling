@@ -49,6 +49,14 @@ function getLangData() {
     .then(res => res.json())
 }
 
+function cssValidLangName(lang) {
+  const regexAlphaNum = /([a-zA-Z]+)/
+  const regexSpace = /\s/
+  const regexNonAlphaNum = /\W+/
+  const res1 = lang.replace(regexSpace, '')
+  const res2 = res1.toLowerCase()
+  return res2.replace(regexNonAlphaNum, 'x')
+}
 // if langdata was in the object passed to the get
 // route for this page then could do
 // console.log(window.languageData);
@@ -131,6 +139,7 @@ function d3graph(data) {
     .enter().append('rect')
     .attr("class", "bar")
     .attr("width", barWidth)
+    .attr("id", function (d, i) {return cssValidLangName(d.language) })
     // d === each data obj(elem) in array
     // i is its index
     .attr("x", function (d, i) { return barWidth * i + barSpace * i + margin })
@@ -138,12 +147,14 @@ function d3graph(data) {
 
     // tooltips must come before transition idk why
     // see http://bl.ocks.org/WilliamQLiu/0aab9d28ab1905ac2c8d
-    .on('mouseover', function (d) { console.log('mouseover' + d.language); })
+    // .on('mouseover', function (d) { console.log('mouseover' + d.language); })
 
     .on("mouseover", function (d, i) {  // Create tooltip on mouseover
       const xPosition = barWidth + (i * barWidth)
       const yPosition = chartHeight - scl(d.count) / 2 + 90
 
+      const dlang = cssValidLangName(d.language)
+      const langColor = window.langColors[ d.language]['color']
       // Update the tooltip position and value
       // requires addition to html
       d3.select("#tooltip")
@@ -154,10 +165,13 @@ function d3graph(data) {
         .select("#value")
         .text(d.language + ' ' + d.count + ' bytes')
 
-      d3.select("#tooltip").classed("hidden", false);  // Show the tooltip
+      d3.select("#tooltip").classed("hidden", false)  // Show the tooltip
+      d3.select('#' + dlang).style('fill', langColor)
     })
-    .on("mouseout", function () {  // 'Destroy' tooltip on mouseout
+    .on("mouseout", function (d, i) {  // 'Destroy' tooltip on mouseout
+      const dlang = cssValidLangName(d.language)
       d3.select("#tooltip").classed("hidden", true);  // Hide the tooltip
+      d3.select('#'+ dlang).style('fill', 'rgb(204,204,204)')
     })
 
     // transition
@@ -228,3 +242,9 @@ function d3graph(data) {
 }
 
 // d3graph(data)
+
+// colours for hover
+// data for loop or for each
+// d.language
+//add class name to 
+
