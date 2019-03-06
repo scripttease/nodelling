@@ -262,6 +262,7 @@ describe('langDataSort', () => {
 });
 
 
+// cant seem to compile d3 file with mocha so this is here for testing only
 
 describe('cssValidLangName', function () {
   it('takes string and retrns css valid string', () => {

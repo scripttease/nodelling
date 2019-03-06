@@ -89,8 +89,8 @@ getLangData()
 // { language: 'Scala', count: 131638 },
 // { language: 'HTML', count: 223061 },
 // { language: 'JavaScript', count: 317581 },
-// { language: 'Ruby', count: 333298 },//]
-// { language: 'Python', count: 6342896 } ]
+// { language: 'Ruby', count: 333298 }]
+// // { language: 'Python', count: 6342896 } ]
 
 // svg size
 //need margin for axes
@@ -139,13 +139,20 @@ function d3graph(data) {
     .enter().append('rect')
     .attr("class", "bar")
     .attr("width", barWidth)
-    .attr("id", function (d, i) {return cssValidLangName(d.language) })
+    .attr("id", function (d, i) {
+
+      return cssValidLangName(d.language) })
     // d === each data obj(elem) in array
     // i is its index
+    .style('fill', function(d, i) {
+      'langColor'
+      const langColor = window.langColors[d.language]['color']
+      return langColor
+    })
+    .style('opacity', '0.75')
     .attr("x", function (d, i) { return barWidth * i + barSpace * i + margin })
     .attr("y", chartHeight + margin)
 
-    // tooltips must come before transition idk why
     // see http://bl.ocks.org/WilliamQLiu/0aab9d28ab1905ac2c8d
     // .on('mouseover', function (d) { console.log('mouseover' + d.language); })
 
@@ -166,12 +173,19 @@ function d3graph(data) {
         .text(d.language + ' ' + d.count + ' bytes')
 
       d3.select("#tooltip").classed("hidden", false)  // Show the tooltip
-      d3.select('#' + dlang).style('fill', langColor)
+      // d3.select('#' + dlang).style('fill', 'rgb(204,204,204)')
+      // d3.select('#'+ dlang).style('outline-style', 'solid' )
+      // d3.select('#'+ dlang).style('outline-width', 'thin' )
+      // d3.select('#'+ dlang).style('outline-color', langColor)
+      d3.select('#'+ dlang).style('opacity', '1')
     })
     .on("mouseout", function (d, i) {  // 'Destroy' tooltip on mouseout
       const dlang = cssValidLangName(d.language)
+      const langColor = window.langColors[ d.language]['color']
       d3.select("#tooltip").classed("hidden", true);  // Hide the tooltip
-      d3.select('#'+ dlang).style('fill', 'rgb(204,204,204)')
+      d3.select('#'+ dlang).style('fill', langColor)
+      d3.select('#'+ dlang).style('opacity', '0.75' )
+      // d3.select('#'+ dlang).style('outline-style', 'none' )
     })
 
     // transition
@@ -242,7 +256,6 @@ function d3graph(data) {
 }
 
 // d3graph(data)
-
 // colours for hover
 // data for loop or for each
 // d.language

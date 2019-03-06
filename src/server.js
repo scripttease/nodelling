@@ -44,12 +44,12 @@ app.get("/", function (req, res) {
 function getUserInfo(username) {
   // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
   // https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
-  return fetch("https://github.com/users/" + username + "/contributions", {
+  return fetch_retry("https://github.com/users/" + username + "/contributions", {
     headers: {
       "Content-Type": "application/json",'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
  
     },
-  })
+  },3)
     .then(function (response) {
       if (response.ok) {
         // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Checking_that_the_fetch_was_successful
@@ -123,16 +123,24 @@ app.get('api/streak/:username', function (req, res) {
     });
 });
 
-//TODO these do not paginate so will only collect say first 30 need to adjust the uris
-//api.github.com/users/scripttease/repos
+function fetch_retry(url, options, n) {
+  return new Promise(function(resolve, reject) {
+      fetch(url, options).then(resolve)
+          .catch(function(error) {
+              if (n === 1) return reject(error);
+              resolve(fetch_retry(url, options, n - 1));
+          })
+  });
+}
+
 function getPaginationInfoFromHeader(username) {
 
-  return fetch("https://api.github.com/users/" + username + "/repos", {
+  return fetch_retry("https://api.github.com/users/" + username + "/repos", {
     headers: {
       "Content-Type": "application/json",'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
  
-    },
-  }).then(function (response) {
+    }, 
+  }, 3).then(function (response) {
     // console.log(response)
     if (response.ok) {
       // console.log(response.headers);
@@ -203,10 +211,10 @@ function flattenArray(arrays) {
 //TODO IMPORTANT filter for forks - don't want forks clogging up your bytes of code
 // filter in the getLangUris?
 function getLanguageUriForRepo(uri) {
-  return fetch(uri, { headers: {
+  return fetch_retry(uri, { headers: {
       "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
     },
-  }).then(function (response) {
+  },3).then(function (response) {
     // console.log(response)
     if (response.ok) {
       return response.text();
@@ -227,11 +235,11 @@ function getLanguageUriForRepo(uri) {
 
 //no longer used
 function getApiInfo(username) {
-  return fetch("https://api.github.com/users/" + username + "/repos", {
+  return fetch_retry("https://api.github.com/users/" + username + "/repos", {
     headers: {
       "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
     },
-  }).then(function (response) {
+  },3).then(function (response) {
     // console.log(response)
     if (response.ok) {
       return response.text();
@@ -247,7 +255,6 @@ function getApiInfo(username) {
     // console.log(langUrisObj)
     return langUrisObj;
     // don't want to catch here because want to catch in the app to signify to user.
-
   });
 }
 
@@ -258,7 +265,7 @@ function getLangInfo(langUrisObj) {
   const promiseArray = langUrisObj.map(uri => {
     // console.log("the uri is>")
     // console.log(uri.langUri)
-    return fetch(uri.langUri, { headers: { 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN } })
+    return fetch_retry(uri.langUri, { headers: { 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN } },3)
       .then(function (response) {
         // console.log(response)
         if (response.ok) {
