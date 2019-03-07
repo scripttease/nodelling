@@ -43,6 +43,7 @@ function getLangUris(reposObj) {
             langAndRepoNameArray.push(langAndRepoNameObj)
         }
     })
+    console.log(langAndRepoNameArray);
     return langAndRepoNameArray
 }
 

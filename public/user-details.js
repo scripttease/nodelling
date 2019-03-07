@@ -145,9 +145,13 @@ function d3graph(data) {
     // d === each data obj(elem) in array
     // i is its index
     .style('fill', function(d, i) {
-      'langColor'
+      if (window.langColors[d.language]) {
       const langColor = window.langColors[d.language]['color']
       return langColor
+      } else {
+        console.log(d.language);
+        return 'black'
+      }
     })
     .style('opacity', '0.75')
     .attr("x", function (d, i) { return barWidth * i + barSpace * i + margin })

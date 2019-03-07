@@ -288,9 +288,15 @@ function getLangInfo(langUrisObj) {
   return Promise.all(promiseArray)
 }
 
-//TODO write the <script> for the index page that gets the username typed in by the user and then write the ajax that inserts their streak info into page (or render a new page)
 
 //1. get the repo names for all a user repos - do I have this already
+//yes I have modified get languris to spit out reponames
+
+//2. construct the uri that goes to this SINGLe Repos commits
+//3. from this request get the pagination headers for a single repo
+//4. from the paginated uris go to all the commits of the repos. eg gleam has 16!
+//5. from the body of these (ie16) pages, parse as JSON then can extract for each commit:
+//commit['author']['login'] and if the login is the username ie the user you want, you can then increment a count for the languages 
 
 // function getPaginationCommitUris(username) {
 
