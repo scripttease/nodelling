@@ -25,6 +25,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.11.0",
     "request": "^2.88.0",
-    "supertest": "^3.4.2"
+    "supertest": "^3.4.2",
+    "yakbak": "^3.0.0"
   }
 }

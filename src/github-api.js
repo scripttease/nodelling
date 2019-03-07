@@ -18,18 +18,32 @@ function getMainLang(reposObj) {
 }
 
 function getLangUris(reposObj) {
-    let langObj;
-    const langArray = [];
-    reposObj.forEach(function(obj, ind){
-        // add filter for fork here
+    let langAndRepoNameObj;
+    const langAndRepoNameArray = [];
+    const regex = /repos\/[A-Za-z0-9-]+\/([A-Za-z0-9-_\.^\/]+)\//
+    reposObj.forEach(function (obj, ind) {
+        const url = obj.languages_url
+        const match = regex.exec(url)
         if (obj.languages_url && !obj.fork) {
-            langObj = {
-                langUri: obj.languages_url
+            // console.log(match);
+            // don't include forks
+            if (match) {
+                // console.log(url)
+                // console.log(match)
+                langAndRepoNameObj = {
+                    langUri: url,
+                    repoName: match[1]
+                }
+            } else {
+                langAndRepoNameObj = {
+                    langUri: url,
+                    repoName: 'undefined'
+                }
             }
-            langArray.push(langObj)
+            langAndRepoNameArray.push(langAndRepoNameObj)
         }
     })
-    return langArray;
+    return langAndRepoNameArray
 }
 
 // takes array in format:

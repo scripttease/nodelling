@@ -12,6 +12,20 @@ const { extractSVG, userStats, langDataSort, } = require('./data-handling')
 
 const { getMainLang, getLangUris, combineLangData, } = require('./github-api');
 
+const GITHUB_API_HOST = 
+  process.env.NODE_ENV == "test" 
+  ? "http://localhost:7599" 
+  : "https://api.github.com"
+
+const GITHUB_HOST = 
+  process.env.NODE_ENV == "test" 
+  ? "http://localhost:7598" 
+  : "https://github.com"
+
+  console.log(GITHUB_API_HOST);
+  console.log(GITHUB_HOST);
+
+
 // this and app listen were in start server
 // const port = process.env.PORT || 1234;
 
@@ -44,7 +58,7 @@ app.get("/", function (req, res) {
 function getUserInfo(username) {
   // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
   // https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
-  return fetch_retry("https://github.com/users/" + username + "/contributions", {
+  return fetch_retry(GITHUB_HOST + "/users/" + username + "/contributions", {
     headers: {
       "Content-Type": "application/json",'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
  
@@ -135,7 +149,7 @@ function fetch_retry(url, options, n) {
 
 function getPaginationInfoFromHeader(username) {
 
-  return fetch_retry("https://api.github.com/users/" + username + "/repos", {
+  return fetch_retry(GITHUB_API_HOST + "/users/" + username + "/repos", {
     headers: {
       "Content-Type": "application/json",'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
  
@@ -206,12 +220,14 @@ function flattenArray(arrays) {
   return Array.prototype.concat.apply(...arrays)
 }
 
+
 // takes uri for 1page of repos, returns object containing
 // the languages uri for each repo on the page
 //TODO IMPORTANT filter for forks - don't want forks clogging up your bytes of code
 // filter in the getLangUris?
 function getLanguageUriForRepo(uri) {
-  return fetch_retry(uri, { headers: {
+  const requestUri = uri.replace("https://api.github.com", GITHUB_API_HOST); // Hack for using a proxy in tests
+  return fetch_retry(requestUri, { headers: {
       "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
     },
   },3).then(function (response) {
@@ -235,7 +251,7 @@ function getLanguageUriForRepo(uri) {
 
 //no longer used
 function getApiInfo(username) {
-  return fetch_retry("https://api.github.com/users/" + username + "/repos", {
+  return fetch_retry(GITHUB_API_HOST + "/users/" + username + "/repos", {
     headers: {
       "Content-Type": "application/json", 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
     },
@@ -289,6 +305,27 @@ function getLangInfo(langUrisObj) {
 
 //TODO write the <script> for the index page that gets the username typed in by the user and then write the ajax that inserts their streak info into page (or render a new page)
 
+//1. get the repo names for all a user repos - do I have this already
+
+// function getPaginationCommitUris(username) {
+
+//   return fetch_retry("https://api.github.com/users/" + username + "/repos", {
+//     headers: {
+//       "Content-Type": "application/json",'Authorization': 'token ' + process.env.GITHUB_API_TOKEN 
+ 
+//     }, 
+//   }, 3).then(function (response) {
+//     // console.log(response)
+//     if (response.ok) {
+//       // console.log(response.headers);
+//       return response.headers.get('link');
+//     }
+//     // else
+//     const error = new Error(response.statusText)
+//     error.response = response
+//     throw error
+//   });
+// }
 
 module.exports = { 
   app, 

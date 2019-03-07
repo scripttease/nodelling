@@ -17,6 +17,7 @@ const getUserInfo = require('../src/server').getUserInfo;
 const startServer = require('../start-server')
 
 describe('user details view', function() {
+  useMockServersForThisDescribeBlock();
   
   it('displays differently if latest streak is current streak', function (done) {
     request(app)
