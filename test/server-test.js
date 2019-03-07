@@ -110,7 +110,9 @@ describe("server tests", () => {
       const headersLink = '<https://api.github.com/user/16262154/repos?page=2>; rel="next", <https://api.github.com/user/16262154/repos?page=3>; rel="last"'
 
       const reposUris = paginatedUserRepoUris(headersLink)
-      expect(reposUris).to.deep.equal(['https://api.github.com/user/16262154/repos?page=1','https://api.github.com/user/16262154/repos?page=2', 'https://api.github.com/user/16262154/repos?page=3'])
+      expect(reposUris).to.deep.equal([ "http://localhost:7599/user/16262154/repos?page=1"
+      ,"http://localhost:7599/user/16262154/repos?page=2"
+      ,"http://localhost:7599/user/16262154/repos?page=3"])
     })
   })
 
@@ -171,7 +173,7 @@ describe("server tests", () => {
       // const langUrisObj = doAllTheThings(username)
       // expect(langUrisObj).to.deep.equal({})
       return getUserLangStats(username).then(function(langUriObj) {
-        console.log(langUriObj);
+        // console.log(langUriObj);
         expect(langUriObj[0]).to.deep.equal({'count':46, 'language': 'Standard ML'})
       })
       // or timesout after 2s which is not enough

@@ -22,23 +22,9 @@ const GITHUB_HOST =
   ? "http://localhost:7598" 
   : "https://github.com"
 
-  console.log(GITHUB_API_HOST);
-  console.log(GITHUB_HOST);
+  // console.log(GITHUB_API_HOST);
+  // console.log(GITHUB_HOST);
 
-
-// this and app listen were in start server
-// const port = process.env.PORT || 1234;
-
-// // this module.parent allows test watcher to run by checking that not already listening, see http://www.marcusoft.net/2015/10/eaddrinuse-when-watching-tests-with-mocha-and-supertest.html
-// if(!module.parent){ 
-//   app.listen(port, function(err) {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//   console.log('app listening on port ' + port);
-//     }
-// });
-// }
 
 // https://expressjs.com/en/starter/static-files.html
 // serve static files from dir 'public'
@@ -146,7 +132,7 @@ function fetch_retry(url, options, n) {
           })
   });
 }
-
+// returns: <https://api.github.com/user/6134406/repos?page=2>; rel="next", <https://api.github.com/user/6134406/repos?page=8>; rel="last"
 function getPaginationInfoFromHeader(username) {
 
   return fetch_retry(GITHUB_API_HOST + "/users/" + username + "/repos", {
@@ -157,7 +143,6 @@ function getPaginationInfoFromHeader(username) {
   }, 3).then(function (response) {
     // console.log(response)
     if (response.ok) {
-      // console.log(response.headers);
       return response.headers.get('link');
     }
     // else
@@ -170,14 +155,18 @@ function getPaginationInfoFromHeader(username) {
 function range(n) {
   return [...Array(n).keys()];
 }
-
+// returns:[ 'https://api.github.com/user/6134406/repos?page=1',
+  // 'https://api.github.com/user/6134406/repos?page=2',
+  // 'https://api.github.com/user/6134406/repos?page=3',...] 
 function paginatedUserRepoUris(pagInfoFromHeader) {
   const regex = /(https:\/\/api\.github\.com\/user\/([0-9]+)\/repos\?page\=)([0-9]+)\>; rel\="last"/gm;
   const matches = regex.exec(pagInfoFromHeader);
   const numPages = parseInt(matches[3])
   const array1 = range(numPages)
   const array2 = array1.map(x => x + 1)
-  const res = array2.map(page => '' + matches[1] + page);
+  const array3 = array2.map(page => '' + matches[1] + page);
+  const res = array3.map(uri => uri.replace("https://api.github.com", GITHUB_API_HOST))
+  // console.log(res);
   return res
 }
 
@@ -279,19 +268,15 @@ function getApiInfo(username) {
 // language object for each repo
 function getLangInfo(langUrisObj) {
   const promiseArray = langUrisObj.map(uri => {
+  const requestUri = uri.langUri.replace("https://api.github.com", GITHUB_API_HOST); // Hack for using a proxy in tests
     // console.log("the uri is>")
     // console.log(uri.langUri)
-    return fetch_retry(uri.langUri, { headers: { 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN } },3)
+    return fetch_retry(requestUri, { headers: { 'Authorization': 'token ' + process.env.GITHUB_API_TOKEN } },3)
       .then(function (response) {
         // console.log(response)
         if (response.ok) {
           return response.text();
         }
-        // else
-        //TODO we dont actually want to throw here 
-        // we eithere want to retry the failed ones
-        // or skip them and as we map afterwards
-        // ignore the unsucecssful ones
         const error = new Error(response.statusText)
         error.response = response
         throw error
