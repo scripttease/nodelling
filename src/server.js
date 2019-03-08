@@ -297,7 +297,21 @@ function getLangInfo(langUrisObj) {
 //4. from the paginated uris go to all the commits of the repos. eg gleam has 16!
 //5. from the body of these (ie16) pages, parse as JSON then can extract for each commit:
 //commit['author']['login'] and if the login is the username ie the user you want, you can then increment a count for the languages 
+// BUT to get the languages you actually have to follow the languri 
+// OR from each commit body you also follow the commit[url] link and that gives you the actual commitdetails. 
+// in commitdetails body under files[] you get each file that was changed and you can work out its languege from the 'filename' extension (this is what git does and its in my colours2.js file
+//it also tells you 'additions' which is LINES of code that you changed.
 
+
+
+
+
+// for an entire org ( ie all the repos) who has commited most lines person (at the moment contributors is by app)
+// eg for louis use tokei to calc the TOTAL number of lines of code per language for all his repos
+// this would be easier probably to just download the repo rather than querying the api a load of times so maybe write a program that does that .
+// what is faster? to clone the entire repo and scrape it OR to do the api queries...
+// idea: what is the gateway langauge for code and what languages do ppl progress to if they start with a certain language is there a noticeable divide between functional and oop and if you start with a ceratin lang are you more likely to code more or less, ie corerlation between someones first lang and the number of commits...
+//if i do it this way I might want to initially filtr out organisatiions and repos over a certain size but also I should get a user (maybe at randoom) and get all their repos as a staryting point. and from there who they have worked with perhaps although this will mean a skewd data set at first towards a certain lang.
 // function getPaginationCommitUris(username) {
 
 //   return fetch_retry("https://api.github.com/users/" + username + "/repos", {
